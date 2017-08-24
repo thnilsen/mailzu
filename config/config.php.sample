@@ -63,6 +63,9 @@
 // all instances of amavisd-new must use the same AM.PDP port 
 $conf['amavisd']['spam_release_port'] = '9998';
 
+// Set Amavisd-new host, if AM.PDP only allowed over localhost
+//$conf['amavisd']['host'] = '127.0.0.1';
+
 // Database type to be used by PEAR [mysql]
 /* Options are:
 	mysql  -> MySQL

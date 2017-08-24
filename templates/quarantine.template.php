@@ -130,8 +130,10 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
 				for ($i = $start_entry;  $i < $end_entry; $i++) {
 					$rs = $res[$i];
 					// Make sure that there is a clickable subject
-					$subject = $rs['subject'] ? htmlspecialchars($rs['subject']) : '(none)';
-					$from = $rs['from_addr'] ? htmlspecialchars($rs['from_addr']) : '(none)';
+					// If there is some non parseable content in subject htmlspecialchars returns empty subject
+					//$subject = $rs['subject'] ? htmlspecialchars(mb_convert_encoding($rs['subject'],'UTF-8' )) : '(none)';
+					$subject = $rs['subject'] ? mb_encode_numericentity($rs['subject'],array(0x80, 0xff, 0, 0xff),'UTF-8') : '(none)';
+					$from = $rs['from_addr'] ? htmlspecialchars($rs['from_addr'],ENT_SUBSTITUTE) : '(none)';
 					if ( (count($_SESSION['sessionMail']) > 1) || (Auth::isMailAdmin() && 
 					   ("Site Quarantine" == $_SESSION['sessionNav'] || "Site Pending Requests" == $_SESSION['sessionNav']))) {
 						$to = $rs['email'] ? htmlspecialchars($rs['email']) : '(none)';

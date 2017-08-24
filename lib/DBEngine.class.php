@@ -105,8 +105,21 @@ class DBEngine {
 			die ('Error connecting to database: ' . $db->getMessage() );
 		}
 
+        // Set utf8 as client charset
+        switch ($this->dbType) {
+            case "mysql":
+                mysql_set_charset('utf8');
+                break;
+            case "mysqli":
+                $db->set_charset('utf8');
+                break;
+            default:
+                break;
+        }
+
 		// Set fetch mode to return associatve array
 		$db->setFetchMode(DB_FETCHMODE_ASSOC);
+
 
 		$this->db = $db;
 	}

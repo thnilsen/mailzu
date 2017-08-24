@@ -65,9 +65,9 @@ function releaseMessages($emailaddresses, $mail_id_array) {
 	foreach ($mail_id_array as $mail_id_recip) {
 
 		// Get mail_id and recipient email address
-		$temp = preg_split('/_/', $mail_id_recip, 2);
-		$mail_id = $temp[0];
-		$recip_email = $temp[1];
+        $temp = preg_split('/_/', $mail_id_recip);
+        $mail_id = str_replace("_" . $temp[(sizeof($temp) - 1)], "", $mail_id_recip);
+        $recip_email = $temp[(sizeof($temp) - 1)];
 
 		// Check if logged in user is admin or logged in user is trying to release his own messages
 		if ( Auth::isMailAdmin() || in_array($recip_email, $emailaddresses) )
@@ -254,11 +254,9 @@ function updateMessages($flag, $content_type, $emailaddresses, $mail_id_array, $
 		$i = 0;
 		foreach ($mail_id_array as $mail_id_recip) {
 			// Get mail_id and recipient email address
-			//$temp = preg_split('/_/', $mail_id_recip, 2);
-			//$mail_id = $temp[0];
-			//$recip_email = $temp[1];
-			$mail_id = substr($mail_id_recip, 0, 12);
-			$recip_email = substr($mail_id_recip, 13);
+            $temp = preg_split('/_/', $mail_id_recip);
+            $mail_id = str_replace("_" . $temp[(sizeof($temp) - 1)], "", $mail_id_recip);
+            $recip_email = $temp[(sizeof($temp) - 1)];
 
 			// Check if logged in user is admin or logged in user is trying to delete his own messages
 			if ( Auth::isMailAdmin() || in_array($recip_email, $emailaddresses) ) {

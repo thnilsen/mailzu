@@ -48,6 +48,9 @@ class AmavisdEngine {
 	* $return object Amavisd object
 	*/
 	function AmavisdEngine($host) {
+        if ($GLOBALS['conf']['amavisd']['host']) {
+            $host=$GLOBALS['conf']['amavisd']['host'];
+        }
 		$this->socket = new Net_Socket();
 		$this->port = $GLOBALS['conf']['amavisd']['spam_release_port'];
 		$this->connected = false;

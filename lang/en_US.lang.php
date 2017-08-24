@@ -62,7 +62,7 @@ global $days_letter;		  //
 
 // Charset for this language
 // 'iso-8859-1' will work for most languages
-$charset = 'iso-8859-1';
+$charset = 'utf-8';
 
 /***
   DAY NAMES
