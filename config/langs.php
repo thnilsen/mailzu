@@ -41,13 +41,14 @@
 */
 
 $languages = array (
+	'de'	=> array('de([-_][[:alpha:]]{2})?|german', 'de.lang.php', 'de', 'Deutsch'),
 	'en_US'	=> array('en([-_]us)?|english', 'en_US.lang.php', 'en', 'English US'),
 	'en_GB'	=> array('en([-_]gb)?|english', 'en_GB.lang.php', 'en', 'English GB'),
 	'es'	=> array('es([-_][[:alpha:]]{2})?|spanish', 'es.lang.php', 'es', 'Español'),
 	'cs'	=> array('cs([-_][[:alpha:]]{2})?|czech', 'cs.lang.php', 'cs', '&#268;esky'),
 	'fr'	=> array('fr([-_][[:alpha:]]{2})?|french', 'fr.lang.php', 'fr', 'Fran&ccedil;ais'),
 	'it'	=> array('it([-_][[:alpha:]]{2})?|italian', 'it.lang.php', 'it', 'Italiano'),
-        'pt_BR' => array('pt([-_]br)?|portuguese', 'pt_BR.lang.php', 'pt', 'Portuguese Brazilian')
+	'pt_BR'	=> array('pt([-_]br)?|portuguese', 'pt_BR.lang.php', 'pt', 'Portuguese Brazilian')
 );
 
 // Language files directory	
