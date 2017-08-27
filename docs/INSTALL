@@ -155,6 +155,9 @@ additional hosts you desire.
     inet_acl => [qw( 127.0.0.1 [::1] <IP of MailZu host> )],
   };
 
+
+
+
 The configuration settings above is the minimal setting required by MailZu. 
 
 This allows MailZu to give an index of all messages that were considered spam
@@ -206,7 +209,14 @@ port we specified earlier in "Amavisd-new Configuration".
   // Amavisd-new AM.PDP port 
   // Since the port number can not be stored in the database
   // all instances of amavisd-new must use the same AM.PDP port
+
   $conf['amavisd']['spam_release_port'] = '9998';
+
+In a single host setup if you do not want to open AM.PDP to the internet, you need to override
+the hostname that gets written into msgs.host (in Debian the server FQDN hostname). 
+Set the host where amavisd-new can be reached, if AM.PDP is only allowed over localhost
+
+  $conf['amavisd']['host'] = '127.0.0.1';
 
 All amavisd-new instances must use the same port number, but not necessarily
 9998. Now we must configure MailZu to query the same database that amavisd-new
