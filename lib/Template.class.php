@@ -156,7 +156,7 @@ class Template {
 	function printHTMLFooter() {
 		global $conf;
 	?>
-	<p align="center"><a href="http://www.mailzu.net"><?php echo $conf['app']['title']?> v<?php $conf['app']['version']?></a></p>
+	<p align="center"><a href="http://www.mailzu.net"><?php echo $conf['app']['title']?> v<?php echo $conf['app']['version'];?></a></p>
 	</body>
 	</html>
 	<?php
