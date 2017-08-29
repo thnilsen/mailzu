@@ -15,7 +15,6 @@ Users can access their personal quarantine by authenticating to various pre-exis
 
 This fork already includes changes that enable displaying utf8 content, releasing spam from localhost, German language, full database schema for MySQL 5.6 with InnoDB storage, and amavisd-new 2.7.0
 
-*Planned changes are: cleanup code, removing obsolete content, and scripts; replacing HTML tables with CSS tables; creating mobile view using CSS media queries; updated database cleanup script; script that sends daily report about quarantined items to users; step-by-step installation guid for a common postfix-dovecot-amavis-spamassassin setup 
-*
+*Planned changes are: cleanup code, removing obsolete content, and scripts; replacing HTML tables with CSS tables; creating mobile view using CSS media queries; updated database cleanup script; script that sends daily report about quarantined items to users; step-by-step installation guid for a common postfix-dovecot-amavis-spamassassin setup*
 
 See the INSTALL file in the docs/ directory included with this distribution.
