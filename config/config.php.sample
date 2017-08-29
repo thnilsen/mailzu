@@ -7,13 +7,13 @@
 * @author Samuel Tran <stran2005@users.sourceforge.net>
 * @author Brian Wong <bwsource@users.sourceforge.net>
 * @author Jeremy Fowler <jfowler06@users.sourceforge.net>
-* @version 04-03-07
+* @version 29-08-2017
 * @package MailZu
 */
 /***************************************
-* MailZu    	                       *
-* Version 0.8                          *
-* http://www.mailzu.net 	       *
+* MailZu                               *
+* Version 0.9                          *
+* http://www.mailzu.net                *
 *                                      *
 /***************************************/
 /**

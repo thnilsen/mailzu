@@ -5,7 +5,7 @@
 * @Author Bogdan Baliuc <b.baliuc@rogers.com>
 * @package ExchAuth
 *
-* Copyright (C) 2005 - 2007 MailZu
+* Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 /**

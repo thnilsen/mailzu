@@ -4,9 +4,9 @@
 * @author Samuel Tran <stran2005@users.sourceforge.net>
 * @author Brian Wong <bwsource@users.sourceforge.net>
 * @author Nicolas Peyrussie <peyrouz@users.sourceforge.net>
-* @version 04-03-07
+* @version 29-08-2017
 *
-* Copyright (C) 2005 - 2007 MailZu
+* Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 /**

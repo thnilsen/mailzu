@@ -2,10 +2,10 @@
 /**
 * This file provides output functions
 * @author Nick Korbel <lqqkout13@users.sourceforge.net>
-* @version 10-21-04
+* @version 29-08-2017
 * @package phpScheduleIt
 *
-* Copyright (C) 2003 - 2005 phpScheduleIt
+* Copyright (C) 2003 - 2017 phpScheduleIt
 * License: GPL, see LICENSE
 */
 /**

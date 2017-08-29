@@ -6,10 +6,10 @@
 * @author Brian Wong <bwsource@users.sourceforge.net>
 * @author Nicolas Peyrussie <peyrouz@users.sourceforge.net>
 * @author Jeremy Fowler <jfowler06@users.sourceforge.net>
-* @version 04-03-2007
+* @version 29-08-2017
 * @package Templates
 *
-* Copyright (C) 2005 - 2007 MailZu
+* Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 

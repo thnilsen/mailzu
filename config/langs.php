@@ -4,7 +4,7 @@
 *  translating the text
 * A few ideas and techniques were taken from the phpMyAdmin project
 * @author Nick Korbel <lqqkout13@users.sourceforge.net>
-* @version 03-14-05
+* @version 29-08-2017
 * @package Languages
 *
 * Copyright (C) 2003 - 2005 phpScheduleIt

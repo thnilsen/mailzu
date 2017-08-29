@@ -5,7 +5,7 @@
 * @author Samuel Tran <stran2005@users.sourceforge.net>
 * @author Brian Wong <bwsource@users.sourceforge.net>
 * @author Jeremy Fowler <jfowler06@users.sourceforge.net>
-* @version 02-21-2007
+* @version 29-08-2017
 * @package DBEngine
 *
 * Following functions taken from PhpScheduleIt,
@@ -13,7 +13,7 @@
 * @version 03-29-05:
 *	db_connect(), check_for_error(), cleanRow(), get_err()
 *
-* Copyright (C) 2005 - 2007 MailZu
+* Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 /**

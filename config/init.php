@@ -2,7 +2,7 @@
 /**
 * Initialization file.  Please do not edit.
 * @author Nick Korbel <lqqkout13@users.sourceforge.net>
-* @version 10-25-04
+* @version 29-08-2017
 * @package phpScheduleIt
 */
 /**

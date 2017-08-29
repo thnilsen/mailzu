@@ -5,7 +5,7 @@
 * @version 04-24-2005
 * @package LDAPEngine
 *
-* Copyright (C) 2005 - 2007 MailZu
+* Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 /**

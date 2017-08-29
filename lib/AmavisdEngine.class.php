@@ -3,10 +3,10 @@
 * AmavisdEngine class
 * @author Samuel Tran
 * @author Jeremy Fowler
-* @version 03-22-07
+* @version 29-08-2017
 * @package AmavisdEngine
 *
-* Copyright (C) 2005 - 2007 MailZu
+* Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 /**

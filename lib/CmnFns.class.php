@@ -15,7 +15,7 @@
 *	get_vert_order(), get_value_order(), write_log(), get_day_name(), redirect(),
 *	print_language_pulldown(), html_activate_links()
 *
-* Copyright (C) 2005 - 2007 MailZu
+* Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 /**
