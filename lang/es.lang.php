@@ -12,7 +12,7 @@
 * @version 04-03-07
 * @package Languages
 *
-* Copyright (C) 2005 - 2007 MailZu
+* Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 ///////////////////////////////////////////////////////////

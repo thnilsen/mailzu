@@ -12,7 +12,7 @@
 * @version 04-03-07
 * @package Languages
 *
-* Copyright (C) 2005 - 2007 MailZu
+* Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 ///////////////////////////////////////////////////////////
@@ -88,9 +88,9 @@ $days_letter = array('So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa');
    and go through the twelve months of the year, ending on December
 ***/
 // The full month name
-$months_full = array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember');
+$months_full = array('Januar', 'Februar', 'MÃ¤rz', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember');
 // The three letter month name
-$months_abbr = array('Jan', 'Feb', 'März', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez');
+$months_abbr = array('Jan', 'Feb', 'MÃ¤rz', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez');
 
 // All letters of the alphabet starting with A and ending with Z
 $letters = array ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
@@ -126,7 +126,7 @@ $strings['am'] = 'am';
 $strings['pm'] = 'pm';
 
 $strings['Administrator'] = 'Administrator';
-$strings['Welcome Back'] = 'Willkommen zurück, %s';
+$strings['Welcome Back'] = 'Willkommen zurÃ¼ck, %s';
 $strings['Log Out'] = 'Abmeldung';
 $strings['Help'] = 'Hilfe';
 
@@ -135,16 +135,16 @@ $strings['Admin Email'] = 'Administrator Email';
 $strings['Default'] = 'Standart';
 $strings['Reset'] = 'reseten';
 $strings['Edit'] = 'editieren';
-$strings['Delete'] = 'löschen';
+$strings['Delete'] = 'lÃ¶schen';
 $strings['Cancel'] = 'abbrechen';
 $strings['View'] = 'ansehen';
 $strings['Modify'] = 'bearbeiten';
 $strings['Save'] = 'speichern';
-$strings['Back'] = 'zurück';
-$strings['BackMessageIndex'] = 'Zurück zu den Nachrichten';
+$strings['Back'] = 'zurÃ¼ck';
+$strings['BackMessageIndex'] = 'ZurÃ¼ck zu den Nachrichten';
 $strings['ToggleHeaders'] = 'Headers umschalten';
 $strings['ViewOriginal'] = 'Original ansehen';
-$strings['Next'] = 'nächste';
+$strings['Next'] = 'nÃ¤chste';
 $strings['Close Window'] = 'Fenster schliessen';
 $strings['Search'] = 'suchen';
 $strings['Clear'] = 'leeren';
@@ -166,9 +166,9 @@ $strings['Institution'] = 'Firma';
 $strings['Phone'] = 'Telefon';
 $strings['Password'] = 'Passwort';
 $strings['Permissions'] = 'Berechtigungen';
-$strings['View information about'] = 'Zeige Informationen über %s %s';
+$strings['View information about'] = 'Zeige Informationen Ã¼ber %s %s';
 $strings['Send email to'] = 'Sende Email zu %s %s';
-$strings['Reset password for'] = 'Passwort zurücksetzen von %s %s';
+$strings['Reset password for'] = 'Passwort zurÃ¼cksetzen von %s %s';
 $strings['Edit permissions for'] = 'Berechtigung von %s %s bearbeiten';
 $strings['Position'] = 'Position';
 $strings['Password (6 char min)'] = 'Passwort (min %s Zeichen)';	// @since 1.1.0
@@ -179,11 +179,11 @@ $strings['Email Users'] = 'Benutzer Email';
 $strings['Subject'] = 'Subjekt';
 $strings['Message'] = 'Nachricht';
 $strings['Send Email'] = 'Sende Email';
-$strings['problem sending email'] = 'Sorry, es traten Fehler auf beim senden Ihrer Nachricht. Bitte versuchen Sie es später nochmal';
+$strings['problem sending email'] = 'Sorry, es traten Fehler auf beim senden Ihrer Nachricht. Bitte versuchen Sie es spÃ¤ter nochmal';
 $strings['The email sent successfully.'] = 'The email sent successfully.';
 $strings['Email address'] = 'Email Adresse';
 $strings['Please Log In'] = 'Bitte einloggen';
-$strings['Keep me logged in'] = 'Eingeloggt bleiben <br/>(benötigt Cookies)';
+$strings['Keep me logged in'] = 'Eingeloggt bleiben <br/>(benÃ¶tigt Cookies)';
 $strings['Password'] = 'Passwort';
 $strings['Log In'] = 'Anmeldung';
 $strings['Get online help'] = 'Online Hilfe verwenden';
@@ -195,8 +195,8 @@ $strings['Email Administrator'] = 'Administrator Email';
 $strings['N/A'] = 'N/A';
 $strings['Summary'] = 'Inhalt';
 
-$strings['View stats for schedule'] = 'Zeige Statistiken für den Zeitplan:';
-$strings['At A Glance'] = 'Im Überblick';
+$strings['View stats for schedule'] = 'Zeige Statistiken fÃ¼r den Zeitplan:';
+$strings['At A Glance'] = 'Im Ãœberblick';
 $strings['Total Users'] = 'Benutzer Total:';
 $strings['Total Resources'] = 'Inhalt Total:';
 $strings['Total Reservations'] = 'Reservierungen Total:';
@@ -223,8 +223,8 @@ $strings['Reservation start time'] = 'Reservierte Startzeit:';
 $strings['Reservation end time'] = 'Endzeit der Reservation:';
 $strings['Days shown at a time'] = 'Anzahl Tage gleichzeitig anzeigen:';
 $strings['Reservations'] = 'Reservationen';
-$strings['Return to top'] = 'An den Anfang zurück';
-$strings['for'] = 'für';
+$strings['Return to top'] = 'An den Anfang zurÃ¼ck';
+$strings['for'] = 'fÃ¼r';
 
 $strings['Per page'] = 'Pro Seite:';
 $strings['Page'] = 'Seite:';
@@ -240,20 +240,20 @@ $strings['Close'] = 'schliessen';
 
 $strings['Admin'] = 'Admin';
 
-$strings['My Quick Links'] = 'Menü';
+$strings['My Quick Links'] = 'MenÃ¼';
 
 $strings['Go to first page'] = 'Gehe zur ersten Seite';
 $strings['Go to last page'] = 'Gehe zur letzten Seite';
 $strings['Sort by descending order'] = 'Absteigend sortieren';
 $strings['Sort by ascending order'] = 'Aufsteigend sortieren';
-$strings['Spam Quarantine'] = 'Spam-Quarantäne';
+$strings['Spam Quarantine'] = 'Spam-QuarantÃ¤ne';
 $strings['Message View'] = 'Nachricht anzeigen';
-$strings['Attachment Quarantine'] = 'Anhang-Quarantäne';
+$strings['Attachment Quarantine'] = 'Anhang-QuarantÃ¤ne';
 $strings['No such content type'] = 'Unbekannter Inhalt';
 $strings['No message was selected'] = 'Es wurde keine Nachricht selektiert ...';
 $strings['Unknown action type'] = 'Unbekannter Aktionstyp ...';
 $strings['A problem occured when trying to release the following messages'] = 'Es ist ein Fehler beim anzeigen dieser Nachricht aufgetreten';
-$strings['A problem occured when trying to delete the following messages'] = 'Es ist ein Fehler beim löschen dieser Nachricht aufgetreten';
+$strings['A problem occured when trying to delete the following messages'] = 'Es ist ein Fehler beim lÃ¶schen dieser Nachricht aufgetreten';
 $strings['Please release the following messages'] = 'Bitte geben Sie folgende Nachrichten frei';
 $strings['To'] = 'An';
 $strings['From'] = 'Von';
@@ -267,27 +267,27 @@ $strings['Unknown server type'] = 'Unbekannter Servertyp ...';
 $strings['Showing messages'] = "Angezeigte Nachrichten %s von %s &nbsp;&nbsp; (%s Total)\r\n";
 $strings['View this message'] = 'Diese Nachricht anzeigen';
 $strings['Message Unavailable'] = 'Nachricht nicht gefunden';
-$strings['My Quarantine'] = 'Meine Quarantäne';
-$strings['Site Quarantine'] = 'Quarantäne Systemweit';
+$strings['My Quarantine'] = 'Meine QuarantÃ¤ne';
+$strings['Site Quarantine'] = 'QuarantÃ¤ne Systemweit';
 $strings['Message Processing'] = 'Nachricht wird bearbeitet';
-$strings['Quarantine Summary'] = 'Inhalt der Quarantäne';
-$strings['Site Quarantine Summary'] = 'Quarantäneinhalt Systemweit';
+$strings['Quarantine Summary'] = 'Inhalt der QuarantÃ¤ne';
+$strings['Site Quarantine Summary'] = 'QuarantÃ¤neinhalt Systemweit';
 $strings['Login'] = 'Anmeldename';
 $strings['spam(s)'] = 'Spam(s)';
-$strings['attachment(s)'] = 'Anhänge';
+$strings['attachment(s)'] = 'AnhÃ¤nge';
 $strings['pending release request(s)'] = 'wartende Anfrage(n) zur Freigabe';
 $strings['virus(es)'] = 'Viren';
 $strings['bad header(s)'] = 'Fehlerhafte Headers';
 $strings['You have to type some text'] = 'Bitte Text eingeben';
 $strings['Release'] = 'Weiterleiten';
 $strings['Release/Request release'] = 'Weiterleitung beantragen';
-$strings['Request release'] = 'Anfrage für Freigaben';
-$strings['Delete'] = 'Löschen';
-$strings['Delete All'] = 'Alles löschen';
-$strings['Send report and go back'] = 'Report senden und zurück';
-$strings['Go back'] = "Gehe zurück";
+$strings['Request release'] = 'Anfrage fÃ¼r Freigaben';
+$strings['Delete'] = 'LÃ¶schen';
+$strings['Delete All'] = 'Alles lÃ¶schen';
+$strings['Send report and go back'] = 'Report senden und zurÃ¼ck';
+$strings['Go back'] = "Gehe zurÃ¼ck";
 $strings['Select All'] = "Alles selektieren";
-$strings['Clear All'] = "Selektierung löschen";
+$strings['Clear All'] = "Selektierung lÃ¶schen";
 $strings['Access Denied'] = "Zugriff verweigert";
 $strings['My Pending Requests'] = "Beantragte Weiterleitungen";
 $strings['Site Pending Requests'] = "Beantragungen der User";
@@ -300,7 +300,7 @@ $strings['Logout successful'] = "Erfolgreich ausgeloggt";
 $strings['IMAP Authentication: no match'] = "IMAP Authentifizierung: Kein Treffer";
 $strings['Search for messages whose:'] = "Suche nach Nachrichten mit:";
 $strings['Content Type'] = "Blockart";
-$strings['Clear search results'] = "Suchresultate löschen";
+$strings['Clear search results'] = "Suchresultate lÃ¶schen";
 $strings['contains'] = "beinhaltet";
 $strings['doesn\'t contain'] = "beinhaltet nicht";
 $strings['equals'] = "gleich";
@@ -312,13 +312,13 @@ $strings['Virus'] = "Virus";
 $strings['Viruses'] = "Viren";
 $strings['Bad Header'] = "Fehlerhafter Header";
 $strings['Bad Headers'] = "Fehlerhafte Headers";
-$strings['Pending Requests'] = "hängende Anfragen";
+$strings['Pending Requests'] = "hÃ¤ngende Anfragen";
 $strings['last'] = "letzte";
 $strings['first'] = "erste";
-$strings['previous'] = "nächste";
+$strings['previous'] = "nÃ¤chste";
 $strings['There was an error executing your query'] = 'Bei Ihrer Anfrage ist ein fehler aufgetreten:';
 $strings['There are no matching records.'] = 'Keine Suchresultate gefunden.';
-$strings['Domain'] = 'Domäne';
+$strings['Domain'] = 'DomÃ¤ne';
 $strings['Total'] = 'Total';
 $strings['X-Amavis-Alert'] = 'X-Amavis-Alarme';
 $strings['Loading Summary...'] = 'Inhalt wird geladen...';
