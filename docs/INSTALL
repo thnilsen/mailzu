@@ -9,7 +9,7 @@ delete them.
 MailZu need not reside on the same host as amavisd-new. MailZu also supports
 environments with multiple amavisd-new instances (as long as all instances
 report to the same SQL database). MailZu is only suitable for amavisd-new
-versions greater than 2.3.0.
+versions greater than 2.7.0.
 
 
 Requirements
@@ -21,9 +21,9 @@ to SQL should be enabled.
 
 The requirements for running MailZu is as follows:
 
-1) Amavisd-new greater than 2.3.0. 
+1) Amavisd-new greater than 2.7.0. 
 2) A PHP-compatible web server
-3) PHP 4.3.x or greater with socket support ( --enable-sockets )
+3) PHP 5.6.x or greater with socket support ( --enable-sockets )
 4) PEAR::PEAR
 5) PEAR::DB 
 6) PEAR::Mail_Mime
@@ -51,20 +51,10 @@ look through the queries in the provided script and merge them.
 AMAVISD-NEW SQL REQUIREMENTS
 ==============================
 
-If you are currently using amavisd-new 2.4.0 or later, no changes are necessary.
+If you are currently using amavisd-new 2.7.0 or later, no changes are necessary.
 
-If using MySQL, please make sure that you use the TIMESTAMP type for the 
-database field 'time_iso'. Please refer to the amavisd-new documentation for
-details. 
-
-If you are using a version of amavisd-new prior to 2.4.0 (with old database
-schema), please add the 'quar_loc' column to your 'msgs' table with:
-
-  ALTER TABLE msgs ADD quar_loc varchar(255) DEFAULT '';
-
-This is a mandatory requirement for this version and future versions of MailZu.
 In other words, MailZu does not care which version of amavisd-new you are running,
-as long as the SQL tables match those that are needed by amavisd-new 2.4.0 or
+as long as the SQL tables match those that are needed by amavisd-new 2.7.0 or
 later.
 
 
@@ -164,12 +154,32 @@ This allows MailZu to give an index of all messages that were considered spam
 or banned. The index displays the To (admins only), From, Subject, Date, and 
 spam Score, for each message.
 
+To test if Amavis is filling correctly the tables maddr, msgs, and msgcrpt you
+can set $sql_store_info_for_all_msgs to 1 (the default)
+
+  $sql_store_info_for_all_msgs = 1;
+
+If everything runs fine, set $sql_store_info_for_all_msgs to 0 to tell amavis
+to not store non-quarantined messages info into SQL.
+
+  $sql_store_info_for_all_msgs = 0;
+
+
 If you want users to be able to view the body of their spam messages via MailZu,
 you must configure amavisd-new to quarantine messages to SQL. This can be done
 with
 
+  $virus_quarantine_method        = 'sql:';
   $banned_files_quarantine_method = 'sql:';
   $spam_quarantine_method         = 'sql:';
+  $bad_header_quarantine_method   = 'sql:';
+
+  $virus_quarantine_to     = 'virus-quarantine';
+  $banned_quarantine_to    = 'banned-quarantine';
+  $bad_header_quarantine_to= 'bad-header-quarantine';
+  $spam_quarantine_to      = 'spam-quarantine';
+
+
 
 This optional setting has no impact on MailZu's capability to release or
 request mail.
@@ -424,3 +434,4 @@ Set this option to determine the number of messages displayed per page:
 
   // Maximum number of messages displayed per page
   $conf['app']['displaySizeLimit'] = 50;
+
