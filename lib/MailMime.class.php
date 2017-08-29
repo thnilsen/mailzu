@@ -5,7 +5,7 @@
 * @version 04-12-05
 * @package MailEngine
 *
-* Copyright (C) 2003 - 2007 MailZu
+* Copyright (C) 2003 - 2017 MailZu
 * License: GPL, see LICENSE
 */
 /**
