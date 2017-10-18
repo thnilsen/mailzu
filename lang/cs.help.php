@@ -59,7 +59,7 @@
           Clicking the &quot;Help&quot; link brings a pop-up help window. Clicking
           the &quot;Email Administrator&quot; link will open a new mail addressed to the system's
           administrator.</p>
-          <p align="right"><a href="#top">Top</a></p>
+          <p class="alignright"><a href="#top">Top</a></p>
         <h5><a name="logging_in" id="logging_in"></a>Logging In</h5>
         <p>To log in, users must provide their login id and password. The login id
 	  may be your fully-qualified email address ('user@example.com') or simply
@@ -70,7 +70,7 @@
           you are the only person using MailZu on your computer.</i> After 
           logging in, you will be redirected to the <a href="#message_summary">
           Message Summary</a>.</p>
-        <p align="right"><a href="#top">Top</a></p>
+        <p class="alignright"><a href="#top">Top</a></p>
         <h5><a name="language" id="language"></a>Selecting My Language</h5>
         <p>On the login page, there will be a pull down menu with all of the
           available language translations that your administrator has included.
@@ -78,19 +78,19 @@
           will be translated. This will not translate any text related to actual
 	  email messages; it will only translate the application text. You will 
 	  need to log out to select a different language.</p>
-        <p align="right"><a href="#top">Top</a></p>        
+        <p class="alignright"><a href="#top">Top</a></p>        
         <h5><a name="getting_support" id="getting_support"></a>Getting
           Help</h5>
         <p>If you you need assistance with viewing your quarantined messages or any
 	  issue whatsoever, feel free to use the &quot;Email
           Administrator&quot; link located in <a href="#quick_links">My Quick Links</a>.</p>
-        <p align="right"><a href="#top">Top</a></p>        <p align="right">&nbsp;</p>
+        <p class="alignright"><a href="#top">Top</a></p>        <p class="alignright">&nbsp;</p>
         <hr width="95%" size="1" noshade="noshade" />
         <h4><a name="using_mailzu" id="using_mailzu"></a>Using MailZu</h4>
         <p>MailZu allows the user to view quarantined messages based on the type of messages. 
 	   The most prevalent types of messages which will be quarantined are those that are 
 	   considered spam, or contain a banned attachment.
-        <p align="right"><a href="#top">Top</a></p>
+        <p class="alignright"><a href="#top">Top</a></p>
         <h5><a name="quick_links" id="quick_links"></a>My Quick Links</h5>
         <p>The Quick Links table will provide you with common application links.
 	  The first, &quot;Quarantine Summary&quot; will give an overview of your message 
@@ -102,11 +102,11 @@
         <p>&quot;Help&quot; gives you this document.</p>
         <p>The final link, &quot;Log Out&quot; will log you out of your current
           session and return you to the log in screen.</p>
-        <p align="right"><a href="#top">Top</a></p>
+        <p class="alignright"><a href="#top">Top</a></p>
         <h5><a name="msg_summary" id="msg_summary"></a>Message Summary</h5>
 	<p> The message summary is the default page after login. It gives you a quick count of
 	  how many messages you have in your quarantine and their type.
-        <p align="right"><a href="#top">Top</a></p>
+        <p class="alignright"><a href="#top">Top</a></p>
         <h5><a name="msg_index" id="msg_index"></a>Message Indexes</h5>
         <p> Message indices show all the email for selected quarantined. 
 	  For each email quarantined, the index will show the From, Subject, and Date. Depending
@@ -122,18 +122,18 @@
 	<p>When viewing your pending requests you can withdraw the request by clicking 
 	   'Cancel Request'. The message will no longer be queued for administrator review.
 	</p>
-        <p align="right"><a href="#top">Top</a></p>
+        <p class="alignright"><a href="#top">Top</a></p>
         <h5><a name="search" id="search"></a>Message Search</h5>
         <p>Using the search function is a quick way to find a message you believe has been
 	   quarantined. You can search for a message by specifying either who its from, or
 	   what the subject is, or both. The search is not case sensitive.</p>
-        <p align="right"><a href="#top">Top</a></p> 
+        <p class="alignright"><a href="#top">Top</a></p> 
 	<h5><a name="msg_view" id="msg_view"></a>Message View</h5>
         <p>The Message View allows you to see the contents of the message to help
 	   determine if the message is legitimate. This view offers other options such
 	   as to display the original plain text email and see additional message headers.
 	</p>
-        <p align="right"><a href="#top">Top</a></p>        <p align="right">&nbsp;</p>
+        <p class="alignright"><a href="#top">Top</a></p>        <p class="alignright">&nbsp;</p>
 
         <hr width="95%" size="1" noshade="noshade" />
       </td>

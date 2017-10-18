@@ -73,7 +73,7 @@ class MailEngine {
 		$message = new Mail_mimeDecode($contents);
 		$msg_struct = $message->decode( array ( 'include_bodies' => true,
 							'decode_bodies' => true,
-							'decode_headers' => true)
+							'decode_headers' => 'UTF8//IGNORE')
 						);
 		return $msg_struct;
 	}

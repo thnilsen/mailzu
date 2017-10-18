@@ -6,7 +6,7 @@
 * @author Brian Wong <bwsource@users.sourceforge.net>
 * @author Nicolas Peyrussie <peyrouz@users.sourceforge.net>
 * @author Jeremy Fowler <jfowler06@users.sourceforge.net>
-* @version 29-08-2017
+* @version  29-08-2017
 * @package Templates
 *
 * Copyright (C) 2005 - 2017 MailZu
@@ -32,8 +32,13 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
 	global $conf;
 
 	// grab the display size limit set in config.php
-	$sizeLimit = isset ( $conf['app']['displaySizeLimit'] ) && is_numeric( $conf['app']['displaySizeLimit'] ) ?
+	if ( Auth::isMailAdmin() ) {
+    $sizeLimit = isset ( $conf['app']['displaySizeLimitAdmin'] ) && is_numeric( $conf['app']['displaySizeLimitAdmin'] ) ?
+			$conf['app']['displaySizeLimitAdmin'] : 100;
+    } else {
+    $sizeLimit = isset ( $conf['app']['displaySizeLimit'] ) && is_numeric( $conf['app']['displaySizeLimit'] ) ?
 			$conf['app']['displaySizeLimit'] : 50;
+    }
 
 	if ('ASC' == $vert) {
 		$new_vert = 'DESC';
@@ -63,7 +68,7 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
 		printActionButtons((! CmnFns::didSearch() && ! ("Site Quarantine" == $_SESSION['sessionNav'])) );
 		// Draw 'Select All, Clear All' and multi pages links 
 		printSelectAndPager($pager_html);
-	 
+ 
         	flush(); ?>
 
 		<table width="100%" border="0" cellspacing="0" cellpadding="1" align="center">
@@ -78,7 +83,7 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
 				</td>
 
         			<td class="tableTitle">
-            			<div align="right">
+            			<div class="alignright">
               				<?php $link->doLink('javascript: help(\'msg_index\');', '?', '', 'color: #FFFFFF;', translate('Help') . ' - ' . translate('My Quarantine')) ?>
             			</div>
         			</td>
@@ -130,8 +135,9 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
 				for ($i = $start_entry;  $i < $end_entry; $i++) {
 					$rs = $res[$i];
 					// Make sure that there is a clickable subject
-					// If there is some non parseable content in subject htmlspecialchars returns empty subject
-					//$subject = $rs['subject'] ? htmlspecialchars(mb_convert_encoding($rs['subject'],'UTF-8' )) : '(none)';
+                    // error_log(htmlspecialchars($rs['subject'],ENT_SUBSTITUTE));
+//                    error_log(mb_convert_encoding($rs['subject'],'UTF-8'));
+//					$subject = $rs['subject'] ? htmlspecialchars(mb_convert_encoding($rs['subject'],'UTF-8' )) : '(none)';
 					$subject = $rs['subject'] ? mb_encode_numericentity($rs['subject'],array(0x80, 0xff, 0, 0xff),'UTF-8') : '(none)';
 					$from = $rs['from_addr'] ? htmlspecialchars($rs['from_addr'],ENT_SUBSTITUTE) : '(none)';
 					if ( (count($_SESSION['sessionMail']) > 1) || (Auth::isMailAdmin() && 
@@ -220,7 +226,7 @@ function printSearchEngine($content_type, $submit_page, $full_search = false) {
 	    <a href="javascript: void(0);" onclick="showHideSearch('search');">&#8250; <?php echo translate('Search')?></a>
 	  </td>
 	  <td class="tableTitle">
-            <div align="right">
+            <div class="alignright">
               <?php $link->doLink('javascript: help(\'search\');', '?', '', 'color: #FFFFFF;', translate('Help') . ' - ' . translate('My Re
 servations')) ?>
             </div>
@@ -253,7 +259,7 @@ function printSelectAndPager($pager_html) {
 	<a href="javascript:CheckNone(document.messages_process_form);"><?php echo translate('Clear All'); ?></a>
 </td>
 <td>
-	<div align="right">
+	<div class="alignright">
 <?php
 	// Draw the paging links if more than 1 page
 	echo $pager_html . "\n";
@@ -311,7 +317,7 @@ function showFailedMessagesTable($action, $content_type, $res) {
  			?>
 			</td>
 					<td class="tableTitle">
-							<div align="right">
+							<div class"alignright">
 								<?php $link->doLink('javascript: help(\'msg_index\');', '?', '', 'color: #FFFFFF;', translate('Help') ) ?>
 							</div>
 					</td>

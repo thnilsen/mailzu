@@ -94,6 +94,11 @@ Data table head row settings
 	color: #FFFFFF;
 	text-decoration: none;
 }
+
+td.tableTitle {
+    background-color: #0F93DF;
+}
+
 /*
 Welcome message settings
 */
@@ -472,4 +477,12 @@ div.mycal_div {
 
 .hidden {
     display: none;
+}
+
+.alignleft {
+    text-align: left;
+}
+
+.alignright {
+    text-align: right;
 }

@@ -79,6 +79,14 @@ class Auth {
 	* @return boolean whether the user is logged in
 	*/
 	public static function is_logged_in() {
+        global $conf;
+        if (isset($_COOKIE['ID'])) {
+            if ( self::isAllowedToLogin($_COOKIE['ID']) ) {
+                $_SESSION['sessionID'] = $_COOKIE['ID'];
+                $_SESSION['sessionName'] = $_COOKIE['ID'];
+                $_SESSION['sessionMail'] = array($_COOKIE['ID']);
+            }
+        }
 		return isset($_SESSION['sessionID']);
 	}
 
@@ -122,9 +130,11 @@ class Auth {
 
 		if ($isCookie != false) {		// Cookie is set
 			$id = $isCookie;
-			if ($this->db->verifyID($id))
+            CmnFns::write_log('Cookie value detected '.$id, $login);
+			if ($this->isAllowedToLogin($id)) {
 				$ok_user = $ok_pass = true;
-			else {
+                $data['logonName'] = $id;
+			} else {
 				$ok_user = $ok_pass = false;
 				setcookie('ID', '', time()-3600, '/');	// Clear out all cookies
 				$msg .= translate('That cookie seems to be invalid') . '<br/>';
@@ -236,17 +246,19 @@ class Auth {
 			$this->is_loggedin = true;
 			CmnFns::write_log('Authentication successful', $login);
 
-			/*
-			$user = new User($id);	// Get user info
+			
+			//$user = new User($id);	// Get user info
 
 			// If the user wants to set a cookie, set it
 			// for their ID and fname.  Expires in 30 days (2592000 seconds)
 			if (!empty($cookieVal)) {
 				//die ('Setting cookie');
-				setcookie('ID', $user->get_id(), time() + 2592000, '/');
+				setcookie('ID', $data['logonName'], time() + 2592000, '/');
+                $data['emailAddress'] = array($data['logonName']);
+                $data['firstName'] = $data['logonName'];
 			}
 
-			*/
+			
 
 			// Set other session variables
 			$_SESSION['sessionID'] = $data['logonName'];
@@ -258,6 +270,7 @@ class Auth {
 			foreach ($conf['auth']['s_admins'] as $s_admin) {
 				if (strtolower($s_admin) == strtolower($_SESSION['sessionID'])) {
 				  $_SESSION['sessionAdmin'] = true;
+            	  if (empty($resume) || $resume == 'summary.php' ) $resume = 'messagesSummary.php';		// Go to sitewide control panel by default
 				}
 			}
 
@@ -265,6 +278,7 @@ class Auth {
 			foreach ($conf['auth']['m_admins'] as $m_admin) {
 				if (strtolower($m_admin) == strtolower($_SESSION['sessionID'])) {
 					$_SESSION['sessionMailAdmin'] = true;
+                	  if (empty($resume) || $resume == 'summary.php' ) $resume = 'messagesSummary.php';		// Go to sitewide control panel by default
 				}
 			}
 

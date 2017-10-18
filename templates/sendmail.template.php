@@ -34,7 +34,7 @@ function printsendmail(){
 
 				</td>
 				<td class="tableTitle">
-                                <div align="right">
+                                <div class="alignright">
                                         <?php $link->doLink('javascript: help(\'msg_index\');', '?', '', 'color: #FFFFFF;',
                                                 translate('Help') . ' - ' . translate('Email Administrator')) ?>
                                 </div>
@@ -44,7 +44,7 @@ function printsendmail(){
 
 		<table class="stdFont" width="100%" height="100%" border="0" cellspacing="1" cellpadding="0">
 
-			<tr class="cellColor" align="left">
+			<tr class="cellColor alignleft">
 			<form name="sendmail_to_admin_form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 			<td><br />
 			&nbsp;&nbsp;<?php echo translate('Subject') . ": " ;?><br />

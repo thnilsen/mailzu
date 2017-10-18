@@ -37,7 +37,7 @@ function showSummary($count_array) {
 			</td>
 
         		<td class="tableTitle">
-            		<div align="right">
+            		<div class="alignright">
               			<?php $link->doLink('javascript: help(\'msg_summary\');', '?', '', 'color: #FFFFFF;',
 					translate('Help') . ' - ' . translate($_SESSION['sessionNav'])) ?>
             		</div>

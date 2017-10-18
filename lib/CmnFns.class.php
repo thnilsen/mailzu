@@ -509,7 +509,7 @@ class CmnFns {
 		<table border=0 width="100%">
 		<form action="<?php echo $submit_page ?>" method="get" name="quarantine">
 			<tr><td colspan=2 align="center"><?php echo translate('Search for messages whose:'); ?>&nbsp;</td></tr>
-			<tr><td align="right">&nbsp;
+			<tr><td class="alignright">&nbsp;
 		<?php
 			$i = 1;
 			$array_size = count($fields_array);
@@ -531,7 +531,7 @@ class CmnFns {
 				echo "\t\t\t</select>\n";
 				echo "\t\t\t<input type='text' name='" . $k . "_string' size='20' value='"
 					. CmnFns::getGlobalVar($k . '_string', GET) . "' />\n";
-				echo ($i % 2) ? "\t\t\t&nbsp;</td>\n\t\t\t<td align='left'>&nbsp\n" : "\t\t\t&nbsp;</td></tr>\n\t\t\t<tr><td align='right'>&nbsp\n";
+				echo ($i % 2) ? "\t\t\t&nbsp;</td>\n\t\t\t<td class='alignleft'>&nbsp\n" : "\t\t\t&nbsp;</td></tr>\n\t\t\t<tr><td class='alignright'>&nbsp\n";
 				$i ++;
 			}
 		?>
@@ -553,7 +553,7 @@ class CmnFns {
 			<?php }
 			echo "</select>";
 			$i ++;
-			echo ($i % 2) ? "&nbsp;</td></tr>\n\t\t\t<tr><td colspan='2' align='center'>&nbsp\n" : "&nbsp;</td><td align='left'>&nbsp";
+			echo ($i % 2) ? "&nbsp;</td></tr>\n\t\t\t<tr><td colspan='2' align='center'>&nbsp\n" : "&nbsp;</td><td class='alignleft'>&nbsp";
 			?>
 			<input type="submit" class="button" name="search_action" value="<?php echo translate('Search'); ?>" />
 			<?php if (CmnFns::didSearch())

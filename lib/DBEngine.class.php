@@ -11,7 +11,7 @@
 * Following functions taken from PhpScheduleIt,
 * @author Nick Korbel <lqqkout13@users.sourceforge.net>
 * @version 03-29-05:
-*	db_connect(), check_for_error(), cleanRow(), get_err()
+*   db_connect(), check_for_error(), cleanRow(), get_err()
 *
 * Copyright (C) 2005 - 2017 MailZu
 * License: GPL, see LICENSE
@@ -117,9 +117,9 @@ class DBEngine {
                 break;
         }
 
+
 		// Set fetch mode to return associatve array
 		$db->setFetchMode(DB_FETCHMODE_ASSOC);
-
 
 		$this->db = $db;
 	}
@@ -380,8 +380,18 @@ class DBEngine {
 		}
 
 		// grab the display size limit set in config.php
-		$sizeLimit = isset ( $conf['app']['displaySizeLimit'] ) &&
-				is_numeric( $conf['app']['displaySizeLimit'] ) ? $conf['app']['displaySizeLimit'] : 50;
+//		$sizeLimit = isset ( $conf['app']['displaySizeLimit'] ) &&
+//				is_numeric( $conf['app']['displaySizeLimit'] ) ? $conf['app']['displaySizeLimit'] : 50;
+        if ( Auth::isMailAdmin() ) {
+            $sizeLimit = isset ( $conf['app']['displaySizeLimitAdmin'] ) && is_numeric( $conf['app']['displaySizeLimitAdmin'] ) ?
+                        $conf['app']['displaySizeLimitAdmin'] : 100;
+        } else {
+            $sizeLimit = isset ( $conf['app']['displaySizeLimit'] ) && is_numeric( $conf['app']['displaySizeLimit'] ) ?
+                        $conf['app']['displaySizeLimit'] : 50;
+        }
+
+
+
 
 		$rval = array();
 

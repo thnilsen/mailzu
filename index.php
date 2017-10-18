@@ -30,14 +30,14 @@ else if (isset($_POST['login'])) {
 	$msg = $auth->doLogin($_POST['email'], $_POST['password'], (isset($_POST['setCookie']) ? 'y' : null), false, $resume, $_POST['language'], isset($_POST['domain'])? $_POST['domain'] : '');
 }
 else if (isset($_COOKIE['ID'])) {
-    $msg = $auth->doLogin('', '', 'y', $_COOKIE['ID'], $resume);  	// Check if user has cookies set up. If so, log them in automatically 
+    $msg = $auth->doLogin($_COOKIE['ID'], '', 'y', $_COOKIE['ID'], $resume);  	// Check if user has cookies set up. If so, log them in automatically 
 }
 
 $t->printHTMLHeader();
 
 // Print out logoImage if it exists
 echo (!empty($conf['ui']['logoImage']))
-		? '<div align="left"><img src="' . $conf['ui']['logoImage'] . '" alt="logo" vspace="5"/></div>'
+		? '<div class="alignleft"><img src="' . $conf['ui']['logoImage'] . '" alt="logo" vspace="5"/></div>'
 		: '';
 
 $t->startMain();

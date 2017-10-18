@@ -9,7 +9,7 @@
 * @author Brian Wong <bwsource@users.sourceforge.net>
 * @author Nicolas Peyrussie <peyrouz@users.sourceforge.net>
 * @author Jeremy Fowler <jfowler06@users.sourceforge.net>
-* @version 29-08-2017
+* @version  29-08-2017
 * @package Languages
 *
 * Copyright (C) 2005 - 2017 MailZu

@@ -31,8 +31,8 @@ if (!Auth::is_logged_in()) {
 }
 
 // grab the display size limit set in config.php
-$sizeLimit = isset ( $conf['app']['displaySizeLimit'] ) && is_numeric( $conf['app']['displaySizeLimit'] ) ?
-	     $conf['app']['displaySizeLimit'] : 50;
+$sizeLimit = isset ( $conf['app']['displaySizeLimitAdmin'] ) && is_numeric( $conf['app']['displaySizeLimitAdmin'] ) ?
+	     $conf['app']['displaySizeLimitAdmin'] : 50;
 // Get current page number
 $requestedPage = CmnFns::getGlobalVar('page', GET);
 

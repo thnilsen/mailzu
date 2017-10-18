@@ -46,10 +46,10 @@ function showQuickLinks() {
     <td>
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td class="tableTitle" style="background-color:#0F93DF;">
+          <td class="tableTitle">
 		    <?php echo translate('My Quick Links')?>
 		  </td>
-          <td class="tableTitle" style="background-color:#0F93DF;"><div align="right">
+          <td class="tableTitle"><div class="alignright">
               <?php $link->doLink("javascript: help('quick_links');", '?', '', 'color: #FFFFFF', translate('Help') . ' - ' . translate('My Quick Links')) ?>
             </div>
           </td>
@@ -191,7 +191,7 @@ function printActionButtons( $printDeleteAll = true ) {
 ?>
 <table width="100%" border="0" cellspacing="1" cellpadding="0">
 <tr>
-	<td align="left"><input type="submit" class="button" name="action" value="<?php echo translate('Delete'); ?>">
+	<td class="alignleft"><input type="submit" class="button" name="action" value="<?php echo translate('Delete'); ?>">
 <?php
         if ( $printDeleteAll ) {
 		echo "<input type=\"submit\" class=\"button\" name=\"action\" value=\"".translate('Delete All')."\">";
@@ -199,7 +199,7 @@ function printActionButtons( $printDeleteAll = true ) {
 ?>
 	</td>
 <?php
-	echo "<td align=\"right\"><input type=\"submit\" class=\"button\" name=\"action\" value=\"";
+	echo "<td class=\"alignright\"><input type=\"submit\" class=\"button\" name=\"action\" value=\"";
 	if ($_SESSION['sessionNav'] == "My Pending Requests") {
 		echo ( Auth::isMailAdmin() ? translate('Release') : translate('Cancel Request') );
 	} else {

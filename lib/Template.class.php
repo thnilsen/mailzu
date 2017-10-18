@@ -88,7 +88,7 @@ class Template {
 
 		// Print out logoImage if it exists
 		echo (!empty($conf['ui']['logoImage']))
-			? '<div align="left"><img src="' . $conf['ui']['logoImage'] . '" alt="logo" vspace="5" /></div>'
+			? '<div class="alignleft" ><img src="' . $conf['ui']['logoImage'] . '" alt="logo" vspace="5" /></div>'
 			: '';
 	?>
 	<table width="100%" border="0" cellspacing="0" cellpadding="5" class="mainBorder">
@@ -108,7 +108,7 @@ class Template {
 		  </p>-->
 		</td>
 		<td class="mainBkgrdClr" valign="top">
-		  <div align="right">
+		  <div class="alignright">
 		    <p>
 			<?php echo  translate_date('header', time());?>
 			</p>
@@ -156,7 +156,7 @@ class Template {
 	function printHTMLFooter() {
 		global $conf;
 	?>
-	<p align="center"><a href="<?php echo $conf['app']['footlink']; ?>"><?php echo $conf['app']['title']?> v<?php echo $conf['app']['version'];?></a></p>
+    <p align="center"><a href="<?php echo $conf['app']['footlink']; ?>"><?php echo $conf['app']['title']?> v<?php echo $conf['app']['version'];?></a></p>
 	</body>
 	</html>
 	<?php

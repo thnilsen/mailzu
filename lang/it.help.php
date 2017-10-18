@@ -60,7 +60,7 @@ proprie credenziali.
 il link &quot;Scrivi all'Amministratore&quot; inizia la composizione di un email da inviare all'
 amministratore del sistema.
           </p>
-          <p align="right"><a href="#top">Torna su</a></p>
+          <p class="alignright"><a href="#top">Torna su</a></p>
         <h5><a name="logging_in" id="logging_in"></a>Autenticazione</h5>
         <p>L'autenticazione avviene tramite login e password. Il login pu&ograve;
 essere l'indirizzo email completo ('utente@dominio.it') o solo il proprio nome utente ('login'),
@@ -69,7 +69,7 @@ essere comunicata dall'Amministratore/Assistenza.<BR>Con l'opzione &quot;Ricorda
 il sistema utilizza i cookie per identificare l'utente ad ogni accesso futuro, senza richiedere
 pi&ugrave; login e password. <i>Utilizzare questa opzione solo se la postazione non &egrave;
 condivisa con altri utenti!</i><br>Dopo l'autenticazione appare la <a href="#message_summary">pagina principale</a>.</p>
-        <p align="right"><a href="#top">Torna su</a></p>
+        <p class="alignright"><a href="#top">Torna su</a></p>
         <h5><a name="language" id="language"></a>Scelta della Lingua</h5>
         <p>Nella pagina di login si pu&ograve; scegliere la lingua con cui navigare nella
 	propria quarantena. Solamente le lingue impostate dall'amministratore saranno
@@ -77,20 +77,20 @@ condivisa con altri utenti!</i><br>Dopo l'autenticazione appare la <a href="#mes
 	appariranno tradotti. Non verranno invece tradotti i messaggi email eventualmente
 	presenti in quarantena.<BR>
 	Per cambiare la lingua &egrave; necessario uscire e rientrare da MailZu.</p>
-        <p align="right"><a href="#top">Torna su</a></p>        
+        <p class="alignright"><a href="#top">Torna su</a></p>        
         <h5><a name="getting_support" id="getting_support"></a>Come richiedere assistenza
           </h5>
         <p>Per ricevere assistenza sull'utilizzo della quarantena delegata si prega di
 	contattare il servizio di Assistenza o l'Amministratore. Se disponibile si
 	pu&ograve; inviare una email all'Amministratore tramite il link del menu di sinistra.
           <p>
-        <p align="right"><a href="#top">Torna su</a></p>        <p align="right">&nbsp;</p>
+        <p class="alignright"><a href="#top">Torna su</a></p>        <p class="alignright">&nbsp;</p>
         <hr width="95%" size="1" noshade="noshade" />
         <h4><a name="using_mailzu" id="using_mailzu"></a>Utilizzo di MailZu</h4>
         <p>MailZu &egrave; una interfaccia Web per gestire la quarantena personale in sistemi
 	antispam. I messaggi bloccati in quarantena sono tipicamente spam o contengono
 	degli allegati non permessi.
-        <p align="right"><a href="#top">Torna su</a></p>
+        <p class="alignright"><a href="#top">Torna su</a></p>
         <h5><a name="quick_links" id="quick_links"></a>Menu</h5>
         <p>Il Menu riporta i link alle funzioni principali di questa applicazione.
 	Il primo, &quot;Statistiche Quarantena&quot; visualizza un riassunto del contenuto
@@ -103,11 +103,11 @@ condivisa con altri utenti!</i><br>Dopo l'autenticazione appare la <a href="#mes
         <p>&quot;Aiuto&quot; apre questo documento.</p>
         <p>L'ultimo link, &quot;Esci&quot;, chiude la sessione corrente e riporta la navigazione
 	alla pagina di login.</p>
-        <p align="right"><a href="#top">Torna su</a></p>
+        <p class="alignright"><a href="#top">Torna su</a></p>
         <h5><a name="msg_summary" id="message_summary"></a>Statistiche Quarantena</h5>
 	<p>Le statistiche della propria quarantena compaiono nella prima pagina dopo il login.
 	Forniscono un panorama sul numero e tipo di messaggi in quarantena.
-        <p align="right"><a href="#top">Torna su</a></p>
+        <p class="alignright"><a href="#top">Torna su</a></p>
         <h5><a name="msg_index" id="msg_index"></a>Quarantena</h5>
         <p> La pagina di quarantena mostra l'elenco dei messaggi presenti in quarantena.
 	Per ogni email bloccato il riassunto mostra il mittente, l'oggetto, la data e il
@@ -124,19 +124,19 @@ condivisa con altri utenti!</i><br>Dopo l'autenticazione appare la <a href="#mes
 	su 'Cancella la Richiesta'. In questo modo il messaggio verr&agrave; rimosso dalla coda in
 	attesa di revisione da parte dell'Amministratore.
 	</p>
-        <p align="right"><a href="#top">Torna su</a></p>
+        <p class="alignright"><a href="#top">Torna su</a></p>
         <h5><a name="search" id="search"></a>Funzioni di ricerca</h5>
         <p>La funzione di ricerca permette di impostare un filtro nella visualizzazione dei messaggi.
 	&Egrave; possibile specificare il mittente, l'oggetto o il tipo di messaggio (spam o non
 	permesso). La ricerca non distingue tra maiuscole e minuscole.</p>
-        <p align="right"><a href="#top">Torna su</a></p> 
+        <p class="alignright"><a href="#top">Torna su</a></p> 
 	<h5><a name="msg_view" id="msg_view"></a>Messaggio</h5>
         <p>La vista Messaggio mostra una anteprima del messaggio trattenuto in quarantena per determinare
 	se si tratta effettivamente di spam. Questa pagina consente di visualizzare tutte le intestazioni
 	(&quot;Intestazioni Si/no&quot;) e il &quot;Messaggio Originale&quot;.
 The Message View allows you to see the contents of the message to help
 	</p>
-        <p align="right"><a href="#top">Torna su</a></p>        <p align="right">&nbsp;</p>
+        <p class="alignright"><a href="#top">Torna su</a></p>        <p class="alignright">&nbsp;</p>
 
         <hr width="95%" size="1" noshade="noshade" />
       </td>

@@ -58,6 +58,10 @@ a:hover {
 }
 -->
 </style>
+<style type="text/css">
+    @import url(<?php echo $path?>css.css);
+</style>
+
 </head>
 <body>
 <?php

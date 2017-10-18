@@ -24,11 +24,11 @@ function startMessage() {
     <td style="vertical-align:top; width:16%; border:solid 2px #0F93DF; background-color:#FFFFFF;">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td class="tableTitle" style="background-color:#0F93DF;">
+          <td class="tableTitle">
             <?php echo translate('Message'); ?>
           </td>
-          <td class="tableTitle" style="background-color:#0F93DF;">
-            <div align="right"
+          <td class="tableTitle">
+            <div class="alignright">
               <a href="javascript: help('msg_view');" class="" style="color: #FFFFFF" onmouseover="javascript: window.status='Help - Message View'; return true;" onmouseout="javascript: window.status=''; return true;">?</a>
             </div>
           </td>
@@ -121,10 +121,10 @@ function MsgDisplayOptions($mail_id, $recip_email) {
 ?>
 <table class="stdFont" width="100%">
   <tr>
-    <td align="left">
+    <td class="alignleft">
       <a href="javascript: history.back();">&#8249;&#8249; <?php echo translate('BackMessageIndex'); ?> </a>
     </td>
-    <td align="right">
+    <td class="alignright">
       <a href="javascript: ViewOriginal('<?php echo $enc_mail_id ?>','<?php echo $enc_recip_email ?>');"> <?php echo translate('ViewOriginal'); ?></a>
       |
       <a href="javascript: void(1);" onclick="showHideFullHeaders('headers');">
@@ -143,7 +143,7 @@ function MsgOriginalOptions() {
 ?>
   <table width="100%">
    <tr>
-    <td class="stdFont" align="right">
+    <td class="stdFont alignright">
       <a href="javascript: window.print();"> <?php echo translate('Print'); ?></a>
        |
       <a href="javascript: window.close();"> <?php echo translate('CloseWindow'); ?> </a>
@@ -170,6 +170,7 @@ function MsgDisplayHeaders($struct) {
 	$headers_full = array ("Received", 
 			       "Message-ID",
 			       "X-Spam-Status",
+			       "X-Spam-LastReverse",
 			       "X-Amavis-Alert"
 			      ); 
 	

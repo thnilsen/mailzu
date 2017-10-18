@@ -62,7 +62,7 @@
 			 emergente con la ayuda. Pulsando en el enlace &quot;Correo al
 			 Administrador&quot; mandar&aacute; un correo electr&oacute;nico al
 			 administrador del sistema.</p>
-          <p align="right"><a href="#top">Arriba</a></p>
+          <p class="alignright"><a href="#top">Arriba</a></p>
         <h5><a name="logging_in" id="logging_in"></a>Iniciando sesi&oacute;n</h5>
         <p>Para iniciar sesi&oacute;n, los usuarios deben establecer su
 		  identificador de usuario y su contrase&ntilde;a. El identificador de
@@ -76,7 +76,7 @@
 		  &uacute;nica persona que usa MailZu en su computadora.</i>
 		  Despu&eacute;s de iniciar sesi&oacute;n ser&aacute; redirigido al <a
 		  href="#message_summary">Resumen de mensajes</a>.</p>
-        <p align="right"><a href="#top">Arriba</a></p>
+        <p class="alignright"><a href="#top">Arriba</a></p>
         <h5><a name="language" id="language"></a>Seleccionando Mi Lenguaje</h5>
         <p>En la p&aacute;gina de inicio de sesi&oacute;n, encontrar&aacute; un
 		  men&uacute; desplegable con todos los lenguajes traducidos disponibles
@@ -86,12 +86,12 @@
 		  electr&oacute;nicos; s&oacute;lo traduce los textos de la
 		  aplicaci&oacute;n. Necesitar&aacute; salir de sesi&oacute;n para
 		  seleccionar un lenguaje diferente.</p>
-        <p align="right"><a href="#top">Arriba</a></p>        
+        <p class="alignright"><a href="#top">Arriba</a></p>        
         <h5><a name="getting_support" id="getting_support"></a>Obteniendo Ayuda</h5>
         <p>Si necesita asistencia de sus mensajes en cuarentena o cualquier otra
 		  cosa, no dude en usar el enlace &quot;Correo al Administrador&quot;
 		  localizado en <a href="#quick_links">Mis enlaces r&aacute;pidos</a>.</p>
-        <p align="right"><a href="#top">Arriba</a></p>        <p align="right">&nbsp;</p>
+        <p class="alignright"><a href="#top">Arriba</a></p>        <p class="alignright">&nbsp;</p>
         <hr width="95%" size="1" noshade="noshade" />
         <h4><a name="using_mailzu" id="using_mailzu"></a>Usar MailZu</h4>
         <p>MailZu permite a los usuarios ver los mensajes en cuarentena
@@ -99,7 +99,7 @@
 		  Los tipos m&aacute;s frecuentes de mensaje que entrar&aacute;n en
 		  cuarentena ser&aacute;n aquellos que sean considerados spam o que
 		  contengan adjuntos prohibidos.
-        <p align="right"><a href="#top">Arriba</a></p>
+        <p class="alignright"><a href="#top">Arriba</a></p>
         <h5><a name="quick_links" id="quick_links"></a>Mis enlaces rápidos</h5>
         <p>La tabla de enlaces rápidos le ofrecer&aacute; los enlaces mas
 		  comunes.
@@ -113,12 +113,12 @@
         <p>El &uacute;ltimo enlace, &quot;Salir de sesi&oacute;n&quot;
 		  saldr&aacute; de su sesi&oacute;n actual y volver&aacute; a la pantalla
 		  de inicio de sesi&oacute;n.</p>
-        <p align="right"><a href="#top">Arriba</a></p>
+        <p class="alignright"><a href="#top">Arriba</a></p>
         <h5><a name="msg_summary" id="msg_summary"></a>Resumen de mensajes</h5>
 	<p> El resumen de mensajes es la p&aacute;gina por defecto tras iniciar
 	sesi&oacute;n. Le ofrece un contaje r&aacute;pido de cuantos mensajes tiene
 	en su cuarentena y su tipo.
-        <p align="right"><a href="#top">Arriba</a></p>
+        <p class="alignright"><a href="#top">Arriba</a></p>
         <h5><a name="msg_index" id="msg_index"></a>&Iacute;ndice de mensajes</h5>
         <p>&Iacute;ndice de mensajes muestra todos los mensajes de la cuarentena
 		  seleccionada.
@@ -141,20 +141,20 @@
 	<p>Mientas este viendo sus peticiones pendientes puede retirar la
 	petici&oacute;n pulsando sobre 'Cancelar petici&oacute;n'. El mensaje ya no
 	estar&aacute; encolado para que el administrador lo revise.</p>
-        <p align="right"><a href="#top">Arriba</a></p>
+        <p class="alignright"><a href="#top">Arriba</a></p>
         <h5><a name="search" id="search"></a>B&uacute;scar mensaje</h5>
         <p>Usando la funci&oacute;n buscar, dispondr&aacute; de una manera
 		  r&aacute;pida para encontrar un mensaje que crea que se encuentra en
 		  cuarentena. Puede buscar un mensaje especificando tanto qui&eacute;n es
 		  remitente, como cual es su asunto, o ambos. La b&uacute;squeda no es
 		  sensible a may&uacute;sculas y min&uacute;sculas.</p>
-        <p align="right"><a href="#top">Arriba</a></p> 
+        <p class="alignright"><a href="#top">Arriba</a></p> 
 	<h5><a name="msg_view" id="msg_view"></a>Ver mensaje</h5>
         <p>Ver mensaje le permite ver el contenido del mismo para ayudarle a
 		  determinar si se trata de un mensaje leg&iacute;timo. Esta vista le
 		  ofrece otras opciones como mostrar el mensaje original en texto plano y
 		  ver las cabeceras adicionales.	</p>
-        <p align="right"><a href="#top">Arriba</a></p>        <p align="right">&nbsp;</p>
+        <p class="alignright"><a href="#top">Arriba</a></p>        <p class="alignright">&nbsp;</p>
 
         <hr width="95%" size="1" noshade="noshade" />
       </td>
