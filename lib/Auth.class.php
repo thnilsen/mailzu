@@ -55,7 +55,7 @@ class Auth {
 	* @param none
 	* @return boolean whether the user is a s_admin
 	*/
-	function isAdmin() {
+	public static function isAdmin() {
 		return isset($_SESSION['sessionAdmin']);
 	}
 
@@ -67,7 +67,7 @@ class Auth {
         * @param none
         * @return boolean whether the user is a m_admin
         */
-        function isMailAdmin() {
+        public static function isMailAdmin() {
                 return (isset($_SESSION['sessionMailAdmin']) || isset($_SESSION['sessionAdmin']));
         }
 
@@ -78,7 +78,7 @@ class Auth {
 	* @param none
 	* @return boolean whether the user is logged in
 	*/
-	function is_logged_in() {
+	public static function is_logged_in() {
 		return isset($_SESSION['sessionID']);
 	}
 

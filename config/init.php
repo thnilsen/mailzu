@@ -34,9 +34,6 @@
 // Start the session (do not edit!)
 session_start();
 
-// Turn off magic quotes (do not edit!)
-set_magic_quotes_runtime(0);
-
 $conf['app']['version'] = '0.9-github-gnafixes';
 $conf['app']['footlink'] = 'https://github.com/gnanet/mailzu';
 

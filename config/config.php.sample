@@ -259,13 +259,21 @@ $conf['auth']['imap_hosts'] = array( 'imaphost.example.com:143' );
 
 // IMAP type
 /* Options are:
-	imap	 -> default
-	imaptls  -> do not do start-TLS to encrypt the session, even with servers that support it
-	imapssl  -> use the Secure Socket Layer to encrypt the session
-	imapcert -> use the Secure Socket Layer to encrypt the session,
-		    do not validate certificates from TLS/SSL server, needed if server uses self-signed certificates
+        imap     -> default - do not do start-TLS to encrypt the session, even with servers that support it
+        imaptls  -> force use of start-TLS to encrypt the session, and reject connection to servers that do not support it
+        imaptlscert  -> force use of start-TLS to encrypt the session, and reject connection to servers that do not support it
+                    do not validate certificates from TLS/SSL server, needed if server uses self-signed certificates
+        imapssl  -> use the Secure Socket Layer to encrypt the session
+        imapcert -> use the Secure Socket Layer to encrypt the session,
+                    do not validate certificates from TLS/SSL server, needed if server uses self-signed certificates
+
+
+# localhost imap with and without ssl
+# $authhost="{localhost:993/imap/ssl/novalidate-cert}";
+# $authhost="{localhost:143/imap/notls}";
+
 */
-$conf['auth']['imap_type'] = 'imapssl';
+$conf['auth']['imap_type'] = 'imap';
 
 // Domain name part of the email address, (e.g.: example.com)
 $conf['auth']['imap_domain_name'] = 'example.com';

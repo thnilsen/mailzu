@@ -110,7 +110,7 @@ class Template {
 		<td class="mainBkgrdClr" valign="top">
 		  <div align="right">
 		    <p>
-			<?php echo  translate_date('header', mktime());?>
+			<?php echo  translate_date('header', time());?>
 			</p>
 			<!--<p>
 			  <?php $this->link->doLink('javascript: help();', translate('Help')) ?>

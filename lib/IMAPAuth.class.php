@@ -71,11 +71,15 @@ class IMAPAuth {
                     break;
 
                  case "imaptls":
-                    $host = '{'.$host."/imap/notls}INBOX";
+                    $host = '{'.$host."/imap/tls}INBOX";
+                    break;
+
+                 case "imaptlscert":
+                    $host = '{'.$host."/imap/tls/novalidate-cert}INBOX";
                     break;
 
                  default:
-                    $host = '{'.$host.'}INBOX';
+                    $host = '{'.$host."/imap/notls}INBOX";
               }
 
               //error_reporting(0);
