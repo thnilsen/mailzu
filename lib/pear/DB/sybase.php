@@ -6,7 +6,7 @@
  * The PEAR DB driver for PHP's sybase extension
  * for interacting with Sybase databases
  *
- * PHP versions 4 and 5
+ * PHP version 5
  *
  * LICENSE: This source file is subject to version 3.0 of the PHP license
  * that is available through the world-wide-web at the following URI:
@@ -19,9 +19,9 @@
  * @author     Sterling Hughes <sterling@php.net>
  * @author     Antônio Carlos Venâncio Júnior <floripa@php.net>
  * @author     Daniel Convissor <danielc@php.net>
- * @copyright  1997-2005 The PHP Group
+ * @copyright  1997-2007 The PHP Group
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    CVS: $Id: sybase.php,v 1.85 2007/02/06 07:35:07 aharvey Exp $
+ * @version    CVS: $Id$
  * @link       http://pear.php.net/package/DB
  */
 
@@ -44,9 +44,9 @@ require_once 'DB/common.php';
  * @author     Sterling Hughes <sterling@php.net>
  * @author     Antônio Carlos Venâncio Júnior <floripa@php.net>
  * @author     Daniel Convissor <danielc@php.net>
- * @copyright  1997-2005 The PHP Group
+ * @copyright  1997-2007 The PHP Group
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    Release: 1.7.11
+ * @version    Release: 1.9.2
  * @link       http://pear.php.net/package/DB
  */
 class DB_sybase extends DB_common
@@ -141,13 +141,13 @@ class DB_sybase extends DB_common
     // {{{ constructor
 
     /**
-     * This constructor calls <kbd>$this->DB_common()</kbd>
+     * This constructor calls <kbd>parent::__construct()</kbd>
      *
      * @return void
      */
-    function DB_sybase()
+    function __construct()
     {
-        $this->DB_common();
+        parent::__construct();
     }
 
     // }}}
@@ -479,7 +479,7 @@ class DB_sybase extends DB_common
                     return $this->raiseError($result);
                 }
             } elseif (!DB::isError($result)) {
-                $result =& $this->query("SELECT @@IDENTITY FROM $seqname");
+                $result = $this->query("SELECT @@IDENTITY FROM $seqname");
                 $repeat = 0;
             } else {
                 $repeat = false;

@@ -6,7 +6,7 @@
  * The PEAR DB driver for PHP's ifx extension
  * for interacting with Informix databases
  *
- * PHP versions 4 and 5
+ * PHP version 5
  *
  * LICENSE: This source file is subject to version 3.0 of the PHP license
  * that is available through the world-wide-web at the following URI:
@@ -18,9 +18,9 @@
  * @package    DB
  * @author     Tomas V.V.Cox <cox@idecnet.com>
  * @author     Daniel Convissor <danielc@php.net>
- * @copyright  1997-2005 The PHP Group
+ * @copyright  1997-2007 The PHP Group
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    CVS: $Id: ifx.php,v 1.74 2007/01/12 03:11:17 aharvey Exp $
+ * @version    CVS: $Id$
  * @link       http://pear.php.net/package/DB
  */
 
@@ -46,9 +46,9 @@ require_once 'DB/common.php';
  * @package    DB
  * @author     Tomas V.V.Cox <cox@idecnet.com>
  * @author     Daniel Convissor <danielc@php.net>
- * @copyright  1997-2005 The PHP Group
+ * @copyright  1997-2007 The PHP Group
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    Release: 1.7.11
+ * @version    Release: 1.9.2
  * @link       http://pear.php.net/package/DB
  */
 class DB_ifx extends DB_common
@@ -167,13 +167,13 @@ class DB_ifx extends DB_common
     // {{{ constructor
 
     /**
-     * This constructor calls <kbd>$this->DB_common()</kbd>
+     * This constructor calls <kbd>parent::__construct()</kbd>
      *
      * @return void
      */
-    function DB_ifx()
+    function __construct()
     {
-        $this->DB_common();
+        parent::__construct();
     }
 
     // }}}
@@ -536,7 +536,7 @@ class DB_ifx extends DB_common
      */
     function errorCode($nativecode)
     {
-        if (ereg('SQLCODE=(.*)]', $nativecode, $match)) {
+        if (preg_match('/SQLCODE=(.*)]/', $nativecode, $match)) {
             $code = $match[1];
             if (isset($this->errorcode_map[$code])) {
                 return $this->errorcode_map[$code];
