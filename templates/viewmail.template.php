@@ -221,7 +221,7 @@ function MsgBodyHtmlText($text) {
 */ 
 function MsgDisplayFooter() {
 	// Globals read from MailMime.class.php
-	global $filelist;
+        global $filelist, $link, $mail_id, $recip_email;
 	global $errors;
 	if ( $filelist || $errors ) {
 	// Space before attachment or warning list
@@ -233,8 +233,11 @@ function MsgDisplayFooter() {
 	
 	  if ($filelist) {
 	    echo '--Attachments--<br>';
-	    foreach ($filelist as $file) {
-	      echo $file . '<br>';
+            foreach ($filelist as $fileid=>$file) {
+              echo $link->getLink('get_attachment.php' . '?mail_id=' . urlencode($mail_id) .
+                                                "&amp;recip_email=" . urlencode($recip_email) .
+                                                "&amp;fileid=".$fileid.
+                                                "&amp;$query_string", $file, '', '', '', false)."<br>";
 	    }
        	  }
 	  if ($errors) {

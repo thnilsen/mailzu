@@ -122,6 +122,10 @@ or:
   @storage_sql_dsn = @lookup_sql_dsn; # If you plan to use the same database
 				      # as the SQL lookups
 
+Note that the database schema is not automatically created by Amavisd-new.
+You usually can find the necessary SQL commands to create the schema in
+/usr/share/doc/amavisd-new/README.sql-mysql.gz
+
 Specify the ports that amavisd-new should bind to.
 
   $inet_socket_bind = undef; 	      # Bind on all interfaces

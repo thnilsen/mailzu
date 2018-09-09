@@ -114,10 +114,10 @@ function get_browser_lang() {
 	global $languages;
 		
 	if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && !empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-		$http_accepted = split(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);
+                $http_accepted = explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);
 		for ($i = 0; $i < count($http_accepted); $i++) {
 			foreach ($languages as $lang => $vals) {
-				if (eregi($vals[0], $http_accepted[$i]))
+                                if (stripos($http_accepted[$i], $vals[0])!==false)
 					return $lang;
 			}
 		}	

@@ -6,7 +6,7 @@
  * The PEAR DB driver for PHP's mysqli extension
  * for interacting with MySQL databases
  *
- * PHP versions 4 and 5
+ * PHP version 5
  *
  * LICENSE: This source file is subject to version 3.0 of the PHP license
  * that is available through the world-wide-web at the following URI:
@@ -17,9 +17,9 @@
  * @category   Database
  * @package    DB
  * @author     Daniel Convissor <danielc@php.net>
- * @copyright  1997-2005 The PHP Group
+ * @copyright  1997-2007 The PHP Group
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    CVS: $Id: mysqli.php,v 1.79 2007/03/20 10:22:04 aharvey Exp $
+ * @version    CVS: $Id$
  * @link       http://pear.php.net/package/DB
  */
 
@@ -41,9 +41,9 @@ require_once 'DB/common.php';
  * @category   Database
  * @package    DB
  * @author     Daniel Convissor <danielc@php.net>
- * @copyright  1997-2005 The PHP Group
+ * @copyright  1997-2007 The PHP Group
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    Release: 1.7.11
+ * @version    Release: 1.9.2
  * @link       http://pear.php.net/package/DB
  * @since      Class functional since Release 1.6.3
  */
@@ -224,13 +224,13 @@ class DB_mysqli extends DB_common
     // {{{ constructor
 
     /**
-     * This constructor calls <kbd>$this->DB_common()</kbd>
+     * This constructor calls <kbd>parent::__construct()</kbd>
      *
      * @return void
      */
-    function DB_mysqli()
+    function __construct()
     {
-        $this->DB_common();
+        parent::__construct();
     }
 
     // }}}
@@ -271,7 +271,7 @@ class DB_mysqli extends DB_common
      *     'ssl' => true,
      * );
      * 
-     * $db =& DB::connect($dsn, $options);
+     * $db = DB::connect($dsn, $options);
      * if (PEAR::isError($db)) {
      *     die($db->getMessage());
      * }
@@ -497,7 +497,11 @@ class DB_mysqli extends DB_common
      */
     function freeResult($result)
     {
-        return is_resource($result) ? mysqli_free_result($result) : false;
+        if (! $result instanceof mysqli_result) {
+            return false;
+        }
+        mysqli_free_result($result);
+        return true;
     }
 
     // }}}
@@ -962,6 +966,13 @@ class DB_mysqli extends DB_common
     function tableInfo($result, $mode = null)
     {
         if (is_string($result)) {
+            // Fix for bug #11580.
+            if ($this->_db) {
+                if (!@mysqli_select_db($this->connection, $this->_db)) {
+                    return $this->mysqliRaiseError(DB_ERROR_NODBSELECTED);
+                }
+            }
+
             /*
              * Probably received a table name.
              * Create a result resource identifier.
@@ -986,7 +997,7 @@ class DB_mysqli extends DB_common
             $got_string = false;
         }
 
-        if (!is_a($id, 'mysqli_result')) {
+        if (!is_object($id) || !is_a($id, 'mysqli_result')) {
             return $this->mysqliRaiseError(DB_ERROR_NEED_MORE_DATA);
         }
 
@@ -1024,6 +1035,10 @@ class DB_mysqli extends DB_common
                                     ? $this->mysqli_types[$tmp->type]
                                     : 'unknown',
                 // http://bugs.php.net/?id=36579
+                //  Doc Bug #36579: mysqli_fetch_field length handling
+                // https://bugs.php.net/bug.php?id=62426
+                //  Bug #62426: mysqli_fetch_field_direct returns incorrect
+                //  length on UTF8 fields
                 'len'   => $tmp->length,
                 'flags' => $flags,
             );
