@@ -5,10 +5,11 @@
 * @author Nick Korbel <lqqkout13@users.sourceforge.net>
 * @author Adam Moore
 * @author David Poole <David.Poole@fccc.edu>
-* @version 03-11-05
+* @version 07-09-2018
 * @package Templates
 *
 * Copyright (C) 2003 - 2005 phpScheduleIt
+* Copyright (C) 2005 - 2018 MailZu
 * License: GPL, see LICENSE
 */
 

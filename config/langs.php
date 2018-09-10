@@ -4,7 +4,7 @@
 *  translating the text
 * A few ideas and techniques were taken from the phpMyAdmin project
 * @author Nick Korbel <lqqkout13@users.sourceforge.net>
-* @version  29-08-2017
+* @version 26-08-2018
 * @package Languages
 *
 * Copyright (C) 2003 - 2005 phpScheduleIt
@@ -101,7 +101,7 @@ function load_language_file() {
 	}
 	else {
 		die('Could not load language file: ' . $languages[$lang][1]);
-		setcookie('lang', '', time() - 2592000, '/');
+                setcookie('lang', '', time() - 2592000, '/'.basename($conf['app']['weburi']));
 	}
 }
 
@@ -141,7 +141,7 @@ function set_language($lang) {
 	
 	@session_start();
 	setlocale(LC_ALL, $lang);
-	setcookie('lang', $lang, time() + 2592000, '/');	
+        setcookie('lang', $lang, time() + 2592000, '/'.basename($conf['app']['weburi']));
 }
 
 /**

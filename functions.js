@@ -34,9 +34,17 @@ function showHideSearch(element) {
 	var showHide = "";
 	if (document.getElementById(element).style.display == "none") {
 		document.getElementById(element).style.display='block';
+                if (document.getElementById(element+'_closed')) {
+                document.getElementById(element+'_closed').style.display='none';
+                document.getElementById(element+'_td').style.width='16vw';
+                }
 		showHide = "show";
 	} else {
 		document.getElementById(element).style.display='none';
+                if (document.getElementById(element+'_closed')) {
+                document.getElementById(element+'_closed').style.display='block';
+                document.getElementById(element+'_td').style.width='3vw';
+                }
 		showHide = "hide";
 	}
 	
@@ -63,8 +71,9 @@ function showHideFullHeaders(table) {
 function changeLanguage(opt) {
 	var expires = new Date();
 	var time = expires.getTime() + 2592000000;
+        var cpath = document.location.href.replace( /\\/g, '/' ).replace( /\/[^\/]*$/, '' ).replace( /\\/g, '/' ).replace( /.*\//, '' );
 	expires.setTime(time);
-	document.cookie = "lang=" + opt.options[opt.selectedIndex].value + ";expires=" + expires.toGMTString() + ";path=/";
+        document.cookie = "lang=" + opt.options[opt.selectedIndex].value + ";expires=" + expires.toGMTString() + ";path=/" + cpath;
 	document.location.href = document.URL;
 }
 

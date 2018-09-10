@@ -85,8 +85,24 @@ class Auth {
                 $_SESSION['sessionID'] = $_COOKIE['ID'];
                 $_SESSION['sessionName'] = $_COOKIE['ID'];
                 $_SESSION['sessionMail'] = array($_COOKIE['ID']);
+                        // If it is the super admin, set session variable
+                        foreach ($conf['auth']['s_admins'] as $s_admin) {
+                                if (strtolower($s_admin) == strtolower($_SESSION['sessionID'])) {
+                                  $_SESSION['sessionAdmin'] = true;
             }
         }
+
+                        // If it is the mail admin, set session variable
+                        foreach ($conf['auth']['m_admins'] as $m_admin) {
+                                if (strtolower($m_admin) == strtolower($_SESSION['sessionID'])) {
+                                        $_SESSION['sessionMailAdmin'] = true;
+                                }
+                        }
+
+            }
+        }
+
+
 		return isset($_SESSION['sessionID']);
 	}
 

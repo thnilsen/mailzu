@@ -506,8 +506,8 @@ class CmnFns {
 		if ($full_search) $fields_array = array_merge(array("t" => translate('To')), $fields_array);
 
 		?>
-		<table border=0 width="100%">
-		<form action="<?php echo $submit_page ?>" method="get" name="quarantine">
+                <table id="searchenginetbl" border=0 width="100%">
+                <tbody><form action="<?php echo $submit_page ?>" method="get" name="quarantine">
 			<tr><td colspan=2 align="center"><?php echo translate('Search for messages whose:'); ?>&nbsp;</td></tr>
 			<tr><td class="alignright">&nbsp;
 		<?php
@@ -560,7 +560,7 @@ class CmnFns {
 				echo "<input type=\"submit\" class=\"button\" name=\"search_action\" value=\"" . translate('Clear search results') . "\" />";
 			?>
 			&nbsp;</td></tr>
-		</form>
+                </form></tbody>
 		</table>
 		<?php
 

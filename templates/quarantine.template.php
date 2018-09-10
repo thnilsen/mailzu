@@ -71,12 +71,12 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
  
         	flush(); ?>
 
-		<table width="100%" border="0" cellspacing="0" cellpadding="1" align="center">
+                <table id="messagestbl" width="100%" border="0" cellspacing="0" cellpadding="1" align="center">
   			<tr>
     			<td class="tableBorder">
 
 			<!-- Draw 'Showing messages ...' table -->
-      			<table width="100%" border="0" cellspacing="1" cellpadding="0">
+                        <table id="messageslisthdr" width="100%" border="0" cellspacing="1" cellpadding="0">
         			<tr>
 				<td colspan="5" class="tableTitle">
 				<?php echo translate('Showing messages', array( number_format($page*$sizeLimit+1), number_format($page*$sizeLimit+$end_entry), $count )); ?>
@@ -91,9 +91,9 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
       			</table>
 
 			<!-- Print messages table -->
-      			<table width="100%" border="0" cellspacing="1" cellpadding="0">
+                        <table id="messageslisttbl" width="100%" border="0" cellspacing="1" cellpadding="0">
 				<!-- Print table's headers -->
-			<tr class="rowHeaders">
+                        <tr class="rowHeaders quarcell">
 				<td width="2%">&nbsp;</td>
 				<?php if ( (count($_SESSION['sessionMail']) > 1) || ((Auth::isMailAdmin()) &&
 				      ("Site Quarantine" == $_SESSION['sessionNav'] || "Site Pending Requests" == $_SESSION['sessionNav']))) { ?>
@@ -151,10 +151,10 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
 						name="mail_id_array[]" value="' . $rs['mail_id'] . '_' . $rs['email'] . '"></td>';
 					if ( (count($_SESSION['sessionMail']) > 1) || (Auth::isMailAdmin() && 
 					   ("Site Quarantine" == $_SESSION['sessionNav'] || "Site Pending Requests" == $_SESSION['sessionNav']))) {
-						echo '  <td>' . $to . '</td>';
+                                                echo '  <td class="quarcell">' . $to . '</td>';
 					}
-					echo '  <td>' . $from . '</td>';
-					echo '  <td>' . 
+                                        echo '  <td class="quarcell">' . $from . '</td>';
+                                        echo '  <td class="quarcell">' . 
 						// Only allow link to view mail if the mail is stored in SQL
 						($rs['quar_type'] == 'Q' ?
 						$link->getLink('read_mail.php' . '?mail_id=' . urlencode($rs['mail_id']) .
@@ -163,9 +163,9 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
 						translate('View this message'), ($rs['rs']=='v' || $rs['rs']=='p' ? false : true)) 
 						: "<b>$subject</b>") . 
 						'</td>';
-					echo '  <td>' . CmnFns::formatDateTime($rs['time_num']) . '</td>';
+                                        echo '  <td class="quarcell">' . CmnFns::formatDateTime($rs['time_num']) . '</td>';
 
-					echo '  <td>' . ( $rs['content'] == 'S' ? $rs['spam_level'] : 'N/A') . '</td>';
+                                        echo '  <td class="quarcell">' . ( $rs['content'] == 'S' ? $rs['spam_level'] : 'N/A') . '</td>';
 					
 					switch ($rs['content']) {
 					case 'S':
@@ -182,11 +182,11 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
 						break;	
 					}
 
-					echo ( $rs['content'] == 'V' ? '<td class="typeVirus">' : '<td>') . $type . '</td>';
+                                        echo ( $rs['content'] == 'V' ? '<td class="typeVirus quarcell">' : '<td class="quarcell">') . $type . '</td>';
 
 					if ( Auth::isMailAdmin() && 
 					   ("Site Quarantine" == $_SESSION['sessionNav'] || "Site Pending Requests" == $_SESSION['sessionNav'])) {
-						echo '  <td>' . $rs['mail_id'] . '</td>';
+                                                echo '  <td class="quarcell">' . $rs['mail_id'] . '</td>';
 					}
 
 					echo "</tr>\n";
@@ -217,30 +217,35 @@ function showMessagesTable($content_type, $res, $page, $order, $vert, $numRows =
 function printSearchEngine($content_type, $submit_page, $full_search = false) {
 	global $link;
 ?>
-<table width="100%" border="0" cellspacing="0" cellpadding="1" align="center">
+<!-- search box on -->
+<table id="searchtbl" width="100%" border="0" cellspacing="0" cellpadding="1" align="center">
   <tr>
     <td class="tableBorder">
-      <table width="100%" border="0" cellspacing="1" cellpadding="0">
+<!-- search title on -->
+      <table id="searchhdr" width="100%" border="0" cellspacing="1" cellpadding="0">
       	<tr>
 	  <td class="tableTitle">
 	    <a href="javascript: void(0);" onclick="showHideSearch('search');">&#8250; <?php echo translate('Search')?></a>
 	  </td>
 	  <td class="tableTitle">
             <div class="alignright">
-              <?php $link->doLink('javascript: help(\'search\');', '?', '', 'color: #FFFFFF;', translate('Help') . ' - ' . translate('My Re
-servations')) ?>
+              <?php $link->doLink('javascript: help(\'search\');', '?', '', 'color: #FFFFFF;', translate('Help') . ' - ' . translate('My Reservations')) ?>
             </div>
           </td>
 	</tr>
 </table>
+<!-- search title off -->
 <div id="search" style="display: <?php echo  getShowHide('search') ?>">
-  <table width="100%" border="0" cellspacing="1" cellpadding="0">
+<!-- search formbox on -->
+  <table id="searchcnt" width="100%" border="0" cellspacing="1" cellpadding="0">
     <tr class="cellColor"><td><center><?php CmnFns::searchEngine($content_type, $submit_page, $full_search); ?></center></td></tr>
   </table>
+<!-- search formbox off -->
 </div>
     </td>
   </tr>
 </table>
+<!-- search box off -->
 <?php
 }
 
@@ -252,11 +257,12 @@ servations')) ?>
 function printSelectAndPager($pager_html) {
 ?>
 
-<table class="stdFont" width="100%" border="0" cellspacing="1" cellpadding="0">
+<!-- pager and sel on -->
+<table id="selandpagetbl" class="stdFont" width="100%" border="0" cellspacing="1" cellpadding="0">
 <tr>
-<td>
-	<a href="javascript:CheckAll(document.messages_process_form);"><?php echo translate('Select All'); ?></a>&nbsp;|&nbsp;
-	<a href="javascript:CheckNone(document.messages_process_form);"><?php echo translate('Clear All'); ?></a>
+<td class="quarcell">
+        <a class="quarcell" href="javascript:CheckAll(document.messages_process_form);"><?php echo translate('Select All'); ?></a>&nbsp;|&nbsp;
+        <a class="quarcell" href="javascript:CheckNone(document.messages_process_form);"><?php echo translate('Clear All'); ?></a>
 </td>
 <td>
 	<div class="alignright">
@@ -268,6 +274,7 @@ function printSelectAndPager($pager_html) {
 </td>
 </tr>
 </table>
+<!-- pager and sel off -->
 <?php
 }
 

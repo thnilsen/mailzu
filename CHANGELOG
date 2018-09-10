@@ -1,3 +1,26 @@
+MailZu 0.9.3-github-gnafixes (09.10.2018):
+----------
+Mobile responsive, and usability changes:
+- Switched from XHTML to HTML5 in header
+- added marker class quarcell which can be referred in mobile view CSS
+- added marker id-s for all the anonymous tables, to ease selecting in mobile view CSS
+- added @media query based mobile view rules to css.css
+- small fixes for language cookie
+- small fixes for cookie based login
+
+MailZu 0.9.2-github-gnafixes (09.07.2018):
+----------
+- Applied changes from @crazy4chrissi fork
+
+MailZu 0.9.1-github-gnafixes (06.14.2017):
+----------
+- Cookie login persistence fixes
+- First changes to allow mobile responsive usage
+
+MailZu 0.9-github-gnafixes (06.14.2017):
+----------
+- First fork from zedzedtop, small fixes to it
+
 MailZu 0.8RC3 (06.14.2007):
 ----------
 - Fixed an inconsistency in the FAQ
