@@ -51,6 +51,8 @@ if (! Auth::isMailAdmin() && !in_array($recip_email, $_SESSION['sessionMail'])) 
          header("Content-disposition: attachment; filename=\"" . basename($filelist[$_GET['fileid']]) . "\""); 
          echo $fileContent[$_GET['fileid']];
       }
+      else
+        echo "Error: Attachment not found";
     
     }
 }
