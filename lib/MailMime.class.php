@@ -68,13 +68,13 @@ function MsgParseBody($struct, $getAttachmentContent=false) {
 					// Handle multipart/alternative parts
 					$alt_entity = FindMultiAlt($struct->parts);
 					// Ignore if we return false NEEDS WORK
-					if ($alt_entity) MsgParseBody($alt_entity);
+					if ($alt_entity) MsgParseBody($alt_entity, $getAttachmentContent);
 					break;
 				case "related":
 					// Handle multipart/related parts
 					$rel_entities = FindMultiRel($struct);
 					foreach ($rel_entities as $ent) {
-						MsgParseBody($ent);
+						MsgParseBody($ent, $getAttachmentContent);
 					}
 					break;
 				default:
@@ -82,7 +82,7 @@ function MsgParseBody($struct, $getAttachmentContent=false) {
 					// Recursively process nested mime entities
 					if ( is_array($struct->parts) || is_object($struct->parts) ) {
 						foreach ($struct->parts as $cur_part) {
-							MsgParseBody($cur_part);
+							MsgParseBody($cur_part, $getAttachmentContent);
 						}
 					} else {
 						$errors['Invalid or Corrupt MIME Detected.'] = true;
