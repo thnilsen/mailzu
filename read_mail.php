@@ -51,32 +51,36 @@ $content_type = CmnFns::getGlobalVar('ctype', GET);
 $recip_email = CmnFns::getGlobalVar('recip_email', GET);
 $query_string = CmnFns::querystring_exclude_vars( array('mail_id','recip_email') );
 
-$m = new MailEngine($mail_id,$recip_email);
 
-if ( ! $m->msg_found) {
-  CmnFns::do_error_box(translate('Message Unavailable'));
-
+if (! Auth::isMailAdmin() && !in_array($recip_email, $_SESSION['sessionMail'])) {
+  CmnFns::do_error_box(translate('Access Denied'));
 } else {
-
-  echo '<form name="messages_process_form" action="messagesProcessing.php" method="POST">';
-  echo '  <input type="hidden" name="mail_id_array[]" value="' . $mail_id . '_' . $recip_email . '">';
-  echo '  <input type="hidden" name="query_string" value="' . $query_string . '">';
-  printActionButtons(false);
-  echo '</form>';
-
-  MsgDisplayOptions(CmnFns::get_mail_id(),$recip_email);
-  startMessage();
-  MsgDisplayHeaders($m->struct);
-  // Give a space before the body displays
-  echo '<br>' . "\n";
-  if ( ! $m->msg_error ) { 
-    MsgDisplayBody($m->struct);
-  } else {
-    echo "<p> $m->last_error </p>";
-  }
-  endMessage();
-}
-  
+    $m = new MailEngine($mail_id,$recip_email);
+    
+    if ( ! $m->msg_found) {
+      CmnFns::do_error_box(translate('Message Unavailable'));
+    
+    } else {
+    
+      echo '<form name="messages_process_form" action="messagesProcessing.php" method="POST">';
+      echo '  <input type="hidden" name="mail_id_array[]" value="' . $mail_id . '_' . $recip_email . '">';
+      echo '  <input type="hidden" name="query_string" value="' . $query_string . '">';
+      printActionButtons(false);
+      echo '</form>';
+    
+      MsgDisplayOptions(CmnFns::get_mail_id(),$recip_email);
+      startMessage();
+      MsgDisplayHeaders($m->struct);
+      // Give a space before the body displays
+      echo '<br>' . "\n";
+      if ( ! $m->msg_error ) { 
+        MsgDisplayBody($m->struct);
+      } else {
+        echo "<p> $m->last_error </p>";
+      }
+      endMessage();
+    }
+}  
 endDataDisplayCol();
 $t->endMain();
 $t->printHTMLFooter();

@@ -42,10 +42,14 @@ $t->startMain();
 $mail_id = CmnFns::getGlobalVar('mail_id', GET);
 $recip_email = CmnFns::getGlobalVar('recip_email', GET);
 
-$m = new MailEngine($mail_id,$recip_email);
-
-MsgOriginalOptions();
-MsgBodyPlainText($m->raw);
+if (! Auth::isMailAdmin() && !in_array($recip_email, $_SESSION['sessionMail'])) {
+  CmnFns::do_error_box(translate('Access Denied'));
+} else {
+    $m = new MailEngine($mail_id,$recip_email);
+    
+    MsgOriginalOptions();
+    MsgBodyPlainText($m->raw);
+}
 
 $t->endMain();
 $t->printHTMLFooter();

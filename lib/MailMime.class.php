@@ -55,7 +55,7 @@ $filelist = array ();
 $fileContent = array();
 $errors = array ();
 
-function MsgParseBody($struct) {
+function MsgParseBody($struct, $getAttachmentContent=false) {
 	global $filelist, $fileContent;
 	global $errors;
 	$ctype_p = strtolower(trim($struct->ctype_primary));
@@ -95,7 +95,8 @@ function MsgParseBody($struct) {
 			if (property_exists($struct, "d_parameters")) {
 				if ($attachment = $struct->d_parameters['filename'] or $attachment = $struct->d_parameters['name']) {
 					array_push($filelist, $attachment);
-					$fileContent[] = $struct->body;
+					if($getAttachmentContent)
+						$fileContent[] = $struct->body;
 					break;
 				}
 			}
@@ -117,7 +118,8 @@ function MsgParseBody($struct) {
 			// Save the listed filename or notify the
 			// reader that this mail is not displayed completely
 			$attachment = $struct->d_parameters['filename'];
-			$fileContent[] = $struct->body;
+			if($getAttachmentContent)
+				$fileContent[] = $struct->body;
 			$attachment ? array_push($filelist, $attachment) : $errors['Unsupported MIME objects present'] = true;
 	}
 }

@@ -31,23 +31,28 @@ $content_type = CmnFns::getGlobalVar('ctype', GET);
 $recip_email = CmnFns::getGlobalVar('recip_email', GET);
 $query_string = CmnFns::querystring_exclude_vars( array('mail_id','recip_email') );
 
-$m = new MailEngine($mail_id,$recip_email);
-
-if ( ! $m->msg_found) {
-  CmnFns::do_error_box(translate('Message Unavailable'));
-
+if (! Auth::isMailAdmin() && !in_array($recip_email, $_SESSION['sessionMail'])) {
+  CmnFns::do_error_box(translate('Access Denied'));
 } else {
-
-  MsgParseBody($m->struct);
-
-  if(isset($fileContent[$_GET['fileid']])) {
-
-     header('Content-Type: application/octet-stream');
-     header("Content-Transfer-Encoding: Binary"); 
-     header("Content-disposition: attachment; filename=\"" . basename($filelist[$_GET['fileid']]) . "\""); 
-     echo $fileContent[$_GET['fileid']];
-  }
-
+    
+    $m = new MailEngine($mail_id,$recip_email);
+    
+    if ( ! $m->msg_found) {
+      CmnFns::do_error_box(translate('Message Unavailable'));
+    
+    } else {
+    
+      MsgParseBody($m->struct, true);
+    
+      if(isset($fileContent[$_GET['fileid']])) {
+    
+         header('Content-Type: application/octet-stream');
+         header("Content-Transfer-Encoding: Binary"); 
+         header("Content-disposition: attachment; filename=\"" . basename($filelist[$_GET['fileid']]) . "\""); 
+         echo $fileContent[$_GET['fileid']];
+      }
+    
+    }
 }
 
 
