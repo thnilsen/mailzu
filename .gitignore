@@ -1,3 +1,10 @@
-/config/config.php
+# below seems not working
+#/config/config.php
+# this should work
+config.php
 *.bak.php
+
+# these are private files for a private implementation
 /msgview.php
+msgview.php
+
