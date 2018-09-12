@@ -45,11 +45,16 @@ if (! Auth::isMailAdmin() && !in_array($recip_email, $_SESSION['sessionMail'])) 
       MsgParseBody($m->struct, true);
     
       if(isset($fileContent[$_GET['fileid']])) {
-    
-         header('Content-Type: application/octet-stream');
-         header("Content-Transfer-Encoding: Binary"); 
-         header("Content-disposition: attachment; filename=\"" . basename($filelist[$_GET['fileid']]) . "\""); 
-         echo $fileContent[$_GET['fileid']];
+        
+        if(isset($_GET['virustotal'])) {
+          header('Location: https://www.virustotal.com/#/file/'.hash('sha256',$fileContent[$_GET['fileid']]).'/detection');
+          exit;
+        } else {
+           header('Content-Type: application/octet-stream');
+           header("Content-Transfer-Encoding: Binary"); 
+           header("Content-disposition: attachment; filename=\"" . basename($filelist[$_GET['fileid']]) . "\""); 
+           echo $fileContent[$_GET['fileid']];
+        }
       }
       else
         echo "Error: Attachment not found";

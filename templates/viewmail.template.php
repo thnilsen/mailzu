@@ -237,7 +237,12 @@ function MsgDisplayFooter() {
 	      echo $link->getLink('get_attachment.php' . '?mail_id=' . urlencode($mail_id) .
                                                 "&amp;recip_email=" . urlencode($recip_email) .
                                                 "&amp;fileid=".$fileid.
-                                                "&amp;$query_string", $file, '', '', '', false)."<br>";
+                                                "&amp;$query_string", $file, '', '', '', false)." ";
+          echo $link->getLink('get_attachment.php' . '?mail_id=' . urlencode($mail_id) .
+                                                "&amp;recip_email=" . urlencode($recip_email) .
+                                                "&amp;fileid=".$fileid.
+                                                "&amp;virustotal=1".
+                                                "&amp;$query_string", " [ VirusTotal ] ", '', '', '', false, "_blank")."<br>";
 	    }
        	  }
 	  if ($errors) {

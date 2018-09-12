@@ -200,10 +200,10 @@ class Link {
 	* @param string $text_on_over text to display in status bar onmouseover
 	* @return string of HTML for link
 	*/
-	function getLink($url=null, $text=null, $class=null, $style=null, $text_on_over=null, $boldtext=null) {
+	function getLink($url=null, $text=null, $class=null, $style=null, $text_on_over=null, $boldtext=null, $target='_self') {
 		$text_on_over = (!is_null($text_on_over)) ? $text_on_over : $text;	// Use passed in text on mouse over, else just use link text
 		//return "<a href=\"$url\" class=\"$class\" style=\"$style\" onmouseover=\"javascript: window.status='" . addslashes($text_on_over) . "'; return true;\" onmouseout=\"javascript: window.status=''; return true;\">$text</a>";
-		return "<a href=\"$url\" class=\"$class\" style=\"$style\" onmouseover=\"javascript: window.status='" . addslashes($text_on_over) . "'; return true;\" onmouseout=\"javascript: window.status=''; return true;\">" . ($boldtext ? "<b>$text</b>" : $text) . "</a>";
+		return "<a href=\"$url\" class=\"$class\" style=\"$style\" onmouseover=\"javascript: window.status='" . addslashes($text_on_over) . "'; return true;\" onmouseout=\"javascript: window.status=''; return true;\" target=\"$target\">" . ($boldtext ? "<b>$text</b>" : $text) . "</a>";
 	}
 
 	/**
