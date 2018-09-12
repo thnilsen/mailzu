@@ -41,37 +41,58 @@ function showQuickLinks() {
 	global $conf;
 	global $link;
 ?>
-<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+
+
+<!-- menu cell on -->
+<td id="quick_links_table_td" style="vertical-align:top; <?php echo 'width: '.(getShowHideBool('quick_links_table') ? '16vw' : '3vw').';'; ?>" >
+
+<!-- menu close on -->
+<div id="quick_links_table_closed" style="<?php echo 'display: '.(getShowHideBool('quick_links_table') ? 'none' : 'block').';'; ?>">
+<table id="quicklinks_closed" width="100%" border="0" cellspacing="0" cellpadding="1" align="center">
   <tr>
-    <td>
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <td class="tableBorder tableTitle">
+        <a class="box-shadow-menu" href="javascript: void(0);" onclick="showHideSearch('quick_links_table');"><b>M</b></a>
+    </td>
+  </tr>
+</table>
+</div>
+<!-- menu close off -->
+<!-- menu open on -->
+<div id="quick_links_table" style="<?php echo 'display: '.(getShowHideBool('quick_links_table') ? 'block' : 'none').';'; ?>" >
+<table id="quicklinks" width="100%" border="0" cellspacing="0" cellpadding="1" align="center">
+  <tr>
+    <td class="tableBorder">
+<!-- menu header on -->
+      <table id="menuheader" width="100%" border="0" cellspacing="1" cellpadding="0">
         <tr>
           <td class="tableTitle">
-		    <?php echo translate('My Quick Links')?>
+                    <a href="javascript: void(0);" onclick="showHideSearch('quick_links_table');"><?php echo translate('My Quick Links'); ?></a>
 		  </td>
           <td class="tableTitle"><div class="alignright">
-              <?php $link->doLink("javascript: help('quick_links');", '?', '', 'color: #FFFFFF', translate('Help') . ' - ' . translate('My Quick Links')) ?>
+              <?php $link->doLink("javascript: help('quick_links');", '?', '', 'color: #FFFFFF', translate('Help') . ' - ' . translate('My Quick Links')); ?>
             </div>
           </td>
         </tr>
       </table>
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!-- menu header off -->
+<!-- menu content on -->
+      <table id="menucontent" width="100%" border="0" cellspacing="1" cellpadding="0">
         <tr style="padding: 5px;" class="cellColor">
           <td colspan="2">
 		<?php echo "Quarantine Summary" == $_SESSION['sessionNav'] ? 
-			' <p class="selectedLink"><b>&raquo;</b>':
-			" <p><b>&#8250;</b>\t";
+                        ' <p class="selectedLink quarcell"><b>&raquo;</b>':
+                        ' <p class="quarcell"><b>&rsaquo;</b>'."\t";
               	$link->doLink('summary.php', translate('Quarantine Summary')) ?>
             	</p>
 		<?php echo "My Quarantine" == $_SESSION['sessionNav'] ? 
-			' <p class="selectedLink"><b>&raquo;</b>':
-			" <p><b>&#8250;</b>\t";
+                        ' <p class="selectedLink quarcell"><b>&raquo;</b>':
+                        ' <p class="quarcell"><b>&rsaquo;</b>'."\t";
               	$link->doLink('messagesIndex.php?ctype=A', translate('My Quarantine'));
             	echo '</p>';
 		if (! Auth::isMailAdmin()) {	
 		  echo "My Pending Requests" == $_SESSION['sessionNav'] ?
-                      ' <p class="selectedLink"><b>&raquo;</b>':
-                      " <p><b>&#8250;</b>\t";
+                      ' <p class="selectedLink quarcell"><b>&raquo;</b>':
+                      ' <p class="quarcell"><b>&rsaquo;</b>'."\t";
                   $link->doLink('messagesPending.php?ctype=A', translate('My Pending Requests'));
 		  echo '</p>';
 		}
@@ -81,45 +102,50 @@ function showQuickLinks() {
 		<?php if (Auth::isMailAdmin()) {
 		     if ($conf['app']['siteSummary']) {
   		       echo "Site Quarantine Summary" == $_SESSION['sessionNav'] ? 
-		  	  ' <p class="selectedLink"><b>&raquo;</b>':
-			  " <p><b>&#8250;</b>\t";
+                          ' <p class="selectedLink quarcell"><b>&raquo;</b>':
+                          ' <p class="quarcell"><b>&rsaquo;</b>'."\t";
         	      	  $link->doLink('messagesSummary.php', translate('Site Quarantine Summary'));
             	       echo '</p>';
                      }
 
 		  echo "Site Quarantine" == $_SESSION['sessionNav'] ?
-                        ' <p class="selectedLink"><b>&raquo;</b>':
-                        " <p><b>&#8250;</b>\t";
+                        ' <p class="selectedLink quarcell"><b>&raquo;</b>':
+                        ' <p class="quarcell"><b>&rsaquo;</b>'."\t";
                   $link->doLink('messagesAdmin.php?ctype=A&searchOnly='.$conf['app']['searchOnly'], translate('Site Quarantine'));
 		  echo '</p>';
 		  echo "Site Pending Requests" == $_SESSION['sessionNav'] ?
-                        ' <p class="selectedLink"><b>&raquo;</b>':
-                        " <p><b>&#8250;</b>\t";
+                        ' <p class="selectedLink quarcell"><b>&raquo;</b>':
+                        ' <p class="quarcell"><b>&rsaquo;</b>'."\t";
                   $link->doLink('messagesPendingAdmin.php?ctype=A', translate('Site Pending Requests'));
 		  echo '</p>';
 		  echo '<br>';
 		}  
     if ((! Auth::isMailAdmin()) && ($conf['app']['showEmailAdmin'])) {
 		  echo "Email Administrator" == $_SESSION['sessionNav'] ? 
-			' <p class="selectedLink"><b>&raquo;</b>':
-			" <p><b>&#8250;</b>\t";
+                        ' <p class="selectedLink quarcell"><b>&raquo;</b>':
+                        ' <p class="quarcell"><b>&rsaquo;</b>'."\t";
               	  $link->doLink('send_mail.php', translate('Email Administrator'));   
             	  echo ' </p>';
 		}
 		?>
-            	<p><b>&#8250;</b>
+                <p class="quarcell" class="quarcell"><b>&rsaquo;</b>
               	<?php $link->doLink('javascript: help();', translate('Help')) ?>
             	</p>
 		<br>
-            	<p><b>&#8250;</b>
+                <p class="quarcell"><b>&rsaquo;</b>
               	<?php $link->doLink('index.php?logout=true', translate('Log Out')) ?>
             	</p>
           </td>
         </tr>
       </table>
+<!-- menu content off -->
     </td>
   </tr>
 </table>
+</div>
+<!-- menu open off -->
+</td>
+<!-- menu cell off -->
 <?php
 }
 
@@ -144,6 +170,19 @@ function getShowHide($table) {
 	else
 		return 'none';
 }
+/**
+* Returns the proper expansion bool for this table
+*  based on cookie settings
+* @param string table name of table to check
+* @return either true or false
+*/
+function getShowHideBool($table) {
+        if (isset($_COOKIE[$table]) && $_COOKIE[$table] == 'show') {
+                return true;
+        }
+        else
+                return false;
+}
 
 /**
 * Returns the proper className for the rows of this table
@@ -161,24 +200,26 @@ function getShowHideHeaders($table) {
 
 function startQuickLinksCol() {
 ?>
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<!-- content table on -->
+<table id="contenttbl" width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td style="vertical-align:top; width:16%; border:solid 2px #0F93DF; background-color:#FFFFFF;">
 <?php
 }
 
 function startDataDisplayCol() {
 ?>
-</td>
-<td style="padding-left:5px; vertical-align:top;">
+<!-- content cell on -->
+<td id="contentcell" style="padding-left:5px; vertical-align:top;">
 <?php
 }
 
 function endDataDisplayCol() {
 ?>
 </td>
+<!-- content cell off -->
 </tr>
 </table>
+<!-- content table off -->
 <?php
 }
 
@@ -189,17 +230,17 @@ function endDataDisplayCol() {
 */
 function printActionButtons( $printDeleteAll = true ) {
 ?>
-<table width="100%" border="0" cellspacing="1" cellpadding="0">
+<table id="actionbuttonstbl" width="100%" border="0" cellspacing="1" cellpadding="0">
 <tr>
-	<td class="alignleft"><input type="submit" class="button" name="action" value="<?php echo translate('Delete'); ?>">
+        <td class="alignleft"><input type="submit" class="button quarcell" name="action" value="<?php echo translate('Delete'); ?>">
 <?php
         if ( $printDeleteAll ) {
-		echo "<input type=\"submit\" class=\"button\" name=\"action\" value=\"".translate('Delete All')."\">";
+                echo "<input type=\"submit\" class=\"button quarcell\" name=\"action\" value=\"".translate('Delete All')."\">";
         }
 ?>
 	</td>
 <?php
-	echo "<td class=\"alignright\"><input type=\"submit\" class=\"button\" name=\"action\" value=\"";
+        echo "<td class=\"alignright\"><input type=\"submit\" class=\"button quarcell\" name=\"action\" value=\"";
 	if ($_SESSION['sessionNav'] == "My Pending Requests") {
 		echo ( Auth::isMailAdmin() ? translate('Release') : translate('Cancel Request') );
 	} else {

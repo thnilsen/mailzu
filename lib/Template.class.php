@@ -2,10 +2,12 @@
 /**
 * This file provides output functions
 * @author Nick Korbel <lqqkout13@users.sourceforge.net>
-* @version 29-08-2017
+* @author Gergely Nagy <nagy.gergely@gnanet.net>
+* @version 09-09-2018
+* @package MailZu
 * @package phpScheduleIt
 *
-* Copyright (C) 2003 - 2017 phpScheduleIt
+* Copyright (C) 2003 - 2018 MailZu
 * License: GPL, see LICENSE
 */
 /**
@@ -28,7 +30,7 @@ class Template {
 	/**
 	* Set the page's title
 	* @param string $title title of page
-	* @param int $depth depth of the current page relative to phpScheduleIt root
+    * @param int $depth depth of the current page relative to MailZu root
 	*/
 	function Template($title = '', $depth = 0) {
 		global $conf;
@@ -40,10 +42,10 @@ class Template {
 	}
 
 	/**
-	* Print all XHTML headers
+    * Print all HTML5 headers
 	* This function prints the HTML header code, CSS link, and JavaScript link
 	*
-	* DOCTYPE is XHTML 1.0 Transitional
+    * DOCTYPE is HTML, with viewport defined to allow responsive display
 	* @param none
 	*/
 	function printHTMLHeader() {
@@ -53,21 +55,22 @@ class Template {
 		global $charset;
 
 		$path = $this->dir_path;
-		echo "<?xml version=\"1.0\" encoding=\"$charset\"?" . ">\n";
 	?>
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $languages[$lang][2]?>" lang="<?php echo $languages[$lang][2]?>">
+    <!DOCTYPE html>
+    <html lang="<?php echo $languages[$lang][2]?>">
 	<head>
 	<title>
 	<?php echo $this->title?>
 	</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $charset?>" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta charset="<?php echo $charset?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0F93DF">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" sizes="192x192" href="img/mailzu-x4-192x192-icon.png">
 	<script language="JavaScript" type="text/javascript" src="<?php echo $path?>functions.js"></script>
-	<!--<link href="<?php echo $path?>css.css" rel="stylesheet" type="text/css" />-->
 	<style type="text/css">
-	@import url(<?php echo $path?>css.css);
+    @import url("<?php echo $path?>css.css?v=1");
 	</style>
 	</head>
 	<body>
@@ -88,9 +91,10 @@ class Template {
 
 		// Print out logoImage if it exists
 		echo (!empty($conf['ui']['logoImage']))
-			? '<div class="alignleft" ><img src="' . $conf['ui']['logoImage'] . '" alt="logo" vspace="5" /></div>'
+            ? '<div class="alignleft" ><img src="' . $conf['ui']['logoImage'] . '" alt="logo" vspace="5" /></div>'."\n"
 			: '';
 	?>
+    <!-- welcome on -->
 	<table width="100%" border="0" cellspacing="0" cellpadding="5" class="mainBorder">
 	  <tr>
 		<td class="mainBkgrdClr">
@@ -101,24 +105,17 @@ class Template {
 		      echo (Auth::isMailAdmin() ? ' (' . translate('Administrator') . ')' : '');
 		    ?>
 		  </h4>
-		  <!--<p>
-			<?php $this->link->doLink($this->dir_path . 'index.php?logout=true', translate('Log Out')) ?>
-			|
-			<?php $this->link->doLink($this->dir_path . 'summary.php', translate('My Control Panel')) ?>
-		  </p>-->
 		</td>
 		<td class="mainBkgrdClr" valign="top">
 		  <div class="alignright">
 		    <p>
 			<?php echo  translate_date('header', time());?>
 			</p>
-			<!--<p>
-			  <?php $this->link->doLink('javascript: help();', translate('Help')) ?>
-			</p>-->
 		  </div>
 		</td>
 	  </tr>
 	</table>
+    <!-- welcome off -->
 	<?php
 	}
 
@@ -129,9 +126,11 @@ class Template {
 	function startMain() {
 	?>
 	<p>&nbsp;</p>
+    <!-- startmain on -->
 	<table width="100%" border="0" cellspacing="0" cellpadding="10" style="border: solid #CCCCCC 1px;">
 	  <tr>
 		<td bgcolor="#FAFAFA">
+        <!-- startmain off -->
 		  <?php
 	}
 
@@ -141,9 +140,11 @@ class Template {
 	*/
 	function endMain() {
 	?>
+    <!-- endmain on -->
 		</td>
 	  </tr>
 	</table>
+    <!-- endmain off -->
 	<?php
 	}
 
@@ -156,7 +157,7 @@ class Template {
 	function printHTMLFooter() {
 		global $conf;
 	?>
-    <p align="center"><a href="<?php echo $conf['app']['footlink']; ?>"><?php echo $conf['app']['title']?> v<?php echo $conf['app']['version'];?></a></p>
+    <p align="center"><a href="<?php echo $conf['app']['footlink'];?>"><?php echo $conf['app']['title'];?> v<?php echo $conf['app']['version'];?></a></p>
 	</body>
 	</html>
 	<?php

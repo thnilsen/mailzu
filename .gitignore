@@ -1,0 +1,12 @@
+# below ignores the config in the right place
+/config/config.php
+# this should work for everywhere placed config.php
+config.php
+
+# experiments that left a backup 
+*.bak.php
+
+# these are private files for a private implementation
+/msgview.php
+msgview.php
+

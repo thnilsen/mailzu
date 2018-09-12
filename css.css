@@ -1,4 +1,4 @@
-/* Last modified 01-24-05 */
+/* Last modified 2018-09-09 */
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     background-color: #F0F0F0;    			
@@ -485,4 +485,64 @@ div.mycal_div {
 
 .alignright {
     text-align: right;
+}
+.box-shadow-menu {
+  position: relative;
+  padding-left: 1.25em;
+}
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: black;
+  box-shadow: 
+    0 0.25em 0 0 black,
+    0 0.5em 0 0 black;
+}
+
+@media screen and (max-width: 640px) {
+    td.quarcell {
+        display: block!important;
+    }
+    tr.rowHeaders.quarcell {
+        display: none!important;
+    }
+    form > table > tbody > tr > td > input.button.quarcell {
+        font-size: 20px;
+    }
+    #selandpagetbl > tbody > tr > td.quarcell,
+    #selandpagetbl > tbody > tr > td > a.quarcell {
+        font-size: 22px;
+    }
+
+    #searchenginetbl > tbody > tr {
+        display: grid;
+    }
+    #searchenginetbl > tbody > tr > td.alignright,
+    #searchenginetbl > tbody > tr > td.alignleft, 
+    #searchenginetbl > tbody > tr > td.alignright > .button,
+    #searchenginetbl > tbody > tr > td.alignleft > .button {
+        font-size: 20px;
+        text-align: left;
+    }
+    #searchhdr > tbody > tr > td.tableTitle {
+        font-size: 20px;
+    }
+    #quick_links_table > table > tbody > tr > td > table > tbody > tr > td > p.quarcell {
+        min-height: 66px!important;
+        font-size: 18px;
+        font-weight: bold;
+        border: solid 1px #7C7A7A;
+        color: #05609A;
+        background-color: #E7E7E7;
+    }
+    #quicklinks_closed {
+        min-height: 36px;
+    }
+    #quick_links_table > table > tbody > tr > td > table > tbody > tr > td > p.quarcell > b {
+        display: none;
+    }
 }
