@@ -43,7 +43,8 @@
  * @param  $message  A string with the message to output.
  * @return           void.
  */
-function spew($message) {
+function spew($message)
+{
     global $debug;
     if ($debug == true) {
         echo "$message";
@@ -60,7 +61,8 @@ function spew($message) {
  * @param  $tagtype  The type of the tag (see in comments).
  * @return           a string with the final tag representation.
  */
-function tagprint($tagname, $attary, $tagtype) {
+function tagprint($tagname, $attary, $tagtype)
+{
     $me = 'tagprint';
     if ($tagtype == 2) {
         $fulltag = '</' . $tagname . '>';
@@ -89,7 +91,8 @@ function tagprint($tagname, $attary, $tagtype) {
  * @param  $val a value passed by-ref.
  * @return      void since it modifies a by-ref value.
  */
-function casenormalize(&$val) {
+function casenormalize(&$val)
+{
     $val = strtolower($val);
 }
 
@@ -103,7 +106,8 @@ function casenormalize(&$val) {
  * @return         the location within the $body where the next
  *                 non-whitespace char is located.
  */
-function skipspace($body, $offset) {
+function skipspace($body, $offset)
+{
     $me = 'skipspace';
     preg_match('/^(\s*)/s', substr($body, $offset), $matches);
     if (@sizeof($matches{1})) {
@@ -125,7 +129,8 @@ function skipspace($body, $offset) {
  * @return         location of the next occurance of the needle, or
  *                 strlen($body) if needle wasn't found.
  */
-function findnxstr($body, $offset, $needle) {
+function findnxstr($body, $offset, $needle)
+{
     $me = 'findnxstr';
     $pos = strpos($body, $needle, $offset);
     if ($pos === FALSE) {
@@ -149,7 +154,8 @@ function findnxstr($body, $offset, $needle) {
  *                 - string with whatever content between offset and the match
  *                 - string with whatever it is we matched
  */
-function findnxreg($body, $offset, $reg) {
+function findnxreg($body, $offset, $reg)
+{
     $me = 'findnxreg';
     $matches = Array();
     $retarr = Array();
@@ -162,7 +168,7 @@ function findnxreg($body, $offset, $reg) {
         $retarr{0} = $offset + strlen($matches{1});
         $retarr{1} = $matches{1};
         $retarr{2} = $matches{2};
-        spew("$me: '$reg' found at pos $offset matching '".$matches{2}."'\n");
+        spew("$me: '$reg' found at pos $offset matching '" . $matches{2} . "'\n");
     }
     return $retarr;
 }
@@ -181,7 +187,8 @@ function findnxreg($body, $offset, $reg) {
  *                 - integer where the tag ends (ending ">")
  *                 first three members will be false, if the tag is invalid.
  */
-function getnxtag($body, $offset) {
+function getnxtag($body, $offset)
+{
     $me = 'getnxtag';
     if ($offset > strlen($body)) {
         spew("$me: Past the end of body\n");
@@ -223,7 +230,7 @@ function getnxtag($body, $offset) {
             /**
              * A comment or an SGML declaration.
              */
-            if (substr($body, $pos+1, 2) == '--') {
+            if (substr($body, $pos + 1, 2) == '--') {
                 spew("$me: A comment found. Stripping.\n");
                 $gt = strpos($body, '-->', $pos);
                 if ($gt === false) {
@@ -253,7 +260,7 @@ function getnxtag($body, $offset) {
      * Look for next [\W-_], which will indicate the end of the tag name.
      */
     $regary = findnxreg($body, $pos, '[^\w\-_]');
-    if ($regary == false){
+    if ($regary == false) {
         spew("$me: End of body reached while analyzing tag name\n");
         return Array(false, false, false, $lt, strlen($body));
     }
@@ -297,7 +304,7 @@ function getnxtag($body, $offset) {
             /**
              * Check if it's whitespace
              */
-            if (preg_match('/\s/', $match)){
+            if (preg_match('/\s/', $match)) {
                 spew("$me: Tagname is '$tagname'\n");
             } else {
                 /**
@@ -385,7 +392,7 @@ function getnxtag($body, $offset) {
          * '\s' means a lot of things -- look what it's followed by.
          *      anything else means the attribute is invalid.
          */
-        switch($match) {
+        switch ($match) {
             case '/':
                 /**
                  * This is an xhtml-style tag with a closing / at the
@@ -440,7 +447,7 @@ function getnxtag($body, $offset) {
                     if ($quot == '\'') {
                         spew("$me: In fact, this is attribute type 1\n");
                         spew("$me: looking for closing quote\n");
-                        $regary = findnxreg($body, $pos+1, '\'');
+                        $regary = findnxreg($body, $pos + 1, '\'');
                         if ($regary == false) {
                             spew("$me: end of body reached before end of val\n");
                             spew("$me: Returning\n");
@@ -453,7 +460,7 @@ function getnxtag($body, $offset) {
                     } else if ($quot == '"') {
                         spew("$me: In fact, this is attribute type 2\n");
                         spew("$me: looking for closing quote\n");
-                        $regary = findnxreg($body, $pos+1, '\"');
+                        $regary = findnxreg($body, $pos + 1, '\"');
                         if ($regary == false) {
                             spew("$me: end of body reached before end of val\n");
                             spew("$me: Returning\n");
@@ -518,7 +525,8 @@ function getnxtag($body, $offset) {
  * @param $hex      whether the entites are hexadecimal.
  * @return          True or False depending on whether there were matches.
  */
-function deent(&$attvalue, $regex, $hex=false) {
+function deent(&$attvalue, $regex, $hex = false)
+{
     $me = 'deent';
     spew("$me: matching '$regex' against: $attvalue\n");
     $ret_match = false;
@@ -552,15 +560,15 @@ function deent(&$attvalue, $regex, $hex=false) {
  * @param  $attvalue A string to run entity check against.
  * @return           Nothing, modifies a reference value.
  */
-function defang(&$attvalue) {
+function defang(&$attvalue)
+{
     $me = 'defang';
     /**
      * Skip this if there aren't ampersands or backslashes.
      */
     spew("$me: Checking '$attvalue' for suspicious content\n");
     if (strpos($attvalue, '&') === false
-        && strpos($attvalue, '\\') === false)
-    {
+        && strpos($attvalue, '\\') === false) {
         spew("$me: no suspicious content found, returning.\n");
         return;
     }
@@ -584,12 +592,13 @@ function defang(&$attvalue) {
  * @param  attvalue  The attribute value before extraneous spaces removed.
  * @return attvalue  Nothing, modifies a reference value.
  */
-function unspace(&$attvalue){
+function unspace(&$attvalue)
+{
     $me = 'unspace';
     if (strcspn($attvalue, "\t\r\n\0 ") != strlen($attvalue)) {
         spew("$me: Killing whitespace.\n");
         $attvalue = str_replace(Array("\t", "\r", "\n", "\0", " "),
-                                Array('', '', ''), $attvalue);
+            Array('', '', ''), $attvalue);
     }
     spew("$me: after unspace: $attvalue\n");
 }
@@ -604,14 +613,15 @@ function unspace(&$attvalue){
  * @param  $add_attr_to_tag See description for sanitize
  * @return                  Array with modified attributes.
  */
-function fixatts($tagname, $attary, $rm_attnames, $bad_attvals, $add_attr_to_tag) {
+function fixatts($tagname, $attary, $rm_attnames, $bad_attvals, $add_attr_to_tag)
+{
     $me = 'fixatts';
     spew("$me: Fixing attributes\n");
     while (list($attname, $attvalue) = each($attary)) {
         /**
          * See if this attribute should be removed.
          */
-        foreach ($rm_attnames as $matchtag=>$matchattrs) {
+        foreach ($rm_attnames as $matchtag => $matchattrs) {
             if (preg_match($matchtag, $tagname)) {
                 foreach ($matchattrs as $matchattr) {
                     if (preg_match($matchattr, $attname)) {
@@ -635,9 +645,9 @@ function fixatts($tagname, $attary, $rm_attnames, $bad_attvals, $add_attr_to_tag
          * get in touch with me so I can drive to where you live and
          * shake your hand personally. :)
          */
-        foreach ($bad_attvals as $matchtag=>$matchattrs) {
+        foreach ($bad_attvals as $matchtag => $matchattrs) {
             if (preg_match($matchtag, $tagname)) {
-                foreach ($matchattrs as $matchattr=>$valary) {
+                foreach ($matchattrs as $matchattr => $valary) {
                     if (preg_match($matchattr, $attname)) {
                         /**
                          * There are two arrays in valary.
@@ -645,7 +655,7 @@ function fixatts($tagname, $attary, $rm_attnames, $bad_attvals, $add_attr_to_tag
                          * Second one is replacements
                          */
                         list($valmatch, $valrepl) = $valary;
-                        $newvalue = preg_replace($valmatch,$valrepl,$attvalue);
+                        $newvalue = preg_replace($valmatch, $valrepl, $attvalue);
                         if ($newvalue != $attvalue) {
                             spew("$me: attvalue is now $newvalue\n");
                             $attary{$attname} = $newvalue;
@@ -658,7 +668,7 @@ function fixatts($tagname, $attary, $rm_attnames, $bad_attvals, $add_attr_to_tag
     /**
      * See if we need to append any attributes to this tag.
      */
-    foreach ($add_attr_to_tag as $matchtag=>$addattary) {
+    foreach ($add_attr_to_tag as $matchtag => $addattary) {
         if (preg_match($matchtag, $tagname)) {
             $attary = array_merge($attary, $addattary);
             spew("$me: Added attributes to this tag\n");
@@ -688,11 +698,11 @@ function fixatts($tagname, $attary, $rm_attnames, $bad_attvals, $add_attr_to_tag
  *                   false,
  *                   "blink",
  *                   "link",
- *		     "object",
- *		     "meta",
+ *             "object",
+ *             "meta",
  *                   "marquee",
  *                   "html"
- *		            );
+ *                    );
  *
  * This will allow all tags except for blink, link, object, meta, marquee,
  * and html.
@@ -867,7 +877,8 @@ function fixatts($tagname, $attary, $rm_attnames, $bad_attvals, $add_attr_to_tag
  * @param $add_attr_to_tag      see description above
  * @return                      sanitized html safe to show on your pages.
  */
-function sanitize($body, $tag_list, $rm_tags_with_content, $self_closing_tags, $force_tag_closing, $rm_attnames, $bad_attvals, $add_attr_to_tag) {
+function sanitize($body, $tag_list, $rm_tags_with_content, $self_closing_tags, $force_tag_closing, $rm_attnames, $bad_attvals, $add_attr_to_tag)
+{
     $me = 'sanitize';
     /**
      * Normalize rm_tags and rm_tags_with_content.
@@ -931,7 +942,7 @@ function sanitize($body, $tag_list, $rm_tags_with_content, $self_closing_tags, $
                 /**
                  * $rm_tags_with_content
                  */
-                if ($skip_content == false){
+                if ($skip_content == false) {
                     /**
                      * See if this is a self-closing type and change
                      * tagtype appropriately.
@@ -949,8 +960,7 @@ function sanitize($body, $tag_list, $rm_tags_with_content, $self_closing_tags, $
                         $skip_content = $tagname;
                     } else {
                         if (($rm_tags == false && in_array($tagname, $tag_list)) ||
-                            ($rm_tags == true && !in_array($tagname, $tag_list)))
-                        {
+                            ($rm_tags == true && !in_array($tagname, $tag_list))) {
                             spew("$me: Removing this tag.\n");
                             $tagname = false;
                         } else {
@@ -986,7 +996,7 @@ function sanitize($body, $tag_list, $rm_tags_with_content, $self_closing_tags, $
     spew("$me: Appending any leftover content\n");
     $trusted .= substr($body, $curpos, strlen($body) - $curpos);
     if ($force_tag_closing == true) {
-        foreach ($open_tags as $tagname=>$opentimes) {
+        foreach ($open_tags as $tagname => $opentimes) {
             while ($opentimes > 0) {
                 spew("$me: '$tagname' left open. Closing by force.\n");
                 $trusted .= '</' . $tagname . '>';
@@ -998,4 +1008,5 @@ function sanitize($body, $tag_list, $rm_tags_with_content, $self_closing_tags, $
     $trusted .= "<!-- end sanitized html -->\n";
     return $trusted;
 }
+
 ?>

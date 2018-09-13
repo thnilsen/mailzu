@@ -1,36 +1,36 @@
 <?php
 /**
-* This file is the control panel, or "home page" for logged in users.
-* It provides a listing of all upcoming reservations
-*  and functionality to modify or delete them. It also
-*  provides links to all other parts of the system.
-* @author Brian Wong <bwsource@users.sourceforge.net>
-* @author Jeremy Fowler
-* @version 04-03-07
-* @package MailZu
-*
-* Copyright (C) 2003 - 2017 MailZu
-* License: GPL, see LICENSE
-*/
+ * This file is the control panel, or "home page" for logged in users.
+ * It provides a listing of all upcoming reservations
+ *  and functionality to modify or delete them. It also
+ *  provides links to all other parts of the system.
+ * @author Brian Wong <bwsource@users.sourceforge.net>
+ * @author Jeremy Fowler
+ * @version 04-03-07
+ * @package MailZu
+ *
+ * Copyright (C) 2003 - 2017 MailZu
+ * License: GPL, see LICENSE
+ */
 /**
-* Include Template class
-*/
+ * Include Template class
+ */
 include_once('lib/Template.class.php');
 /**
-* Include control panel-specific output functions
-*/
+ * Include control panel-specific output functions
+ */
 include_once('templates/common.template.php');
 /**
-* Include viewmail template class
-*/
+ * Include viewmail template class
+ */
 include_once('templates/viewmail.template.php');
 /**
-* Include MailEngine class
-*/
+ * Include MailEngine class
+ */
 include_once('lib/MailEngine.class.php');
 
 if (!Auth::is_logged_in()) {
-    Auth::print_login_msg();	// Check if user is logged in
+    Auth::print_login_msg();    // Check if user is logged in
 }
 
 $t = new Template(translate('ViewOriginal'));
@@ -42,11 +42,11 @@ $t->startMain();
 $mail_id = CmnFns::getGlobalVar('mail_id', GET);
 $recip_email = CmnFns::getGlobalVar('recip_email', GET);
 
-if (! Auth::isMailAdmin() && !in_array($recip_email, $_SESSION['sessionMail'])) {
-  CmnFns::do_error_box(translate('Access Denied'));
+if (!Auth::isMailAdmin() && !in_array($recip_email, $_SESSION['sessionMail'])) {
+    CmnFns::do_error_box(translate('Access Denied'));
 } else {
-    $m = new MailEngine($mail_id,$recip_email);
-    
+    $m = new MailEngine($mail_id, $recip_email);
+
     MsgOriginalOptions();
     MsgBodyPlainText($m->raw);
 }
