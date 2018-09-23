@@ -1,19 +1,19 @@
 <?php
 /**
-* English (en) translation file.
-* Based on phpScheduleIt translation file.
-* This also serves as the base translation file from which to derive
-*  all other translations.
-*
-* @author Samuel Tran <stran2005@users.sourceforge.net>
-* @author Brian Wong <bwsource@users.sourceforge.net>
-* @author Nicolas Peyrussie <peyrouz@users.sourceforge.net>
-* @version 04-03-07
-* @package Languages
-*
-* Copyright (C) 2005 - 2017 MailZu
-* License: GPL, see LICENSE
-*/
+ * English (en) translation file.
+ * Based on phpScheduleIt translation file.
+ * This also serves as the base translation file from which to derive
+ *  all other translations.
+ *
+ * @author Samuel Tran <stran2005@users.sourceforge.net>
+ * @author Brian Wong <bwsource@users.sourceforge.net>
+ * @author Nicolas Peyrussie <peyrouz@users.sourceforge.net>
+ * @version 04-03-07
+ * @package Languages
+ *
+ * Copyright (C) 2005 - 2017 MailZu
+ * License: GPL, see LICENSE
+ */
 ///////////////////////////////////////////////////////////
 // INSTRUCTIONS
 ///////////////////////////////////////////////////////////
@@ -45,18 +45,18 @@
 ////////////////////////////////
 /* Do not modify this section */
 ////////////////////////////////
-global $strings;			  //
-global $email;				  //
-global $dates;				  //
-global $charset;			  //
-global $letters;			  //
-global $days_full;			  //
-global $days_abbr;			  //
-global $days_two;			  //
-global $days_letter;		  //
-global $months_full;		  //
-global $months_abbr;		  //
-global $days_letter;		  //
+global $strings;              //
+global $email;                  //
+global $dates;                  //
+global $charset;              //
+global $letters;              //
+global $days_full;              //
+global $days_abbr;              //
+global $days_two;              //
+global $days_letter;          //
+global $months_full;          //
+global $months_abbr;          //
+global $days_letter;          //
 /******************************/
 
 // Charset for this language
@@ -64,37 +64,37 @@ global $days_letter;		  //
 $charset = 'iso-8859-1';
 
 /***
-  DAY NAMES
-  All of these arrays MUST start with Sunday as the first element 
-   and go through the seven day week, ending on Saturday
-***/
+ * DAY NAMES
+ * All of these arrays MUST start with Sunday as the first element
+ * and go through the seven day week, ending on Saturday
+ ***/
 // The full day name
-$days_full = array('Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sábado');
+$days_full = array('Domingo', 'Segunda-Feira', 'Terï¿½a-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sï¿½bado');
 // The three letter abbreviation
 $days_abbr = array('Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab');
 // The two letter abbreviation
-$days_two  = array('Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa');
+$days_two = array('Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa');
 // The one letter abbreviation
 $days_letter = array('D', 'S', 'T', 'Q', 'U', 'S', 'S');
 
 /***
-  MONTH NAMES
-  All of these arrays MUST start with January as the first element
-   and go through the twelve months of the year, ending on December
-***/
+ * MONTH NAMES
+ * All of these arrays MUST start with January as the first element
+ * and go through the twelve months of the year, ending on December
+ ***/
 // The full month name
-$months_full = array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
+$months_full = array('Janeiro', 'Fevereiro', 'Marï¿½o', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
 // The three letter month name
 $months_abbr = array('Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez');
 
 // All letters of the alphabet starting with A and ending with Z
-$letters = array ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+$letters = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
 
 /***
-  DATE FORMATTING
-  All of the date formatting must use the PHP strftime() syntax
-  You can include any text/HTML formatting in the translation
-***/
+ * DATE FORMATTING
+ * All of the date formatting must use the PHP strftime() syntax
+ * You can include any text/HTML formatting in the translation
+ ***/
 // General date formatting used for all date display unless otherwise noted
 $dates['general_date'] = '%m/%d/%Y';
 // General datetime formatting used for all datetime display unless otherwise noted
@@ -103,12 +103,12 @@ $dates['general_datetime'] = '%m/%d/%Y @';
 $dates['header'] = '%A, %B %d, %Y';
 
 /***
-  STRING TRANSLATIONS
-  All of these strings should be translated from the English value (right side of the equals sign) to the new language.
-  - Please keep the keys (between the [] brackets) as they are.  The keys will not always be the same as the value.
-  - Please keep the sprintf formatting (%s) placeholders where they are unless you are sure it needs to be moved.
-  - Please keep the HTML and punctuation as-is unless you know that you want to change it.
-***/
+ * STRING TRANSLATIONS
+ * All of these strings should be translated from the English value (right side of the equals sign) to the new language.
+ * - Please keep the keys (between the [] brackets) as they are.  The keys will not always be the same as the value.
+ * - Please keep the sprintf formatting (%s) placeholders where they are unless you are sure it needs to be moved.
+ * - Please keep the HTML and punctuation as-is unless you know that you want to change it.
+ ***/
 $strings['hours'] = 'horas';
 $strings['minutes'] = 'minutos';
 // The common abbreviation to hint that a user should enter the month as 2 digits
@@ -127,7 +127,7 @@ $strings['Help'] = 'Ajuda';
 
 $strings['Admin Email'] = 'Admin Email';
 
-$strings['Default'] = 'Padrão';
+$strings['Default'] = 'Padrï¿½o';
 $strings['Reset'] = 'Resetar';
 $strings['Edit'] = 'Editar';
 $strings['Delete'] = 'Deletar';
@@ -137,9 +137,9 @@ $strings['Modify'] = 'Modificar';
 $strings['Save'] = 'Salvar';
 $strings['Back'] = 'Voltar';
 $strings['BackMessageIndex'] = 'Voltar para Menssagens';
-$strings['ToggleHeaders'] = 'Mostrar Cabeçalhos';
+$strings['ToggleHeaders'] = 'Mostrar Cabeï¿½alhos';
 $strings['ViewOriginal'] = 'Ver Original';
-$strings['Next'] = 'próxima';
+$strings['Next'] = 'prï¿½xima';
 $strings['Close Window'] = 'Fechar Janela';
 $strings['Search'] = 'Pesquisar';
 $strings['Clear'] = 'Limpar';
@@ -150,23 +150,23 @@ $strings['Hidden'] = 'Esconder';
 $strings['Show Summary'] = 'Mastrar Agendamento';
 $strings['Add Schedule'] = 'Adicionar Agendamento';
 $strings['Edit Schedule'] = 'Editar Agendamento';
-$strings['No'] = 'Não';
+$strings['No'] = 'Nï¿½o';
 $strings['Yes'] = 'Sim';
 $strings['Name'] = 'Nome';
 $strings['First Name'] = 'Primeiro Nome';
-$strings['Last Name'] = 'Último Nome';
+$strings['Last Name'] = 'ï¿½ltimo Nome';
 $strings['Resource Name'] = 'Recurso';
 $strings['Email'] = 'Email';
 $strings['Institution'] = 'Empresa';
 $strings['Phone'] = 'Telefone';
 $strings['Password'] = 'Senha';
-$strings['Permissions'] = 'Permissões';
-$strings['View information about'] = 'Ver Informações sobre %s %s';
+$strings['Permissions'] = 'Permissï¿½es';
+$strings['View information about'] = 'Ver Informaï¿½ï¿½es sobre %s %s';
 $strings['Send email to'] = 'Enviar e-mail para %s %s';
 $strings['Reset password for'] = 'Resetar senha para %s %s';
-$strings['Edit permissions for'] = 'Editar permissões para %s %s';
-$strings['Position'] = 'Posição';
-$strings['Password (6 char min)'] = 'Senha (%s caracteres min.)';	// @since 1.1.0
+$strings['Edit permissions for'] = 'Editar permissï¿½es para %s %s';
+$strings['Position'] = 'Posiï¿½ï¿½o';
+$strings['Password (6 char min)'] = 'Senha (%s caracteres min.)';    // @since 1.1.0
 $strings['Re-Enter Password'] = 'Redigitar Senha';
 
 $strings['Date'] = 'Data';
@@ -176,19 +176,19 @@ $strings['Message'] = 'Mensagem';
 $strings['Send Email'] = 'Enviar E-mail';
 $strings['problem sending email'] = 'Desculpa, ocorreu um erro ao enviar seu E-mail. Tente mais tarde.';
 $strings['The email sent successfully.'] = 'E-mail enviado com sucesso.';
-$strings['Email address'] = 'Endereço de E-mail';
-$strings['Please Log In'] = 'Informações de Login';
+$strings['Email address'] = 'Endereï¿½o de E-mail';
+$strings['Please Log In'] = 'Informaï¿½ï¿½es de Login';
 $strings['Keep me logged in'] = 'Manter-se logado <br/>(requer cookies)';
 $strings['Password'] = 'Senha';
 $strings['Log In'] = 'Entrar';
 $strings['Get online help'] = 'Ajuda online';
 $strings['Language'] = 'Idioma';
-$strings['(Default)'] = '(Padrão)';
+$strings['(Default)'] = '(Padrï¿½o)';
 
 $strings['Email Administrator'] = 'E-mail p/ Administrador';
 
 $strings['N/A'] = 'N/A';
-$strings['Summary'] = 'Sumário';
+$strings['Summary'] = 'Sumï¿½rio';
 
 $strings['View stats for schedule'] = 'Ver status da Agenda:';
 $strings['At A Glance'] = 'At A Glance';
@@ -221,15 +221,15 @@ $strings['Reservations'] = 'Reservations';
 $strings['Return to top'] = 'Return to top';
 $strings['for'] = 'for';
 
-$strings['Per page'] = 'Por página:';
-$strings['Page'] = 'Página:';
+$strings['Per page'] = 'Por pï¿½gina:';
+$strings['Page'] = 'Pï¿½gina:';
 
-$strings['You are not logged in!'] = 'Você não esta logado!';
+$strings['You are not logged in!'] = 'Vocï¿½ nï¿½o esta logado!';
 
 $strings['Setup'] = 'Setup';
-$strings['Invalid User Name/Password.'] = 'Usuário/Senha inválidos.';
+$strings['Invalid User Name/Password.'] = 'Usuï¿½rio/Senha invï¿½lidos.';
 
-$strings['Valid username is required'] = 'Requerido um nome de usuário válido';
+$strings['Valid username is required'] = 'Requerido um nome de usuï¿½rio vï¿½lido';
 
 $strings['Close'] = 'Fechar';
 
@@ -237,16 +237,16 @@ $strings['Admin'] = 'Admin';
 
 $strings['My Quick Links'] = 'Meus Links';
 
-$strings['Go to first page'] = 'Ir para primeira página';
-$strings['Go to last page'] = 'Ir para última página';
+$strings['Go to first page'] = 'Ir para primeira pï¿½gina';
+$strings['Go to last page'] = 'Ir para ï¿½ltima pï¿½gina';
 $strings['Sort by descending order'] = 'Ordem descendente';
 $strings['Sort by ascending order'] = 'Ordem ascendente';
 $strings['Spam Quarantine'] = 'Quarentena de Spam';
 $strings['Message View'] = 'Visualizando Mensagem';
 $strings['Attachment Quarantine'] = 'Quarentena de Anexos';
-$strings['No such content type'] = 'Tipo de conteúdo não existe';
+$strings['No such content type'] = 'Tipo de conteï¿½do nï¿½o existe';
 $strings['No message was selected'] = 'Nenhuma mensagem foi selecionada ...';
-$strings['Unknown action type'] = 'Tipo de ação desconhecido ...';
+$strings['Unknown action type'] = 'Tipo de aï¿½ï¿½o desconhecido ...';
 $strings['A problem occured when trying to release the following messages'] = 'Ocorreu um problema ao tentar liberar as mensagens selecionadas';
 $strings['A problem occured when trying to delete the following messages'] = 'Ocorreu um problema ao tentar deletar as mesagens selecionadas';
 $strings['Please release the following messages'] = 'Liberar as seguintes mensagens';
@@ -260,44 +260,44 @@ $strings['Status'] = 'Status';
 $strings['Print'] = 'Imprimir';
 $strings['CloseWindow'] = 'Fechar';
 $strings['Unknown server type'] = 'Tipo de servidor desconhecido ...';
-$strings['Showing messages'] = "Mostrando mensagen %s até %s &nbsp;&nbsp; (%s no total)\r\n";
+$strings['Showing messages'] = "Mostrando mensagen %s atï¿½ %s &nbsp;&nbsp; (%s no total)\r\n";
 $strings['View this message'] = 'Ver esta Mensagem';
-$strings['Message Unavailable'] = 'Mensagem Indisponível';
+$strings['Message Unavailable'] = 'Mensagem Indisponï¿½vel';
 $strings['My Quarantine'] = 'Minha Quarentena';
 $strings['Site Quarantine'] = 'Quarentena do Site';
 $strings['Message Processing'] = 'Processando Mensagem';
-$strings['Quarantine Summary'] = 'Sumário da Quarantena';
-$strings['Login'] = 'Usuário';
+$strings['Quarantine Summary'] = 'Sumï¿½rio da Quarantena';
+$strings['Login'] = 'Usuï¿½rio';
 $strings['spam(s)'] = 'spam(s)';
 $strings['attachment(s)'] = 'bloqueio(s) por anexo(s)';
-$strings['pending release request(s)'] = 'pedidos de liberação pendentes';
-$strings['You have to type some text'] = 'Você deve digitar algum texto';
+$strings['pending release request(s)'] = 'pedidos de liberaï¿½ï¿½o pendentes';
+$strings['You have to type some text'] = 'Vocï¿½ deve digitar algum texto';
 $strings['Release'] = 'Liberar';
-$strings['Release/Request release'] = 'Liberar/Solicitar Liberação';
-$strings['Request release'] = 'Solicitar Liberação';
+$strings['Release/Request release'] = 'Liberar/Solicitar Liberaï¿½ï¿½o';
+$strings['Request release'] = 'Solicitar Liberaï¿½ï¿½o';
 $strings['Delete'] = 'Deletar';
 $strings['Delete All'] = 'Deletar Todas';
-$strings['Send report and go back'] = 'Enviar relatório e voltar';
+$strings['Send report and go back'] = 'Enviar relatï¿½rio e voltar';
 $strings['Go back'] = "Voltar";
 $strings['Select All'] = "Selecionar Todas";
 $strings['Clear All'] = "Limpar Todas";
 $strings['Access Denied'] = "Acesso Negado";
-$strings['My Pending Requests'] = "Minhas Pendências<br />&nbsp;&nbsp;de Liberação";
-$strings['Site Pending Requests'] = "Pendências de Liberação";
-$strings['Cancel Request'] = "Cancelar Requisição";
-$strings['User is not allowed to login'] = "Usuário sem permissão para entar";
-$strings['Authentication successful'] = "Autenticação efetuada com sucesso";
-$strings['Authentication failed'] = "Falha na Autenticação";
-$strings['LDAP connection failed'] = "Falha na conexão com LDAP/AD";
+$strings['My Pending Requests'] = "Minhas Pendï¿½ncias<br />&nbsp;&nbsp;de Liberaï¿½ï¿½o";
+$strings['Site Pending Requests'] = "Pendï¿½ncias de Liberaï¿½ï¿½o";
+$strings['Cancel Request'] = "Cancelar Requisiï¿½ï¿½o";
+$strings['User is not allowed to login'] = "Usuï¿½rio sem permissï¿½o para entar";
+$strings['Authentication successful'] = "Autenticaï¿½ï¿½o efetuada com sucesso";
+$strings['Authentication failed'] = "Falha na Autenticaï¿½ï¿½o";
+$strings['LDAP connection failed'] = "Falha na conexï¿½o com LDAP/AD";
 $strings['Logout successful'] = "Logout efetuado com sucesso";
-$strings['IMAP Authentication: no match'] = "Autenticação IMAP: não corresponde";
+$strings['IMAP Authentication: no match'] = "Autenticaï¿½ï¿½o IMAP: nï¿½o corresponde";
 $strings['Search for messages whose:'] = "Procurar por mensagens:";
-$strings['Content Type'] = "Tipo de Conteúdo";
+$strings['Content Type'] = "Tipo de Conteï¿½do";
 $strings['Clear search results'] = "Limpar resultados da pesquisa";
-$strings['contains'] = "contém";
-$strings['doesn\'t contain'] = "não contém";
-$strings['equals'] = "é igual";
-$strings['doesn\'t equal'] = "não é igual";
+$strings['contains'] = "contï¿½m";
+$strings['doesn\'t contain'] = "nï¿½o contï¿½m";
+$strings['equals'] = "ï¿½ igual";
+$strings['doesn\'t equal'] = "nï¿½o ï¿½ igual";
 $strings['All'] = "Todos";
 $strings['Spam'] = "Spam";
 $strings['Banned'] = "Anexo";

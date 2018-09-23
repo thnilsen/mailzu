@@ -1,23 +1,26 @@
-/* Last modified 2018-09-09 */
+/* Last modified 2018-09-12 */
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    background-color: #F0F0F0;    			
+    background-color: #F0F0F0;
     margin-top: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
     color: #333333;
-	font-size: 11px;
+    font-size: 11px;
 }
+
 a {
-	/*color: #104E8B;*/
-	color: #1089CF;
-	text-decoration: none;
+    /*color: #104E8B;*/
+    color: #1089CF;
+    text-decoration: none;
 }
+
 a:hover {
     color: #474747;
     text-decoration: underline;
 }
+
 /*
 Common text settings
 */
@@ -28,41 +31,56 @@ p {
     margin-right: 2px;
     margin-left: 2px;
 }
+
 h5 {
     margin-bottom: 0px;
-	margin-top: 0px;
+    margin-top: 0px;
     font-size: 12px;
 }
+
 h4 {
-	font-size: 13px;
+    font-size: 13px;
 }
+
 h3 {
-	font-size: 18px;
-	margin-top: 0px;
+    font-size: 18px;
+    margin-top: 0px;
 }
+
+/* display of text mails should wrap */
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
 /*
 Error box settings
 */
 .alert {
     color: #CC0000;
-	background-color: #FFFFFF;
+    background-color: #FFFFFF;
     text-align: center;
-	width: 60%;
-	/*border: solid #8B0000 2px;*/
-	border: solid #CC0000 2px;
-	padding: 5px;
-	margin-bottom: 5px;
-	font-size: 11px;
+    width: 60%;
+    /*border: solid #8B0000 2px;*/
+    border: solid #CC0000 2px;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 11px;
 }
+
 /*
 Form text box settings
 */
 .textbox {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 11px; /*color: #36648B;*/
-	color: #05609A;
-	background-color: #FCFCFC;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px; /*color: #36648B;*/
+    color: #05609A;
+    background-color: #FCFCFC;
 }
+
 /*
 Form button settings
 */
@@ -70,29 +88,29 @@ Form button settings
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 10px;
     font-weight: bold;
-	border: solid 1px #7C7A7A;
-	/*color: #36648B;*/
-	color: #05609A;
-	background-color: #E7E7E7;
+    border: solid 1px #7C7A7A;
+    /*color: #36648B;*/
+    color: #05609A;
+    background-color: #E7E7E7;
 }
 
 /*
 Data table head row settings
 */
 .tableTitle {
-	font-size: 11px;
-	font-weight: bold;
-	color: #FFFFFF;
-	padding-left: 10px;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	padding-right: 5px; /*	background-color: #36648B;*/
-	background-color: #05609A;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 5px; /*	background-color: #36648B;*/
+    background-color: #05609A;
 }
 
 .tableTitle a, .tableTitle a:hover {
-	color: #FFFFFF;
-	text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 td.tableTitle {
@@ -108,15 +126,16 @@ Welcome message settings
     margin-bottom: 0px;
     margin-left: 0px;
     /*color: #708090;*/
-	 color: #05609A;
-	font-size: 12px;
+    color: #05609A;
+    font-size: 12px;
 }
+
 /*
 Table border color
 */
 .tableBorder {
-/*    background-color: #36648B; */
-	background-color: #05609A;
+    /*    background-color: #36648B; */
+    background-color: #05609A;
 }
 
 /*
@@ -127,22 +146,25 @@ td.cellColor, .cellColor td, .cellColor {
     background-color: #FFFFFF;
     font-size: 11px;
 }
+
 /*
 Alternating row colors
 Got rid of the contextual selector '.cellColor0 td'
 */
 .cellColor0, td.cellColor0 {
-	font-family: monospace;
+    font-family: monospace;
     padding: 2px;
     background-color: #FFFFFF;
-	font-size: 10px;
+    font-size: 10px;
 }
+
 .cellColor1, td.cellColor1 {
-	font-family: monospace;
+    font-family: monospace;
     padding: 2px;
     background-color: #F8FAEA;
-	font-size: 10px;
+    font-size: 10px;
 }
+
 /*
 Special Alternating row colors for viruses
 */
@@ -151,17 +173,20 @@ td.cellVirus, .cellVirus0 {
     background-color: #FFCCFF;
     font-size: 11px;
 }
+
 td.cellVirus, .cellVirus1 {
     padding: 2px;
     background-color: #FF99FF;
     font-size: 11px;
 }
+
 /*
 Content Type Column Virus Bolding 
 */
 td.typeVirus, .typeVirus td {
     font-weight: bold;
 }
+
 /*
 Table data row heading settings
 */
@@ -172,6 +197,7 @@ td.rowHeaders, .rowHeaders td {
     text-align: center;
     font-size: 11px;
 }
+
 /*
 Summary Table Number values
 */
@@ -179,6 +205,7 @@ td.rowNumValues, .rowNumValues td {
     text-align: right;
     padding-right: 5px;
 }
+
 /*
 Summary Table Totals
 */
@@ -187,6 +214,7 @@ td.rowTotals, .rowTotals td {
     text-align: right;
     padding-right: 5px;
 }
+
 /*
 Individal time cells for the scheduler
 */
@@ -197,20 +225,22 @@ td.scheduleTimes, .scheduleTimes td {
     background-color: #EDEDED;
     padding-left: 2px;
 }
+
 /*
 Date cell for the scheduler
 */
 td.scheduleDate, .scheduleDate td {
-	font-size: 11px;
-	color: #FFFFFF;
-	background-color: #4BB5F2;
-	text-align: center;
-	padding: 2px;
+    font-size: 11px;
+    color: #FFFFFF;
+    background-color: #4BB5F2;
+    text-align: center;
+    padding: 2px;
 }
 
 td.scheduleDate a {
-	color: #FFFFFF;
+    color: #FFFFFF;
 }
+
 /*
 Resource name cell for the scheduler
 */
@@ -223,6 +253,7 @@ td.resourceName {
     padding-bottom: 2px;
     padding-right: 5px;
 }
+
 /*
 Edit form cell settings
 */
@@ -231,55 +262,60 @@ td.formNames {
     background-color: #EDEDED;
     padding-left: 5px;
 }
+
 /*
 Reserved cell settings for the scheduler
 */
 td.reservedCell {
-	font-size: 10px;
-	background-color: #C5E7F9;
+    font-size: 10px;
+    background-color: #C5E7F9;
 }
+
 /*
 Inactive resource text color
 */
 .inact {
     color: #BDBDBD;
 }
+
 /*
 Color of the outermost border on every page
 */
 .mainBorder {
     border: solid 1px #CCCCCC;
 }
-/* 
+
+/*
 Background color of main section on every page
 */
 .mainBkgrdClr {
     background-color: #FAFAFA;
 }
+
 /*
 Alert message settings
 */
 .message {
-	background-color: #FEFEFE;
-	text-align: center;
-	width: 60%;
-	border: solid #E0E0E0 1px;
-	padding: 5px;
-	margin-bottom: 5px;
-	font-size: 11px;
+    background-color: #FEFEFE;
+    text-align: center;
+    width: 60%;
+    border: solid #E0E0E0 1px;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 11px;
 }
 
 /*
 Summary popup box
 */
 .summary_div {
-	position: absolute;
-	visibility: hidden;
-	border: solid #686767 1px;
-	padding: 3px;
-	background-color: #E1E1E1;
-	overflow: visible;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+    position: absolute;
+    visibility: hidden;
+    border: solid #686767 1px;
+    padding: 3px;
+    background-color: #E1E1E1;
+    overflow: visible;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 11px;
 }
 
@@ -287,89 +323,103 @@ Summary popup box
 Recurring reservation box
 */
 .recur_box {
-	background-color: #D0D4E4;
-	color: #282D42;
-	border: solid 1px #8B94B1;
+    background-color: #D0D4E4;
+    color: #282D42;
+    border: solid 1px #8B94B1;
 }
 
 /*
 Calendar settings
 */
 .monthNameStyle {
-	font-size: 11px;
-	text-align: center;
+    font-size: 11px;
+    text-align: center;
 }
+
 .dayBoxStyle {
-	font-size: 10px;
-	background-color: #F0F0F0;
-	text-align: center;
-	width: 25px;
-	height: 25px;
+    font-size: 10px;
+    background-color: #F0F0F0;
+    text-align: center;
+    width: 25px;
+    height: 25px;
 }
+
 .currentDayBoxStyle {
-	width: 25px;
-	height: 25px;
-	font-size: 10px;
-	background-color: #FFFFFF;
-	text-align: center;
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+    background-color: #FFFFFF;
+    text-align: center;
 }
+
 .emptyDayStyle {
-	background-color: #D5D8D3;
+    background-color: #D5D8D3;
 }
+
 .dayNamesStyle {
-	font-size: 11px;
-	text-align: center;
-	height: 25px;
-	background-color: #DDCAF6;
+    font-size: 11px;
+    text-align: center;
+    height: 25px;
+    background-color: #DDCAF6;
 }
+
 .navMonthStyle {
-	font-size: 11px;
-	color: #000000;
+    font-size: 11px;
+    color: #000000;
 }
+
 .selectBoxStyle {
-	font-size: 11px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 /* Reservation tab select */
 .tab-row td {
-	text-align: center;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 11px;
-	padding-top: 3px;
-	padding-bottom: 2px;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    padding-top: 3px;
+    padding-bottom: 2px;
 }
+
 .tab-row a {
-	text-decoration:none;
+    text-decoration: none;
 }
+
 .tab-selected {
-	border-right:solid 1px #CCCCCC;
-	border-top:solid 1px #CCCCCC;
-	border-left:solid 1px #CCCCCC;
-	width:100px;
-	color: #0000ff;
-	height:20px;
+    border-right: solid 1px #CCCCCC;
+    border-top: solid 1px #CCCCCC;
+    border-left: solid 1px #CCCCCC;
+    width: 100px;
+    color: #0000ff;
+    height: 20px;
 }
+
 .tab-selected a {
-	color: #000000;
+    color: #000000;
 }
+
 .tab-not-selected {
-	border:solid 1px #D1D1D1;
-	width:100px;
-	background-color: #EDEDED;
-	border-bottom: solid 1px #CCCCCC;
+    border: solid 1px #D1D1D1;
+    width: 100px;
+    background-color: #EDEDED;
+    border-bottom: solid 1px #CCCCCC;
 }
+
 .tab-not-selected a {
-	color: #666666;
+    color: #666666;
 }
+
 .tab-filler {
-	border-bottom:solid 1px #CCCCCC;
+    border-bottom: solid 1px #CCCCCC;
 }
+
 .tab-main {
-	border-right:solid 1px #CCCCCC;
-	border-left:solid 1px #CCCCCC;
-	border-bottom:solid 1px #CCCCCC;
+    border-right: solid 1px #CCCCCC;
+    border-left: solid 1px #CCCCCC;
+    border-bottom: solid 1px #CCCCCC;
 }
+
 /*************************************
 
 /** MyCalendar **/
@@ -380,97 +430,97 @@ Calendar settings
 }
 
 .MyCalCellColorEmpty {
-	background-color: #F0F0F0;
+    background-color: #F0F0F0;
 }
 
 .MyCalDayBox {
-	padding: 2px;
-	background-color: #FFFFFF;
-	font-size: 11px;
-	width: 140px;
-	height: 120px;
-	vertical-align: top;
+    padding: 2px;
+    background-color: #FFFFFF;
+    font-size: 11px;
+    width: 140px;
+    height: 120px;
+    vertical-align: top;
 }
 
 .MyCalEmptyDayBox {
-	padding: 2px;
-	background-color: #EEEEEE;
-	font-size: 11px;
-	vertical-align: top;
+    padding: 2px;
+    background-color: #EEEEEE;
+    font-size: 11px;
+    vertical-align: top;
 }
 
 .MyCalCurrentDayBox {
-	padding: 2px;
-	background-color: #FFFFFF;
-	font-size: 11px;
-	vertical-align: top;
-	border: solid 1px #36648B;
+    padding: 2px;
+    background-color: #FFFFFF;
+    font-size: 11px;
+    vertical-align: top;
+    border: solid 1px #36648B;
 }
 
 .MyCalDateNumber, a.MyCalDateNumber {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 .MyCalCellColor p, .MyCalDayBox p, .MyCalEmptyDayBox p, .MyCalCurrentDayBox p {
-	margin-bottom: 7px;
+    margin-bottom: 7px;
 }
 
 div.mycal_div {
-	position: absolute;
-	visibility: hidden;
-	/*
-	border-top: solid #BCBB6E 1px;
-	border-left: solid #BCBB6E 1px;
-	border-right: solid #BCBB6E 2px;
-	border-bottom: solid #BCBB6E 2px;
-	background-color: #FEFEDA;
-	*/
-	border-top: solid #7C7C7C 1px;
-	border-left: solid #7C7C7C 1px;
-	border-right: solid #6F6F6F 2px;
-	border-bottom: solid #6F6F6F 2px;
-	background-color: #FEFFFE;
-	padding: 3px;
-	overflow: visible;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+    position: absolute;
+    visibility: hidden;
+    /*
+    border-top: solid #BCBB6E 1px;
+    border-left: solid #BCBB6E 1px;
+    border-right: solid #BCBB6E 2px;
+    border-bottom: solid #BCBB6E 2px;
+    background-color: #FEFEDA;
+    */
+    border-top: solid #7C7C7C 1px;
+    border-left: solid #7C7C7C 1px;
+    border-right: solid #6F6F6F 2px;
+    border-bottom: solid #6F6F6F 2px;
+    background-color: #FEFFFE;
+    padding: 3px;
+    overflow: visible;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 11px;
-	color: #616161;
+    color: #616161;
 }
 
 /* SelectUser colors */
 .SelectUserRowOver, .SelectUserRowOver td, td.SelectUserRowOver {
-	background-color: #A2D9F8;
-	padding: 2px;
-	font-size: 11px;
+    background-color: #A2D9F8;
+    padding: 2px;
+    font-size: 11px;
 }
 
 /* Selected Link */
 .selectedLink {
-	font-size: 11px;
-	background-color: #D8EFFB;
-	padding: 2px;
+    font-size: 11px;
+    background-color: #D8EFFB;
+    padding: 2px;
 }
 
 /* Header Cells */
 .headerName {
-	border: 1px solid #0F93DF;
-	background-color: #D8EFFB;
-	padding: 2px;
-	width: 10px;
-	font-size: 11px;
+    border: 1px solid #0F93DF;
+    background-color: #D8EFFB;
+    padding: 2px;
+    width: 10px;
+    font-size: 11px;
 }
 
 .headerValue {
-    border:solid 1px #0F93DF;
+    border: solid 1px #0F93DF;
     border-right: none;
     padding: 2px;
     font-size: 11px;
-} 
+}
 
 .stdFont {
-/*	font-family: monospace;*/
+    /*	font-family: monospace;*/
     font-size: 11px;
-} 
+}
 
 .visible {
 }
@@ -486,33 +536,37 @@ div.mycal_div {
 .alignright {
     text-align: right;
 }
+
 .box-shadow-menu {
-  position: relative;
-  padding-left: 1.25em;
+    position: relative;
+    padding-left: 1.25em;
 }
+
 .box-shadow-menu:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.25em;
-  width: 1em;
-  height: 0.15em;
-  background: black;
-  box-shadow: 
-    0 0.25em 0 0 black,
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 1em;
+    height: 0.15em;
+    background: black;
+    box-shadow: 0 0.25em 0 0 black,
     0 0.5em 0 0 black;
 }
 
 @media screen and (max-width: 640px) {
     td.quarcell {
-        display: block!important;
+        display: block !important;
     }
+
     tr.rowHeaders.quarcell {
-        display: none!important;
+        display: none !important;
     }
+
     form > table > tbody > tr > td > input.button.quarcell {
         font-size: 20px;
     }
+
     #selandpagetbl > tbody > tr > td.quarcell,
     #selandpagetbl > tbody > tr > td > a.quarcell {
         font-size: 22px;
@@ -521,27 +575,32 @@ div.mycal_div {
     #searchenginetbl > tbody > tr {
         display: grid;
     }
+
     #searchenginetbl > tbody > tr > td.alignright,
-    #searchenginetbl > tbody > tr > td.alignleft, 
+    #searchenginetbl > tbody > tr > td.alignleft,
     #searchenginetbl > tbody > tr > td.alignright > .button,
     #searchenginetbl > tbody > tr > td.alignleft > .button {
         font-size: 20px;
         text-align: left;
     }
+
     #searchhdr > tbody > tr > td.tableTitle {
         font-size: 20px;
     }
+
     #quick_links_table > table > tbody > tr > td > table > tbody > tr > td > p.quarcell {
-        min-height: 66px!important;
+        min-height: 66px !important;
         font-size: 18px;
         font-weight: bold;
         border: solid 1px #7C7A7A;
         color: #05609A;
         background-color: #E7E7E7;
     }
+
     #quicklinks_closed {
         min-height: 36px;
     }
+
     #quick_links_table > table > tbody > tr > td > table > tbody > tr > td > p.quarcell > b {
         display: none;
     }

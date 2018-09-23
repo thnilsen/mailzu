@@ -1,19 +1,19 @@
 <?php
 /**
-* English (en) translation file.
-* Based on phpScheduleIt translation file.
-* This also serves as the base translation file from which to derive
-*  all other translations.
-*
-* @author Samuel Tran <stran2005@users.sourceforge.net>
-* @author Brian Wong <bwsource@users.sourceforge.net>
-* @author Nicolas Peyrussie <peyrouz@users.sourceforge.net>
-* @version 04-03-07
-* @package Languages
-*
-* Copyright (C) 2005 - 2017 MailZu
-* License: GPL, see LICENSE
-*/
+ * English (en) translation file.
+ * Based on phpScheduleIt translation file.
+ * This also serves as the base translation file from which to derive
+ *  all other translations.
+ *
+ * @author Samuel Tran <stran2005@users.sourceforge.net>
+ * @author Brian Wong <bwsource@users.sourceforge.net>
+ * @author Nicolas Peyrussie <peyrouz@users.sourceforge.net>
+ * @version 04-03-07
+ * @package Languages
+ *
+ * Copyright (C) 2005 - 2017 MailZu
+ * License: GPL, see LICENSE
+ */
 ///////////////////////////////////////////////////////////
 // INSTRUCTIONS
 ///////////////////////////////////////////////////////////
@@ -45,18 +45,18 @@
 ////////////////////////////////
 /* Do not modify this section */
 ////////////////////////////////
-global $strings;			  //
-global $email;				  //
-global $dates;				  //
-global $charset;			  //
-global $letters;			  //
-global $days_full;			  //
-global $days_abbr;			  //
-global $days_two;			  //
-global $days_letter;		  //
-global $months_full;		  //
-global $months_abbr;		  //
-global $days_letter;		  //
+global $strings;              //
+global $email;                  //
+global $dates;                  //
+global $charset;              //
+global $letters;              //
+global $days_full;              //
+global $days_abbr;              //
+global $days_two;              //
+global $days_letter;          //
+global $months_full;          //
+global $months_abbr;          //
+global $days_letter;          //
 /******************************/
 
 // Charset for this language
@@ -64,37 +64,37 @@ global $days_letter;		  //
 $charset = 'iso-8859-1';
 
 /***
-  DAY NAMES
-  All of these arrays MUST start with Sunday as the first element 
-   and go through the seven day week, ending on Saturday
-***/
+ * DAY NAMES
+ * All of these arrays MUST start with Sunday as the first element
+ * and go through the seven day week, ending on Saturday
+ ***/
 // The full day name
 $days_full = array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
 // The three letter abbreviation
 $days_abbr = array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
 // The two letter abbreviation
-$days_two  = array('Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa');
+$days_two = array('Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa');
 // The one letter abbreviation
 $days_letter = array('S', 'M', 'T', 'W', 'T', 'F', 'S');
 
 /***
-  MONTH NAMES
-  All of these arrays MUST start with January as the first element
-   and go through the twelve months of the year, ending on December
-***/
+ * MONTH NAMES
+ * All of these arrays MUST start with January as the first element
+ * and go through the twelve months of the year, ending on December
+ ***/
 // The full month name
 $months_full = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
 // The three letter month name
 $months_abbr = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
 
 // All letters of the alphabet starting with A and ending with Z
-$letters = array ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+$letters = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
 
 /***
-  DATE FORMATTING
-  All of the date formatting must use the PHP strftime() syntax
-  You can include any text/HTML formatting in the translation
-***/
+ * DATE FORMATTING
+ * All of the date formatting must use the PHP strftime() syntax
+ * You can include any text/HTML formatting in the translation
+ ***/
 // General date formatting used for all date display unless otherwise noted
 $dates['general_date'] = '%d/%m/%Y';
 // General datetime formatting used for all datetime display unless otherwise noted
@@ -103,12 +103,12 @@ $dates['general_datetime'] = '%d/%m/%Y @';
 $dates['header'] = '%A, %B %d, %Y';
 
 /***
-  STRING TRANSLATIONS
-  All of these strings should be translated from the English value (right side of the equals sign) to the new language.
-  - Please keep the keys (between the [] brackets) as they are.  The keys will not always be the same as the value.
-  - Please keep the sprintf formatting (%s) placeholders where they are unless you are sure it needs to be moved.
-  - Please keep the HTML and punctuation as-is unless you know that you want to change it.
-***/
+ * STRING TRANSLATIONS
+ * All of these strings should be translated from the English value (right side of the equals sign) to the new language.
+ * - Please keep the keys (between the [] brackets) as they are.  The keys will not always be the same as the value.
+ * - Please keep the sprintf formatting (%s) placeholders where they are unless you are sure it needs to be moved.
+ * - Please keep the HTML and punctuation as-is unless you know that you want to change it.
+ ***/
 $strings['hours'] = 'hours';
 $strings['minutes'] = 'minutes';
 // The common abbreviation to hint that a user should enter the month as 2 digits
@@ -166,7 +166,7 @@ $strings['Send email to'] = 'Send email to %s %s';
 $strings['Reset password for'] = 'Reset password for %s %s';
 $strings['Edit permissions for'] = 'Edit permissions for %s %s';
 $strings['Position'] = 'Position';
-$strings['Password (6 char min)'] = 'Password (%s char min)';	// @since 1.1.0
+$strings['Password (6 char min)'] = 'Password (%s char min)';    // @since 1.1.0
 $strings['Re-Enter Password'] = 'Re-Enter Password';
 
 $strings['Date'] = 'Date';

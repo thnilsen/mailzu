@@ -1,17 +1,17 @@
 <?php
 /**
-* Italian (it) translation file.
-* Based on phpScheduleIt translation file.
-* This also serves as the base translation file from which to derive
-*  all other translations.
-*
-* @author Paolo Cravero <pcravero@as2594.net>
-* @version 08-25-05
-* @package Languages
-*
-* Copyright (C) 2005 - MailZu
-* License: GPL, see LICENSE
-*/
+ * Italian (it) translation file.
+ * Based on phpScheduleIt translation file.
+ * This also serves as the base translation file from which to derive
+ *  all other translations.
+ *
+ * @author Paolo Cravero <pcravero@as2594.net>
+ * @version 08-25-05
+ * @package Languages
+ *
+ * Copyright (C) 2005 - MailZu
+ * License: GPL, see LICENSE
+ */
 ///////////////////////////////////////////////////////////
 // INSTRUCTIONS
 ///////////////////////////////////////////////////////////
@@ -43,18 +43,18 @@
 ////////////////////////////////
 /* Do not modify this section */
 ////////////////////////////////
-global $strings;			  //
-global $email;				  //
-global $dates;				  //
-global $charset;			  //
-global $letters;			  //
-global $days_full;			  //
-global $days_abbr;			  //
-global $days_two;			  //
-global $days_letter;		  //
-global $months_full;		  //
-global $months_abbr;		  //
-global $days_letter;		  //
+global $strings;              //
+global $email;                  //
+global $dates;                  //
+global $charset;              //
+global $letters;              //
+global $days_full;              //
+global $days_abbr;              //
+global $days_two;              //
+global $days_letter;          //
+global $months_full;          //
+global $months_abbr;          //
+global $days_letter;          //
 /******************************/
 
 // Charset for this language
@@ -62,37 +62,37 @@ global $days_letter;		  //
 $charset = 'iso-8859-1';
 
 /***
-  DAY NAMES
-  All of these arrays MUST start with Sunday as the first element 
-   and go through the seven day week, ending on Saturday
-***/
+ * DAY NAMES
+ * All of these arrays MUST start with Sunday as the first element
+ * and go through the seven day week, ending on Saturday
+ ***/
 // The full day name
 $days_full = array('Domenica', 'Lunedi', 'Martedi', 'Mercoledi', 'Giovedi', 'Venerdi', 'Sabato');
 // The three letter abbreviation
 $days_abbr = array('Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab');
 // The two letter abbreviation
-$days_two  = array('Do', 'Lu', 'Ma', 'Me', 'Gi', 'Ve', 'Sa');
+$days_two = array('Do', 'Lu', 'Ma', 'Me', 'Gi', 'Ve', 'Sa');
 // The one letter abbreviation
 $days_letter = array('D', 'L', 'm', 'M', 'G', 'V', 'S');
 
 /***
-  MONTH NAMES
-  All of these arrays MUST start with January as the first element
-   and go through the twelve months of the year, ending on December
-***/
+ * MONTH NAMES
+ * All of these arrays MUST start with January as the first element
+ * and go through the twelve months of the year, ending on December
+ ***/
 // The full month name
 $months_full = array('Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre');
 // The three letter month name
 $months_abbr = array('Gen', 'Feb', 'Mar', 'Apr', 'MaG', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic');
 
 // All letters of the alphabet starting with A and ending with Z
-$letters = array ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+$letters = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
 
 /***
-  DATE FORMATTING
-  All of the date formatting must use the PHP strftime() syntax
-  You can include any text/HTML formatting in the translation
-***/
+ * DATE FORMATTING
+ * All of the date formatting must use the PHP strftime() syntax
+ * You can include any text/HTML formatting in the translation
+ ***/
 // General date formatting used for all date display unless otherwise noted
 $dates['general_date'] = '%d/%m/%Y';
 // General datetime formatting used for all datetime display unless otherwise noted
@@ -102,12 +102,12 @@ $dates['general_datetime'] = '%d/%m/%Y @';
 $dates['header'] = '%A, %d %B %Y';
 
 /***
-  STRING TRANSLATIONS
-  All of these strings should be translated from the English value (right side of the equals sign) to the new language.
-  - Please keep the keys (between the [] brackets) as they are.  The keys will not always be the same as the value.
-  - Please keep the sprintf formatting (%s) placeholders where they are unless you are sure it needs to be moved.
-  - Please keep the HTML and punctuation as-is unless you know that you want to change it.
-***/
+ * STRING TRANSLATIONS
+ * All of these strings should be translated from the English value (right side of the equals sign) to the new language.
+ * - Please keep the keys (between the [] brackets) as they are.  The keys will not always be the same as the value.
+ * - Please keep the sprintf formatting (%s) placeholders where they are unless you are sure it needs to be moved.
+ * - Please keep the HTML and punctuation as-is unless you know that you want to change it.
+ ***/
 $strings['hours'] = 'ore';
 $strings['minutes'] = 'minuti';
 // The common abbreviation to hint that a user should enter the month as 2 digits
@@ -165,7 +165,7 @@ $strings['Send email to'] = 'Send email to %s %s';
 $strings['Reset password for'] = 'Reset password for %s %s';
 $strings['Edit permissions for'] = 'Edit permissions for %s %s';
 $strings['Position'] = 'Position';
-$strings['Password (6 char min)'] = 'Password (%s char min)';	// @since 1.1.0
+$strings['Password (6 char min)'] = 'Password (%s char min)';    // @since 1.1.0
 $strings['Re-Enter Password'] = 'Re-Enter Password';
 
 $strings['Date'] = 'Date';
@@ -310,7 +310,7 @@ $strings['Virus'] = "Virus";
 $strings['Viruses'] = "Viruses";
 $strings['last'] = "ultima";
 $strings['first'] = "prima";
-$strings['previous'] = "prec."; 
+$strings['previous'] = "prec.";
 $strings['There was an error executing your query'] = 'E\' stato riscontrato un errore durante la ricerca sul database:';
 $strings['There are no matching records.'] = 'Nessun record trovato.';
 $strings['Domain'] = 'Dominio';

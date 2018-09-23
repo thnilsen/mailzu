@@ -1,18 +1,18 @@
 <?php
 /**
-* Czech (cz) translation file.
-* Based on phpScheduleIt translation file.
-* This also serves as the base translation file from which to derive
-*  all other translations.
-*
-* @author Vladimir Volcko <vtg@prolinux.cz>
-* @author Petr Stehlik <pstehlik@sophics.cz>
-* @version 06-05-07
-* @package Languages
-*
-* Copyright (C) 2005 -2007 MailZu
-* License: GPL, see LICENSE
-*/
+ * Czech (cz) translation file.
+ * Based on phpScheduleIt translation file.
+ * This also serves as the base translation file from which to derive
+ *  all other translations.
+ *
+ * @author Vladimir Volcko <vtg@prolinux.cz>
+ * @author Petr Stehlik <pstehlik@sophics.cz>
+ * @version 06-05-07
+ * @package Languages
+ *
+ * Copyright (C) 2005 -2007 MailZu
+ * License: GPL, see LICENSE
+ */
 ///////////////////////////////////////////////////////////
 // INSTRUCTIONS
 ///////////////////////////////////////////////////////////
@@ -44,18 +44,18 @@
 ////////////////////////////////
 /* Do not modify this section */
 ////////////////////////////////
-global $strings;			  //
-global $email;				  //
-global $dates;				  //
-global $charset;			  //
-global $letters;			  //
-global $days_full;			  //
-global $days_abbr;			  //
-global $days_two;			  //
-global $days_letter;		  //
-global $months_full;		  //
-global $months_abbr;		  //
-global $days_letter;		  //
+global $strings;              //
+global $email;                  //
+global $dates;                  //
+global $charset;              //
+global $letters;              //
+global $days_full;              //
+global $days_abbr;              //
+global $days_two;              //
+global $days_letter;          //
+global $months_full;          //
+global $months_abbr;          //
+global $days_letter;          //
 /******************************/
 
 // Charset for this language
@@ -63,37 +63,37 @@ global $days_letter;		  //
 $charset = 'utf-8';
 
 /***
-  DAY NAMES
-  All of these arrays MUST start with Sunday as the first element 
-   and go through the seven day week, ending on Saturday
-***/
+ * DAY NAMES
+ * All of these arrays MUST start with Sunday as the first element
+ * and go through the seven day week, ending on Saturday
+ ***/
 // The full day name
 $days_full = array('Neděle', 'Pondělí', 'Úterý', 'Středa', 'Čtvtek', 'Pátek', 'Sobota');
 // The three letter abbreviation
 $days_abbr = array('Ne ', 'Po ', 'Út ', 'St ', 'Čt ', 'Pá ', 'So ');
 // The two letter abbreviation
-$days_two  = array('Ne', 'Po', 'Út', 'St', 'Čt', 'Pá', 'So');
+$days_two = array('Ne', 'Po', 'Út', 'St', 'Čt', 'Pá', 'So');
 // The one letter abbreviation
 $days_letter = array('N', 'P', 'Ú', 'S', 'Č', 'P', 'S');
 
 /***
-  MONTH NAMES
-  All of these arrays MUST start with January as the first element
-   and go through the twelve months of the year, ending on December
-***/
+ * MONTH NAMES
+ * All of these arrays MUST start with January as the first element
+ * and go through the twelve months of the year, ending on December
+ ***/
 // The full month name
 $months_full = array('Leden', 'Únor', 'Březen', 'Duben', 'Květen', 'Červen', 'Červenec', 'Srpen', 'Září', 'Říjen', 'Listopad', 'Prosinec');
 // The three letter month name
 $months_abbr = array('Led', 'Úno', 'Bře', 'Dub', 'Kvě', 'Čěr', 'Čec', 'Srp', 'Zář', 'Říj', 'Lis', 'Pro');
 
 // All letters of the alphabet starting with A and ending with Z
-$letters = array ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+$letters = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
 
 /***
-  DATE FORMATTING
-  All of the date formatting must use the PHP strftime() syntax
-  You can include any text/HTML formatting in the translation
-***/
+ * DATE FORMATTING
+ * All of the date formatting must use the PHP strftime() syntax
+ * You can include any text/HTML formatting in the translation
+ ***/
 // General date formatting used for all date display unless otherwise noted
 $dates['general_date'] = '%d/%m/%Y';
 // General datetime formatting used for all datetime display unless otherwise noted
@@ -102,12 +102,12 @@ $dates['general_datetime'] = '%d/%m/%Y @';
 $dates['header'] = '%A, %B %d, %Y';
 
 /***
-  STRING TRANSLATIONS
-  All of these strings should be translated from the English value (right side of the equals sign) to the new language.
-  - Please keep the keys (between the [] brackets) as they are.  The keys will not always be the same as the value.
-  - Please keep the sprintf formatting (%s) placeholders where they are unless you are sure it needs to be moved.
-  - Please keep the HTML and punctuation as-is unless you know that you want to change it.
-***/
+ * STRING TRANSLATIONS
+ * All of these strings should be translated from the English value (right side of the equals sign) to the new language.
+ * - Please keep the keys (between the [] brackets) as they are.  The keys will not always be the same as the value.
+ * - Please keep the sprintf formatting (%s) placeholders where they are unless you are sure it needs to be moved.
+ * - Please keep the HTML and punctuation as-is unless you know that you want to change it.
+ ***/
 $strings['hours'] = 'hodiny';
 $strings['minutes'] = 'minuty';
 // The common abbreviation to hint that a user should enter the month as 2 digits
@@ -165,7 +165,7 @@ $strings['Send email to'] = 'Poslat email %s %s';
 $strings['Reset password for'] = 'Změnit heslo pro %s %s';
 $strings['Edit permissions for'] = 'Editovat oprávnění pro %s %s';
 $strings['Position'] = 'Pozice';
-$strings['Password (6 char min)'] = 'Heslo (%s min. znaků)';	// @since 1.1.0
+$strings['Password (6 char min)'] = 'Heslo (%s min. znaků)';    // @since 1.1.0
 $strings['Re-Enter Password'] = 'Vložte heslo (znovu)';
 
 $strings['Date'] = 'Datum';
