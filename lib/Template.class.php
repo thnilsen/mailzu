@@ -73,7 +73,7 @@ class Template
             <link rel="icon" sizes="192x192" href="img/mailzu-x4-192x192-icon.png">
             <script language="JavaScript" type="text/javascript" src="<?php echo $path ?>functions.js"></script>
             <style type="text/css">
-                @import url("<?php echo $path?>css.css?v=1");
+                @import url("<?php echo $path?>css.css?v=<?php echo md5_file($path.'css.css'); ?>");
             </style>
         </head>
         <body>

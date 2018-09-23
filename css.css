@@ -558,15 +558,12 @@ div.mycal_div {
     td.quarcell {
         display: block !important;
     }
-
     tr.rowHeaders.quarcell {
         display: none !important;
     }
-
     form > table > tbody > tr > td > input.button.quarcell {
         font-size: 20px;
     }
-
     #selandpagetbl > tbody > tr > td.quarcell,
     #selandpagetbl > tbody > tr > td > a.quarcell {
         font-size: 22px;
@@ -575,7 +572,6 @@ div.mycal_div {
     #searchenginetbl > tbody > tr {
         display: grid;
     }
-
     #searchenginetbl > tbody > tr > td.alignright,
     #searchenginetbl > tbody > tr > td.alignleft,
     #searchenginetbl > tbody > tr > td.alignright > .button,
@@ -583,25 +579,25 @@ div.mycal_div {
         font-size: 20px;
         text-align: left;
     }
-
     #searchhdr > tbody > tr > td.tableTitle {
         font-size: 20px;
     }
-
+    #quick_links_table > table > tbody > tr > td > table > tbody > tr > td > p.quarcell > a,
     #quick_links_table > table > tbody > tr > td > table > tbody > tr > td > p.quarcell {
         min-height: 66px !important;
         font-size: 18px;
         font-weight: bold;
-        border: solid 1px #7C7A7A;
         color: #05609A;
         background-color: #E7E7E7;
     }
-
+    #quick_links_table > table > tbody > tr > td > table > tbody > tr > td > p.quarcell {
+        border: solid 1px #7C7A7A;
+    }
     #quicklinks_closed {
         min-height: 36px;
     }
-
     #quick_links_table > table > tbody > tr > td > table > tbody > tr > td > p.quarcell > b {
         display: none;
     }
 }
+
