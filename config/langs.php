@@ -48,7 +48,8 @@ $languages = array (
 	'cs'	=> array('cs([-_][[:alpha:]]{2})?|czech', 'cs.lang.php', 'cs', '&#268;esky'),
 	'fr'	=> array('fr([-_][[:alpha:]]{2})?|french', 'fr.lang.php', 'fr', 'Fran&ccedil;ais'),
 	'it'	=> array('it([-_][[:alpha:]]{2})?|italian', 'it.lang.php', 'it', 'Italiano'),
-	'pt_BR'	=> array('pt([-_]br)?|portuguese', 'pt_BR.lang.php', 'pt', 'Portuguese Brazilian')
+	'pt_BR'	=> array('pt([-_]br)?|portuguese', 'pt_BR.lang.php', 'pt', 'Portuguese Brazilian'),
+	'no_NB' => array('no([-_]nb)?|norsk bokm&aring;l', 'no_NB.lang.php', 'no', 'Norsk Bokm&aring;l')
 );
 
 // Language files directory	
@@ -114,10 +115,10 @@ function get_browser_lang() {
 	global $languages;
 		
 	if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && !empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-                $http_accepted = explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);
+		$http_accepted = explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);
 		for ($i = 0; $i < count($http_accepted); $i++) {
 			foreach ($languages as $lang => $vals) {
-                                if (stripos($http_accepted[$i], $vals[0])!==false)
+				if (stripos($http_accepted[$i], $vals[0])!==false)
 					return $lang;
 			}
 		}	
