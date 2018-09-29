@@ -14,10 +14,14 @@
 include_once('lib/Auth.class.php');
 include_once('lib/MailMime.class.php');
 
-// empty because MsgParseBody calls it but we don't want to print 
+// empty stub because MsgParseBody calls it but we don't want to print
 function MsgBodyPlainText()
 {
 }
+function MsgBodyHtmlText()
+{
+}
+
 
 /*
 * Include MailEngine class
