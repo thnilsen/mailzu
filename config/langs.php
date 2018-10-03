@@ -48,7 +48,8 @@ $languages = array(
     'cs' => array('cs([-_][[:alpha:]]{2})?|czech', 'cs.lang.php', 'cs', '&#268;esky'),
     'fr' => array('fr([-_][[:alpha:]]{2})?|french', 'fr.lang.php', 'fr', 'Fran&ccedil;ais'),
     'it' => array('it([-_][[:alpha:]]{2})?|italian', 'it.lang.php', 'it', 'Italiano'),
-    'pt_BR' => array('pt([-_]br)?|portuguese', 'pt_BR.lang.php', 'pt', 'Portuguese Brazilian')
+    'pt_BR' => array('pt([-_]br)?|portuguese', 'pt_BR.lang.php', 'pt', 'Portuguese Brazilian'),
+    'no_NB' => array('no([-_]nb)?|norsk bokm&aring;l', 'no_NB.lang.php', 'no', 'Norsk Bokm&aring;l')
 );
 
 // Language files directory	

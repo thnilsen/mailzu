@@ -29,7 +29,7 @@
 ///////////////////////////////////////////////////////////
 ?>
 <div align="center"> 
-  <h3><a name="top" id="top"></a>Introduction to MailZu</h3>
+  <h3><a name="top" id="top"></a>Introduksjon til MailZu</h3>
   <p><a href="http://mailzu.net" target="_blank">http://mailzu.net</a></p>
   <table width="100%" border="0" cellspacing="0" cellpadding="5" style="border: solid #CCCCCC 1px">
     <tr> 
@@ -45,12 +45,12 @@
           <ul>
             <li><a href="#quick_links">Mine Hurtig linker</a></li>
             <li><a href="#msg_summary">Meldings oversikt</a></li>
-            <li><a href="#msg_index">Meldings indeks</a></li>
+            <li><a href="#msg_index">Site Karantene</a></li>
             <li><a href="#search">Meldings s&oslash;k</a></li>
             <li><a href="#msg_view">Meldings visning</a></li>
           </ul>
         </ul>
-		<hr width="95%" size="1" noshade="noshade" />
+        <hr width="95%" size="1" noshade="noshade" />
         <h4><a name="getting_started" id="getting_started"></a>Kom i gang</h4>
         <p> &Oslash;verst p&aring; hver side ser du en velkomstmelding og dagens dato.
           Hvis en tidligere bruker vises i velkomstmeldingen, klikker du p&aring; &quot;Logg
@@ -61,7 +61,7 @@
           <p class="alignright"><a href="#top">Tilbake til Toppen</a></p>
         <h5><a name="logging_in" id="logging_in"></a>Logge inn</h5>
         <p> For &aring; logge inn, m&aring; brukerne oppgi brukernavn og passord. Brukernavn
-          kan være din fullt kvalifiserte e-postadresse ('user@example.com') eller ganske enkelt
+          kan v&aelig;re din fullt kvalifiserte e-postadresse ('user@example.com') eller ganske enkelt
           ditt brukernavn ('bruker'). Administratoren skal informere deg om riktig
           skjema &aring; bruke. Velger en &quot;Husk meg&quot; alternativet vil system bruke
           cookies for &aring; identifisere deg hver gang du g&aring;r aksesserer Mailzu karantenen, og en omg&aring;r
@@ -69,68 +69,66 @@
           du er den eneste personen som bruker MailZu p&aring; datamaskinen din. </i> Etter &aring; ha
           logget inn, du blir omdirigert til <a href="#message_summary"> Meldingsoversikt </a>. </p>
         <p class="alignright"><a href="#top">Tilbake til toppen</a></p>
-        <h5><a name="language" id="language"></a>Selecting My Language</h5>
-        <p>On the login page, there will be a pull down menu with all of the
-          available language translations that your administrator has included.
-          Please select the language that you prefer and all MailZu text
-          will be translated. This will not translate any text related to actual
-	  email messages; it will only translate the application text. You will 
-	  need to log out to select a different language.</p>
+        <h5><a name="language" id="language"></a>Velg Mitt Spr&aring;</h5>
+         <p>P&aring; p&aring;loggingssiden vil det v&aelig;re en pull down-meny med alle
+           tilgjengelige spr&aringk oversettelser som administratoren din har inkludert.
+           Vennligst velg spr&aringket du foretrekker, og all tekist i MailZu
+           vil bli oversatt. Dette vil ikke oversette noen tekst relatert til faktiske
+           e-postmeldinger; det vil bare oversette s&oslash;knadsteksten. Du vil m&aringtte
+           logge ut for &aring velge et annet spr&aringk.</p>
         <p class="alignright"><a href="#top">Tilbake til toppen</a></p>        
-        <h5><a name="getting_support" id="getting_support"></a>Getting
-          Help</h5>
-        <p>If you you need assistance with viewing your quarantined messages or any
-	  issue whatsoever, feel free to use the &quot;Email
-          Administrator&quot; link located in <a href="#quick_links">My Quick Links</a>.</p>
+        <h5><a name="getting_support" id="getting_support"></a>F&aring hjelp</h5>
+        <p>Om du trenger hjelp med &aring se dine karantene meldinger eller har et annet
+           problem, bruk gjerne &quot;Send epost til 
+           Administrator&quot; lenken som ligger i <a href="#quick_links">Mine hurtige lenker</a>.</p>
         <p class="alignright"><a href="#top">Tilbake til toppen</a></p>        <p class="alignright">&nbsp;</p>
         <hr width="95%" size="1" noshade="noshade" />
-        <h4><a name="using_mailzu" id="using_mailzu"></a>Using MailZu</h4>
-        <p>MailZu allows the user to view quarantined messages based on the type of messages. 
-	   The most prevalent types of messages which will be quarantined are those that are 
-	   considered spam, or contain a banned attachment.
+        <h4><a name="using_mailzu" id="using_mailzu"></a>Hvordan bruke MailZu</h4>
+        <p>MailZu lar brukeren se eposter som er satt i karantene basert p&aring typen meldinger.
+           De mest utbredte typer meldinger som vil bli satt i karantene er de som
+           anses som spam, eller inneholder et forbudt vedlegg.
         <p class="alignright"><a href="#top">Tilbake til toppen</a></p>
-        <h5><a name="quick_links" id="quick_links"></a>My Quick Links</h5>
-        <p>The Quick Links table will provide you with common application links.
-	  The first, &quot;Quarantine Summary&quot; will give an overview of your message 
-	  quarantines.</p>
-	<p> &quot;My Quarantine&quot; will take you to
-          an index of your unsolicited bulk email and banned attachments.</p>
-        <p>&quot;Email Administrator&quot; is a quick way to contact your support
-	  staff if you require assistance.</p>
-        <p>&quot;Help&quot; gives you this document.</p>
-        <p>The final link, &quot;Log Out&quot; will log you out of your current
-          session and return you to the log in screen.</p>
+        <h5><a name="quick_links" id="quick_links"></a>Mine hurtig lenker</h5>
+        <p>Tabellen Mine Hurtig Lenker gir deg vanlige menypunkter og lenker.
+           Den f&oslash;rste, &quot;Karantene Sammendrag&quot; vil gi en oversikt over meldingen din
+           som er i karantene.</p>
+         <p>&quot;Minn Karatene&quot; vil gi deg 
+             en liste over alle eposter som er ansett som spam og autoriserte vedlegg typer.</p>
+         <p>&quot;Send epost til Administrator&quot; er en hurtig m&aringte &aring kontakt support ansvarlige
+            om du trenger hjelp.</p>
+        <p>&quot;Hjelp&quot; gir deg dette dokumentet.</p>
+        <p>Den siste lenken, &quot;Logg Av&quot; vil logge deg ut av systemet og
+           tar deg tilbake til logg inn skjermbildet.</p>
         <p class="alignright"><a href="#top">Tilbake til toppen</a></p>
-        <h5><a name="msg_summary" id="msg_summary"></a>Message Summary</h5>
-	<p> The message summary is the default page after login. It gives you a quick count of
-	  how many messages you have in your quarantine and their type.
+        <h5><a name="msg_summary" id="msg_summary"></a>Meldingssammendrag</h5>
+        <p> Dette er standard siden som vises etter at en har logget inn. Siden gir ett overiskt over antall
+            meldinger som er i karantene for din bruker, og hva slags type av karatene det gjelder.
         <p class="alignright"><a href="#top">Tilbake til toppen</a></p>
-        <h5><a name="msg_index" id="msg_index"></a>Message Indexes</h5>
-        <p> Message indices show all the email for selected quarantined. 
-	  For each email quarantined, the index will show the From, Subject, and Date. Depending
-	  on the quarantine currently in view, the index may show more information.</p>
-        <p>To sort your index by a specific field, click on the field title. Clicking the field
-	   title again will reverse the sort.</p> 
-	<p>Several buttons are available for handling the messages shown in the index. The 
-	  'Release/Request' action removes the message from the index and delivers the email as 
-   	  if it had never been quarantined. The 'Delete' action only removes the message from the 
-	  index. These buttons perform the action on the messages selected through the checkboxes. 
-	  The 'Delete All' button ignores the state of the checkboxes and removes all messages in
-	  the quarantine selected.</p>
-	<p>When viewing your pending requests you can withdraw the request by clicking 
-	   'Cancel Request'. The message will no longer be queued for administrator review.
-	</p>
+        <h5><a name="msg_index" id="msg_index"></a>Site Karantene</h5>
+        <p>Site karantene viser all e-post for valgt karantene.
+      For hver e-post i karantene vil det vises Fra, Emne og Dato. Avhengig
+      av hvilken karantene som er valgt, kan listen vise mer informasjon. </p>
+        <p> For &aring sortere listen din med et bestemt felt, klikk p&aring feltets tittel. Klikk p&aring felt
+       tittelen igjen for &aring reversere sorteringen. </p>
+    <p> Flere knapper er tilgjengelige for &aring h&aringndtere meldingene som vises i indeksen. De
+      'Frigi / Foresp&oslash;r Frigivelse' -handling fjerner meldingen fra indeksen og leverer e-posten som
+      om den aldri hadde v&aelig;rt i karantene. "Slett" handlingen fjerner bare meldingen fra
+      listen. Disse knappene utf&oslash;rer handlingen p&aring meldingene som er valgt gjennom avmerkingsboksene.
+      "Slett alle" -knappen ignorerer statusen i avmerkingsboksene og fjerner alle meldinger i
+      valgt karantene. </p>
+    <p> N&aringr du ser p&aring dine ventende foresp&oslash;rsler, kan du trekke tilbake foresp&oslash;rselen ved &aring klikke
+       'Avbryt foresp&oslash;rsel'. Meldingen vil ikke lenger v&aelig;re i k&oslash; for administratorrevisjon.</p>
         <p class="alignright"><a href="#top">Tilbake til toppen</a></p>
         <h5><a name="search" id="search"></a>Meldings s&oslash;k</h5>
         <p>Bruk s&oslash;kefunksjonen er en rask m&aring;te &aring; finne en melding du tror har blitt satt i
            karantene. Du kan s&oslash;ke etter en melding ved &aring; spesifisere enten hvem den er fra, eller
            hva subjektet er, eller begge deler. S&oslash;ket skiller ikke mellom store og sm&aring; bokstaver.</p>
         <p class="alignright"><a href="#top">Tilbake til toppen</a></p> 
-	<h5><a name="msg_view" id="msg_view"></a>Meldings visning</h5>
+    <h5><a name="msg_view" id="msg_view"></a>Meldings visning</h5>
         <p>Meldingsvisningen lar deg se innholdet i meldingen som hjelp for &aring;
            avgj&oslash;re om meldingen er legitim. Denne visningen tilbyr andre alternativer som 
            &aring; vise den opprinnelige vanlige tekstmeldingen og se flere meldingshoder.
-	</p>
+    </p>
         <p class="alignright"><a href="#top">Tilbake til toppen</a></p>        <p class="alignright">&nbsp;</p>
 
         <hr width="95%" size="1" noshade="noshade" />
