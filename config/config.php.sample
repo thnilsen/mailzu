@@ -122,6 +122,10 @@ $conf['auth']['ldap_hosts'] = array( 'ldaphost.example.com' );
 // if set to false or not set, unencrypted LDAP connection on port 389
 $conf['auth']['ldap_ssl'] = false;
 
+// if set to true, LDAP connection over TLS (PHP 4.2.0 minimum)
+// if set to false or not set, unencrypted LDAP connection on port 389
+$conf['auth']['ldap_tls'] = false;
+
 // LDAP base dn, e.g. 'dc=example,dc=com'
 $conf['auth']['ldap_basedn'] = 'dc=example,dc=org';
 
@@ -161,6 +165,10 @@ $conf['auth']['ad_hosts'] = array( 'dc1.example.com' );
 // if set to true, LDAP connection over SSL (PHP 4.0.4 minimum)
 // if set to false or not set, unencrypted LDAP connection on port 389
 $conf['auth']['ad_ssl'] = false;
+
+// if set to true, LDAP connection over TLS (PHP 4.2.0 minimum)
+// if set to false or not set, unencrypted LDAP connection on port 389
+$conf['auth']['ad_tls'] = false;
 
 // AD base dn, e.g. 'dc=example,dc=com'
 $conf['auth']['ad_basedn'] = 'dc=example,dc=com';

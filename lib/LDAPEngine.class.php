@@ -26,6 +26,8 @@ class LDAPEngine
     var $hosts;
     // SSL support
     var $ssl;
+    // TLS support
+    var $tls;
     // The base DN (e.g. "dc=example,dc=org")
     var $basedn;
     // The user identifier (e.g. "uid")
@@ -101,6 +103,7 @@ class LDAPEngine
             case "ldap":
                 $this->hosts = $conf['auth']['ldap_hosts'];
                 $this->ssl = $conf['auth']['ldap_ssl'];
+                $this->tls = $conf['auth']['ldap_tls'];
                 $this->basedn = $conf['auth']['ldap_basedn'];
                 $this->userIdentifier = $conf['auth']['ldap_user_identifier'];
                 $this->userContainer = $conf['auth']['ldap_user_container'];
@@ -113,6 +116,7 @@ class LDAPEngine
             case "ad":
                 $this->hosts = $conf['auth']['ad_hosts'];
                 $this->ssl = $conf['auth']['ad_ssl'];
+                $this->tls = $conf['auth']['ad_tls'];
                 $this->basedn = $conf['auth']['ad_basedn'];
                 $this->userIdentifier = $conf['auth']['ad_user_identifier'];
                 $this->domain = $conf['auth']['ad_domain'];
@@ -192,6 +196,15 @@ class LDAPEngine
      */
     function anonBind()
     {
+        if (  $this->tls ) {
+            if ( ! @ldap_start_tls($this->connection) ) {
+                $this->ldapErrorCode = ldap_errno( $this->connection);
+                $this->ldapErrorText = ldap_error( $this->connection);
+                CmnFns::write_log($this->ldapErrorCode . ': ' . $this->ldapErrorText, '');
+                return false;	
+            }
+        }
+
         if (!$this->bind = ldap_bind($this->connection)) {
             $this->ldapErrorCode = ldap_errno($this->connection);
             $this->ldapErrorText = ldap_error($this->connection);
@@ -210,6 +223,15 @@ class LDAPEngine
      */
     function authBind($username, $password)
     {
+        if (  $this->tls ) {
+            if ( ! @ldap_start_tls($this->connection) ) {
+                $this->ldapErrorCode = ldap_errno( $this->connection);
+                $this->ldapErrorText = ldap_error( $this->connection);
+                CmnFns::write_log($this->ldapErrorCode . ': ' . $this->ldapErrorText, '');
+                return false;	
+            }
+        }
+
         if (!$this->bind = @ldap_bind($this->connection, $username, $password)) {
             $this->ldapErrorCode = ldap_errno($this->connection);
             $this->ldapErrorText = ldap_error($this->connection);
